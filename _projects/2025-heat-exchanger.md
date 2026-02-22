@@ -50,18 +50,18 @@ is conserved across the control volume.
 
 For steady operation, the mass balance for each stream is:
 
-    m-dot(out) = m-dot(in)
+- m-dot(out) = m-dot(in)
 
 The steady-flow energy balance for the heat exchanger control volume is:
 
-    m-dot(h)c_p(T_h(out) - T_h(in)) + m-dot(c)c_p(T_c(out) - T_c(in)) = 0
+- m-dot(h)c_p(T_h(out) - T_h(in)) + m-dot(c)c_p(T_c(out) - T_c(in)) = 0
 
 This equation reflects that the thermal energy lost by the hot stream is gained by the
 cold stream.
 
 The entropy balance for steady operation is:
 
-    S-dot_gen = m-dot(h)(s_{h,out} - s_{h,in}) + m-dot(c)(s_{c,out} - s_{c,in}) >= 0
+-  S-dot_gen = m-dot(h)(s_{h,out} - s_{h,in}) + m-dot(c)(s_{c,out} - s_{c,in}) >= 0
 
 Entropy generation arises due to irreversible heat transfer across a finite temperature
 difference.
