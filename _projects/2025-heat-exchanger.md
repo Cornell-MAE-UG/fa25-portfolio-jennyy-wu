@@ -6,7 +6,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer]
 image: /assets/images/heat-exchanger.jpg
 ---
 
-![alt text](../assets/images/heat-exchanger.jpg)
+![Parallel-flow heat exchanger configuration]({{ "/assets/images/heat-exchanger.jpg" | relative_url }}){: .inline-image-r style="width: 300px"}
 
 This project examines a compact water-to-water heat exchanger studied as part of an
 undergraduate thermodynamics laboratory. The objective of the experiment was to analyze
@@ -28,8 +28,6 @@ using thermometers and a thermocouple.
 
 Thermal energy was exchanged between the two water streams through the heat exchanger
 walls without direct mixing of the fluids.
-
-![Parallel-flow heat exchanger configuration]({{ "/assets/images/heat-exchanger.jpg" | relative_url }}){: .inline-image-r style="width: 300px"}
 
 
 ---
