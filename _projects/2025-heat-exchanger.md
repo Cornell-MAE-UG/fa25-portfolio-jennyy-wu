@@ -79,7 +79,7 @@ difference.
 
 ## Effect of Operating Conditions on Performance
 
-### Parallel Flow vs Counterflow Operation
+#### Parallel Flow vs Counterflow Operation
 
 The heat exchanger was operated in both parallel-flow and counterflow configurations.
 In parallel flow, the hot and cold water streams entered the heat exchanger from the same
