@@ -48,23 +48,26 @@ is conserved across the control volume.
 
 ## Governing Balances
 
-For steady operation, the mass balance for each stream is:
+## Governing Balances
+
+To analyze the heat exchanger under steady operating conditions, the system is modeled as a steady-flow control volume.
+
+Because the system operates at steady state, mass does not accumulate within the exchanger. Therefore, for each fluid stream:
 
 \[
 \dot{m}_{in} = \dot{m}_{out}
 \]
 
-The steady-flow energy balance for the heat exchanger control volume is:
+Applying the steady-flow energy equation to the control volume yields:
 
 \[
 \dot{m}_h c_p (T_{h,out} - T_{h,in}) +
 \dot{m}_c c_p (T_{c,out} - T_{c,in}) = 0
 \]
 
-This equation reflects that the thermal energy lost by the hot stream is gained by the
-cold stream.
+This relationship expresses conservation of energy: the thermal energy lost by the hot stream is equal to the energy gained by the cold stream.
 
-The entropy balance for steady operation is:
+To assess irreversibilities within the exchanger, the entropy balance is applied:
 
 \[
 \dot{S}_{gen} =
@@ -72,8 +75,7 @@ The entropy balance for steady operation is:
 \dot{m}_c (s_{c,out} - s_{c,in}) \ge 0
 \]
 
-Entropy generation arises due to irreversible heat transfer across a finite temperature
-difference.
+The positive entropy generation term reflects the irreversible nature of heat transfer across a finite temperature difference.
 
 ---
 
