@@ -13,9 +13,7 @@ permalink: /cv/
 ---
 
 #### Objective
-Mechanical engineering student with strong preparation in thermodynamics,
-energy systems, and engineering analysis. Seeking opportunities to apply fundamental
-engineering principles to real-world systems through coursework, research, and design projects.
+Mechanical Engineering student at Cornell University with interests in robotics, energy systems, and applied engineering analysis. Through coursework and hands-on projects, I have developed a strong foundation in thermodynamics, system modeling, and mechanical design. My goal is to apply engineering principles to build efficient, innovative systems that have meaningful real-world impact.
 
 ---
 
@@ -29,9 +27,9 @@ engineering principles to real-world systems through coursework, research, and d
 ---
 
 #### Skills
-- **Software:** Autodesk Fusion 360, SolidWorks, ANSYS  
+- **Software:** Autodesk Fusion 360
 - **Programming:** Python, MATLAB  
-- **Tools:** 3D Printing, Laser Cutting  
+- **Tools:** 3D Printing, Power Tools, Hand Tools  
 
 ---
 
