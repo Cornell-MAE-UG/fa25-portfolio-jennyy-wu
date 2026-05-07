@@ -20,9 +20,9 @@ Expected Graduation: May 2028
 ---
 
 #### Technical Skills
-**Mechanical Design:** gear systems, drivetrains, shaft design, structural design, GD&T, lean manufacturing
-**Prototyping & Fabrication:** mill and lathe machining, 3D printing, laser cutting
-**Software:** Autodesk Fusion 360, Creo Parametric, MATLAB, Python
+**Mechanical Design:** gear systems, drivetrains, shaft design, structural design, GD&T, lean manufacturing  
+**Prototyping & Fabrication:** mill and lathe machining, 3D printing, laser cutting  
+**Software:** Autodesk Fusion 360, Creo Parametric, MATLAB, Python  
 **Interests & Activities:** golfing, swimming, painting, photography, poker
 
 ---
