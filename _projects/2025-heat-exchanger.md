@@ -6,6 +6,15 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer]
 image: /assets/images/heat-exchanger.jpg
 ---
 
+<style>
+.page-content,
+.wrapper,
+.container {
+    max-width: 1000px !important;
+    width: 92% !important;
+}
+</style>
+
 This project examines a compact water-to-water heat exchanger studied as part of an
 undergraduate thermodynamics laboratory. The objective of the experiment was to analyze
 how thermal energy is transferred between two fluid streams and how system performance
