@@ -14,7 +14,7 @@ image: /assets/images/heat-exchanger.jpg
     width: 92% !important;
 }
 </style>
-
+<p style="max-width: 850px; margin: 0 auto 30px auto; font-size: 18px;">
 This project examines a compact water-to-water heat exchanger studied as part of an
 undergraduate thermodynamics laboratory. The objective of the experiment was to analyze
 how thermal energy is transferred between two fluid streams and how system performance
@@ -22,6 +22,7 @@ changes under different operating conditions.
 
 The experiment focused on steady-flow analysis, conservation laws, and entropy generation
 in a real engineering system.
+</p>
 
 ---
 
