@@ -10,7 +10,7 @@ image: /assets/images/heat-exchanger.jpg
 .page-content,
 .wrapper,
 .container {
-    max-width: 1000px !important;
+    max-width: 800px !important;
     width: 92% !important;
 }
 </style>
