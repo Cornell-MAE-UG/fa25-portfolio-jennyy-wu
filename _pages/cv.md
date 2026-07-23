@@ -54,19 +54,19 @@ Expected Graduation: May 2028
 
 #### Work Experience
 - **Consigli Construction - Field Operations Intern**  
-  [June, 2026] - [August, 2026]  
+  June, 2026 - August, 2026  
   - Coordinated cross-functional teams supporting a 650,000-square-foot office-to-residential conversion project
   - Analyzed daily construction data, field observations, and project documentation to identify issues, communicate updates, and track demolition, scaffolding, and MEP activities across the project
   - Partnered with engineering and architect teams to improve project execution and field decision-making
 
 - **Fairfield County Hunt Club — Lifeguard**  
-  [June, 2023] - [August, 2025]  
+  June, 2023 - August, 2025  
   - Coached a 50-member youth swim team ages five to twelve and taught swim lessons for all ages, providing structured instruction and individualized feedback.
   - Supervised more than 100 patrons while applying risk-assessment and safety protocols to maintain a secure pool environment.
   - Conducted chemical and pH testing three times daily to maintain water quality and meet health standards.
 
 - **Kama Sushi — Waitress/Cashier**  
-  [June, 2022] - [May, 2025]  
+  June, 2022 - May, 2025  
   - Delivered attentive customer service while managing dine-in, takeout, and online orders in a fast-paced restaurant environment.
   - Processed transactions accurately, coordinated orders with kitchen staff, and resolved customer concerns promptly.
   - Balanced multiple tables and responsibilities while maintaining an organized, welcoming dining experience.
@@ -76,7 +76,7 @@ Expected Graduation: May 2028
 ---
 
 #### Achievements
-- Second Place, “Outstanding Problem/Solution,” Cornell Mechanical Synthesis, 2026 
+- Second Place, Outstanding Problem/Solution Award, Cornell Mechanical Synthesis, 2026 
 - Southern Connecticut Conference Scholar-Athlete, 2024 
 - Visual Arts Department Medal, 2024  
 - Francis Service Award, 2024  
@@ -85,7 +85,6 @@ Expected Graduation: May 2028
 
 
 #### Certifications
-- [Achievement Name], [Competition/Event], [Year]  
 - OSHA 10-Hour Construction, OSHA Safety Training Institute, 2026
 - Red Apron Certified, Cornell University, 2026
 - Procore Certified, Procore Technologies, 2026
@@ -95,14 +94,11 @@ Expected Graduation: May 2028
 ---
 
 #### Extracurricular Activities
-- Member of [Club/Organization Name]  
-- Volunteer for [Event/Organization Name]  
-
-- Mechanical Design & Safety Lead, Cornell Cup Robotics  
-- Member, Cornell Poker Club  
-- Member, Cornell Club Swim  
-- Member, Cornell Chinese Student Association  
-- President and Co-Founder, Coding Club  
-- Captain, Varsity Golf  
+- Mechanical Design & Safety Lead of Cornell Cup Robotics  
+- Member of Cornell Poker Club  
+- Member of Cornell Club Swim  
+- Member of Cornell Chinese Student Association  
+- President and Co-Founder of Coding Club  
+- Captain of Varsity Golf  
 
 ---
