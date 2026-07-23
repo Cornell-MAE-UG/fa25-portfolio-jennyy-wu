@@ -24,7 +24,7 @@ Expected Graduation: May 2028
 #### Technical Skills
 **Software:** Autodesk Fusion 360, Creo Parametric, MATLAB, Python, Bluebeam, Procore, Excel  
 **Manufacturing:** CNC mills and lathes, GD&T, DFM, 3D printing  
-**Interests & Activities:** Golfing, swimming, painting, photography, poker  
+**Interests & Activities:** golfing, swimming, painting, photography  
 
 ---
 
