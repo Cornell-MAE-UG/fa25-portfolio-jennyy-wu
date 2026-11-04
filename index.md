@@ -29,7 +29,7 @@ main .wrapper,
 
 .homepage {
   width: 85%;
-  max-width: 1000px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -369,7 +369,7 @@ main .wrapper,
         <div class="hero-buttons">
 
           <a
-            href="https://www.linkedin.com/in/jenny-wu/"
+            href="https://www.linkedin.com/in/jenny-wu-44b5912a8/"
             class="hero-button"
             target="_blank"
             rel="noopener noreferrer">
@@ -377,7 +377,7 @@ main .wrapper,
           </a>
 
           <a
-            href="{{{ "/assets/Resume.pdf" | relative_url }}}"
+            href="{{ '/assets/Resume.pdf' | relative_url }}"
             class="hero-button"
             target="_blank"
             rel="noopener noreferrer">
