@@ -28,8 +28,8 @@ main .wrapper,
 /* ===== HOMEPAGE ===== */
 
 .homepage {
-  width: 90%;
-  max-width: 1360px;
+  width: 85%;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -172,6 +172,7 @@ main .wrapper,
 .homepage .project-card {
   display: block;
   min-width: 0;
+  cursor: pointer;
 }
 
 .homepage .image-wrapper {
