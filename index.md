@@ -434,7 +434,7 @@ footer.site-footer {
 
         <div class="image-wrapper">
           <img class="project-image"
-               src="{{ '/assets/images/smartsweep.jpg' | relative_url }}"
+               src="{{ '/assets/images/smart_sweep.jpg' | relative_url }}"
                alt="SmartSweep mechanical prototype">
         </div>
 
