@@ -3,6 +3,8 @@ layout: default
 title: Home
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 /* ===== REMOVE THE THEME'S NARROW WIDTH ===== */
 
@@ -33,7 +35,7 @@ main .wrapper,
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   color: #222;
 }
 
@@ -64,7 +66,7 @@ main .wrapper,
 }
 
 .homepage .hero h1 {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "DM Sans", Arial, sans-serif;
   font-size: clamp(40px, 4.5vw, 68px);
   font-weight: 700;
   letter-spacing: -0.05em;
@@ -75,34 +77,36 @@ main .wrapper,
 
 .homepage .hero-description {
   max-width: 750px;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.8;
   color: #666;
   margin: 0;
 }
 
-/* ===== LINKEDIN & RESUME BUTTONS ===== */
+/* ===== SMALLER LINKEDIN & RESUME BUTTONS ===== */
 
 .homepage .hero-buttons {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 35px;
+  margin-top: 32px;
 }
 
 .homepage .hero-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 135px;
-  padding: 17px 28px;
-  border-radius: 14px;
+  min-width: 105px;
+  padding: 12px 20px;
+  border-radius: 10px;
   background: #252525;
   color: #fff !important;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 17px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   text-align: center;
   transition: background 0.2s ease, transform 0.2s ease;
 }
@@ -143,14 +147,16 @@ main .wrapper,
 }
 
 .homepage .section-heading h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", Arial, sans-serif;
   font-size: 27px;
   font-weight: 700;
+  letter-spacing: -0.035em;
   margin: 0;
 }
 
 .homepage .section-heading span {
   color: #888;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 13px;
 }
 
@@ -168,6 +174,8 @@ main .wrapper,
   min-width: 0;
   cursor: pointer;
 }
+
+/* ===== PROJECT IMAGES ===== */
 
 .homepage .image-wrapper {
   display: block;
@@ -201,7 +209,7 @@ main .wrapper,
   transform: scale(1.04);
 }
 
-/* INDIVIDUAL PHOTO FRAMING */
+/* ===== INDIVIDUAL PHOTO FRAMING ===== */
 
 .homepage .project-card:nth-child(1) img {
   object-position: center 45% !important;
@@ -230,15 +238,16 @@ main .wrapper,
 }
 
 .homepage .project-info h3 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "DM Sans", Arial, sans-serif;
   font-size: 23px;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.035em;
   line-height: 1.2;
   margin: 0 0 12px;
 }
 
 .homepage .project-info p {
+  font-family: "Inter", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.6;
   color: #777;
@@ -246,6 +255,7 @@ main .wrapper,
 }
 
 .homepage .project-year {
+  font-family: "Inter", Arial, sans-serif;
   font-size: 13px;
   color: #999;
   white-space: nowrap;
@@ -264,6 +274,7 @@ main .wrapper,
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  font-family: "Inter", Arial, sans-serif;
   font-size: 14px;
   color: #777;
 }
@@ -326,9 +337,9 @@ main .wrapper,
   }
 
   .homepage .hero-button {
-    min-width: 120px;
-    font-size: 16px;
-    padding: 15px 24px;
+    min-width: 100px;
+    font-size: 14px;
+    padding: 12px 18px;
   }
 
   .homepage .project-grid {
