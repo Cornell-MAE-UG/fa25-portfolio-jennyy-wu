@@ -1,17 +1,9 @@
 
----
-layout: default
-title: Home
----
-
 <style>
 
-/* ===== REMOVE THEME WIDTH RESTRICTIONS ===== */
-
-html, body {
-  width: 100%;
-  max-width: none !important;
-}
+/* ========================================
+   REMOVE UNWANTED TOP SPACING AND LINE
+   ======================================== */
 
 .page-content,
 .page-content > .wrapper,
@@ -24,13 +16,21 @@ main > .container {
   box-sizing: border-box;
 }
 
-/* ===== HOMEPAGE ===== */
+/* Hide theme-generated page headings */
+.page-heading,
+.post-header {
+  display: none !important;
+}
+
+/* ========================================
+   HOMEPAGE
+   ======================================== */
 
 .homepage {
-  width: min(96vw, 1600px) !important;
-  max-width: none !important;
+  width: 90% !important;
+  max-width: 1350px !important;
   margin: 0 auto !important;
-  padding: 0 35px !important;
+  padding: 0 20px !important;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #202020;
@@ -45,17 +45,19 @@ main > .container {
   text-decoration: none;
 }
 
-/* ===== HERO ===== */
+/* ========================================
+   HERO
+   ======================================== */
 
 .homepage .hero {
-  padding: 85px 0 75px;
+  padding: 75px 0 75px;
 }
 
 .homepage .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
+  grid-template-columns: minmax(0, 1fr) 290px;
   align-items: center;
-  gap: 70px;
+  gap: 65px;
   width: 100%;
 }
 
@@ -74,7 +76,7 @@ main > .container {
 
 .homepage .hero h1 {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(38px, 5vw, 70px);
+  font-size: clamp(38px, 5vw, 68px);
   font-weight: 700;
   letter-spacing: -0.055em;
   line-height: 1.1;
@@ -84,14 +86,16 @@ main > .container {
 
 .homepage .hero-description {
   width: 100%;
-  max-width: 850px;
-  font-size: 20px;
+  max-width: 800px;
+  font-size: 19px;
   line-height: 1.75;
   color: #666;
   margin: 0;
 }
 
-/* ===== BLACK BUTTONS ===== */
+/* ========================================
+   LINKEDIN AND RESUME BUTTONS
+   ======================================== */
 
 .homepage .hero-links {
   display: flex;
@@ -100,12 +104,12 @@ main > .container {
   margin-top: 35px;
 }
 
-.homepage .hero-links .hero-button {
+.homepage .hero-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   background: #252525;
-  color: #fff !important;
+  color: #ffffff !important;
   border: none !important;
   border-radius: 12px;
   padding: 14px 27px;
@@ -115,12 +119,18 @@ main > .container {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.homepage .hero-links .hero-button:hover {
+.homepage .hero-button:hover {
   background: #444;
   transform: translateY(-2px);
 }
 
-/* ===== PROFILE PHOTO ===== */
+/* ========================================
+   PROFILE PHOTO
+   ======================================== */
+
+.homepage .hero-photo {
+  width: 100%;
+}
 
 .homepage .hero-photo img {
   width: 100%;
@@ -130,7 +140,9 @@ main > .container {
   display: block;
 }
 
-/* ===== SECTION HEADINGS ===== */
+/* ========================================
+   SECTION HEADING
+   ======================================== */
 
 .homepage .section-heading {
   display: flex;
@@ -153,12 +165,14 @@ main > .container {
   color: #888;
 }
 
-/* ===== PROJECT GRID ===== */
+/* ========================================
+   FOUR PROJECTS IN ONE ROW
+   ======================================== */
 
 .homepage .project-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
+  gap: 26px;
   width: 100%;
 }
 
@@ -171,7 +185,7 @@ main > .container {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  background: #eee;
+  background: #eeeeee;
 }
 
 .homepage .project-image {
@@ -196,7 +210,7 @@ main > .container {
 
 .homepage .project-info h3 {
   font-family: Georgia, serif;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 1.2;
   margin: 0 0 10px;
@@ -217,14 +231,17 @@ main > .container {
   padding-top: 4px;
 }
 
-/* ===== CLEAN FOOTER ===== */
+/* ========================================
+   CLEAN FOOTER
+   ======================================== */
 
 .homepage .portfolio-footer {
-  margin-top: 100px;
+  margin-top: 95px;
   border-top: 1px solid #ddd;
   padding: 30px 0 55px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   flex-wrap: wrap;
   font-size: 14px;
@@ -235,7 +252,12 @@ main > .container {
 
 .homepage .footer-links {
   display: flex;
-  gap: 25px;
+  gap: 28px;
+}
+
+.homepage .footer-links a {
+  color: #777;
+  transition: color 0.2s;
 }
 
 .homepage .footer-links a:hover {
@@ -248,7 +270,9 @@ footer.site-footer {
   box-shadow: none !important;
 }
 
-/* ===== TABLET ===== */
+/* ========================================
+   TABLET
+   ======================================== */
 
 @media (max-width: 1050px) {
 
@@ -266,7 +290,9 @@ footer.site-footer {
   }
 }
 
-/* ===== MOBILE ===== */
+/* ========================================
+   MOBILE
+   ======================================== */
 
 @media (max-width: 650px) {
 
@@ -314,9 +340,11 @@ footer.site-footer {
 
 </style>
 
-<div class="homepage">
+<div class="homepage" id="top">
 
-  <!-- ===== HERO ===== -->
+  <!-- =====================================
+       HERO
+       ===================================== -->
 
   <section class="hero">
 
@@ -374,7 +402,10 @@ footer.site-footer {
 
   </section>
 
-  <!-- ===== SELECTED WORK ===== -->
+
+  <!-- =====================================
+       SELECTED WORK
+       ===================================== -->
 
   <section id="projects">
 
@@ -385,86 +416,110 @@ footer.site-footer {
 
     <div class="project-grid">
 
-      <!-- ISS MIMIC -->
+
+      <!-- 1. ISS MIMIC -->
 
       <a class="project-card"
          href="{{ '/projects/iss-mimic/' | relative_url }}">
 
         <div class="image-wrapper">
+
           <img class="project-image"
                src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
-               alt="ISS Mimic robotics project">
+               alt="ISS Mimic robotic mechanism">
+
         </div>
 
         <div class="project-info">
+
           <div>
             <h3>ISS Mimic</h3>
             <p>Gear Design · Mechanical Systems · Robotics</p>
           </div>
+
           <span class="project-year">2026</span>
+
         </div>
 
       </a>
 
-      <!-- SUBMERSIBLE XRP -->
+
+      <!-- 2. SUBMERSIBLE XRP -->
 
       <a class="project-card"
          href="{{ '/projects/submersible-xrp/' | relative_url }}">
 
         <div class="image-wrapper">
+
           <img class="project-image"
-               src="{{ '/assets/images/submersible-xrp.jpeg' | relative_url }}"
+               src="{{ '/assets/images/submersible_xrp.jpeg' | relative_url }}"
                alt="Submersible XRP underwater robot">
+
         </div>
 
         <div class="project-info">
+
           <div>
             <h3>Submersible XRP</h3>
             <p>Underwater Robotics · CAD · Prototyping</p>
           </div>
+
           <span class="project-year">2026</span>
+
         </div>
 
       </a>
 
-      <!-- SMARTSWEEP -->
+
+      <!-- 3. SMARTSWEEP -->
 
       <a class="project-card"
          href="{{ '/projects/smartsweep/' | relative_url }}">
 
         <div class="image-wrapper">
+
           <img class="project-image"
                src="{{ '/assets/images/smart_sweep.jpg' | relative_url }}"
                alt="SmartSweep mechanical prototype">
+
         </div>
 
         <div class="project-info">
+
           <div>
             <h3>SmartSweep</h3>
             <p>Product Development · Mechanical Design</p>
           </div>
+
           <span class="project-year">2026</span>
+
         </div>
 
       </a>
 
-      <!-- AR KART -->
+
+      <!-- 4. AR KART -->
 
       <a class="project-card"
          href="{{ '/projects/ar-kart/' | relative_url }}">
 
         <div class="image-wrapper">
+
           <img class="project-image"
                src="{{ '/assets/images/ar-kart.png' | relative_url }}"
                alt="AR Kart robotic vehicle">
+
         </div>
 
         <div class="project-info">
+
           <div>
             <h3>AR Kart</h3>
             <p>Steering Geometry · CAD · 3D Printing</p>
           </div>
+
           <span class="project-year">2025</span>
+
         </div>
 
       </a>
@@ -473,7 +528,10 @@ footer.site-footer {
 
   </section>
 
-  <!-- ===== FOOTER ===== -->
+
+  <!-- =====================================
+       FOOTER
+       ===================================== -->
 
   <footer class="portfolio-footer">
 
@@ -481,9 +539,13 @@ footer.site-footer {
 
     <div class="footer-links">
 
-      <a href="#projects">Projects</a>
+      <a href="{{ '/projects/' | relative_url }}">
+        Projects
+      </a>
 
-      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="#top">
+        Home
+      </a>
 
     </div>
 
