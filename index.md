@@ -381,7 +381,7 @@ main .wrapper,
           </a>
 
           <a
-            href="{{ '/assets/Resume.pdf' | relative_url }}"
+            href="{{{ "/assets/Resume.pdf" | relative_url }}}"
             class="hero-button"
             target="_blank"
             rel="noopener noreferrer">
