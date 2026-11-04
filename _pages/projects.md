@@ -187,7 +187,7 @@ main .wrapper,
   <section class="projects-intro">
 
 
-    <h2>Click project photos below to learn more!</h2>
+    <h1>Click project photos below to learn more!</h1>
 
     <p>
       Each project highlights the engineering decisions,
