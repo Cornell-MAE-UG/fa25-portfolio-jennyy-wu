@@ -19,8 +19,8 @@ main .wrapper,
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1650px;
-  width: calc(100% - 40px);
+  max-width: 1400px;
+  width: calc(100% - 60px);
   margin: 0 auto;
   padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
