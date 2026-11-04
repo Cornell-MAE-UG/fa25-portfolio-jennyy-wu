@@ -292,7 +292,7 @@ main .wrapper,
 
       <div class="project-image-wrap">
         <img
-          src="{{ '/assets/images/lifting-device-design.png' | relative_url }}"
+          src="{{ '/assets/images/fluids.jpg' | relative_url }}"
           alt="Fluid Mechanics">
       </div>
 
