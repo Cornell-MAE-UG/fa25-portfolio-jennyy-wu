@@ -29,7 +29,7 @@ main .wrapper,
 
 .homepage {
   width: 85%;
-  max-width: 1250px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
