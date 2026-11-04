@@ -1,6 +1,7 @@
 ---
 layout: project
 title: ISS Mimic
+permalink: /projects/iss-mimic/
 description: Cornell Cup Robotics — Mechanical Design and Prototyping
 technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, Robotics]
 image: /assets/images/iss-mimic.jpg
