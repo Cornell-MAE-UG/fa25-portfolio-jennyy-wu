@@ -4,10 +4,11 @@ title: Home
 ---
 
 <style>
-/* HOMEPAGE DESIGN */
+/* ===== HOMEPAGE ===== */
 
 .homepage {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 30px;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -23,38 +24,49 @@ title: Home
   text-decoration: none;
 }
 
+/* ===== HERO ===== */
+
 .homepage .hero {
-  padding: 110px 0 95px;
+  padding: 75px 0 100px;
+}
+
+.homepage .hero-layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  align-items: center;
+  gap: 65px;
 }
 
 .homepage .eyebrow {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #777;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
-.homepage h1 {
-  font-size: clamp(46px, 7vw, 92px);
+.homepage .hero h1 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(38px, 4.5vw, 62px);
   font-weight: 600;
-  letter-spacing: -0.065em;
-  line-height: 1.05;
-  margin: 0 0 30px;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin: 0 0 25px;
 }
 
 .homepage .hero-description {
-  max-width: 650px;
-  font-size: 20px;
-  line-height: 1.65;
+  max-width: 570px;
+  font-size: 18px;
+  line-height: 1.7;
   color: #666;
+  margin: 0;
 }
 
 .homepage .hero-links {
   display: flex;
   gap: 25px;
-  margin-top: 35px;
+  margin-top: 32px;
   flex-wrap: wrap;
 }
 
@@ -70,7 +82,17 @@ title: Home
   opacity: 0.5;
 }
 
-/* SECTION HEADERS */
+/* PROFILE PHOTO */
+
+.homepage .hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+/* ===== SECTION HEADERS ===== */
 
 .homepage .section-heading {
   display: flex;
@@ -92,7 +114,7 @@ title: Home
   color: #888;
 }
 
-/* PROJECT GRID */
+/* ===== PROJECT GRID ===== */
 
 .homepage .project-grid {
   display: grid;
@@ -104,19 +126,18 @@ title: Home
   display: block;
 }
 
+.homepage .image-wrapper {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f1f1f1;
+}
+
 .homepage .project-image {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
-  border-radius: 8px;
-  background: #f1f1f1;
   display: block;
   transition: transform 0.35s ease;
-}
-
-.homepage .image-wrapper {
-  overflow: hidden;
-  border-radius: 8px;
 }
 
 .homepage .project-card:hover .project-image {
@@ -126,8 +147,8 @@ title: Home
 .homepage .project-info {
   display: flex;
   justify-content: space-between;
-  gap: 15px;
   align-items: flex-start;
+  gap: 15px;
   padding-top: 17px;
 }
 
@@ -151,7 +172,7 @@ title: Home
   white-space: nowrap;
 }
 
-/* ABOUT SECTION */
+/* ===== ABOUT ===== */
 
 .homepage .about {
   margin-top: 130px;
@@ -165,9 +186,10 @@ title: Home
 }
 
 .homepage .about-content h2 {
-  font-size: 42px;
-  letter-spacing: -2px;
-  line-height: 1.15;
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
   margin: 0;
 }
 
@@ -181,7 +203,7 @@ title: Home
   margin: 0 0 22px;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 .homepage .portfolio-footer {
   border-top: 1px solid #ddd;
@@ -203,19 +225,33 @@ title: Home
   color: #111;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
+
   .homepage {
     padding: 0 20px;
   }
 
   .homepage .hero {
-    padding: 75px 0;
+    padding: 55px 0 75px;
+  }
+
+  .homepage .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .homepage .hero h1 {
+    font-size: 42px;
   }
 
   .homepage .hero-description {
     font-size: 17px;
+  }
+
+  .homepage .hero-photo img {
+    max-width: 360px;
   }
 
   .homepage .project-grid {
@@ -233,7 +269,7 @@ title: Home
   }
 
   .homepage .about-content h2 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .homepage .about-text {
@@ -244,35 +280,48 @@ title: Home
 
 <div class="homepage">
 
-  <!-- HERO -->
+  <!-- ===== HERO ===== -->
 
   <section class="hero">
 
-    <div class="eyebrow">
-      MECHANICAL ENGINEERING · CORNELL UNIVERSITY
-    </div>
+    <div class="hero-layout">
 
-    <h1>
-      Hi, I'm Jenny.<br>
-      I like making<br>
-      things work.
-    </h1>
+      <div class="hero-content">
 
-    <p class="hero-description">
-      I'm a mechanical engineering student at Cornell
-      University with a passion for robotics, product
-      design, and hands-on problem solving.
-      I love turning ideas into real, working things.
-    </p>
+        <div class="eyebrow">
+          MECHANICAL ENGINEERING · CORNELL UNIVERSITY
+        </div>
 
-    <div class="hero-links">
-      <a href="#projects">Explore my work ↗</a>
-      <a href="#about">More about me ↗</a>
+        <h1>Hi, I'm Jenny.</h1>
+
+        <p class="hero-description">
+          I'm a mechanical engineering student at Cornell
+          University with a passion for robotics, product
+          design, and hands-on problem solving.
+          I love turning ideas into real, working things.
+        </p>
+
+        <div class="hero-links">
+          <a href="#projects">Explore my work ↗</a>
+          <a href="#about">More about me ↗</a>
+        </div>
+
+      </div>
+
+      <!-- PROFILE PHOTO -->
+
+      <div class="hero-photo">
+        <img
+          src="{{ '/assets/images/profile.jpg' | relative_url }}"
+          alt="Jenny Wu"
+        >
+      </div>
+
     </div>
 
   </section>
 
-  <!-- PROJECTS -->
+  <!-- ===== PROJECTS ===== -->
 
   <section id="projects">
 
@@ -297,9 +346,7 @@ title: Home
         <div class="project-info">
           <div>
             <h3>ISS Mimic</h3>
-            <p>
-              Mechanical Design · Gear Systems · Robotics
-            </p>
+            <p>Gear Design · Mechanical Systems · Robotics</p>
           </div>
           <span class="project-year">2026</span>
         </div>
@@ -320,9 +367,7 @@ title: Home
         <div class="project-info">
           <div>
             <h3>Submersible XRP</h3>
-            <p>
-              Underwater Robotics · CAD · Prototyping
-            </p>
+            <p>Underwater Robotics · CAD · Prototyping</p>
           </div>
           <span class="project-year">2026</span>
         </div>
@@ -343,9 +388,7 @@ title: Home
         <div class="project-info">
           <div>
             <h3>SmartSweep</h3>
-            <p>
-              Product Development · Mechanical Design
-            </p>
+            <p>Product Development · Mechanical Design</p>
           </div>
           <span class="project-year">2026</span>
         </div>
@@ -359,16 +402,14 @@ title: Home
 
         <div class="image-wrapper">
           <img class="project-image"
-               src="{{ '/assets/images/ar-kart.jpg' | relative_url }}"
+               src="{{ '/assets/images/ar-kart.png' | relative_url }}"
                alt="AR Kart RC car prototype">
         </div>
 
         <div class="project-info">
           <div>
             <h3>AR Kart</h3>
-            <p>
-              Steering Geometry · CAD · 3D Printing
-            </p>
+            <p>Steering Geometry · CAD · 3D Printing</p>
           </div>
           <span class="project-year">2025</span>
         </div>
@@ -379,7 +420,7 @@ title: Home
 
   </section>
 
-  <!-- ABOUT -->
+  <!-- ===== ABOUT ===== -->
 
   <section id="about" class="about">
 
@@ -423,22 +464,21 @@ title: Home
 
   </section>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
 
   <footer class="portfolio-footer">
 
     <span>© 2026 Jenny Wu</span>
 
     <div class="footer-links">
-      <a href="https://www.linkedin.com/in/jenny-wu-44b5912a8/" target="_blank" rel="noopener noreferrer">
-        LinkedIn
-      </a>
-      <a href="{{ '/assets/Resume.pdf' | relative_url }}" target="_blank">
-        Resume
-      </a>
-      <a href="jw2774@cornell.edu">
-        Email
-      </a>
+      <a href="https://www.linkedin.com/"
+         target="_blank"
+         rel="noopener noreferrer">LinkedIn</a>
+
+      <a href="{{ '/assets/Jenny_Wu_Resume.pdf' | relative_url }}"
+         target="_blank">Resume</a>
+
+      <a href="mailto:YOUR_EMAIL@example.com">Email</a>
     </div>
 
   </footer>
