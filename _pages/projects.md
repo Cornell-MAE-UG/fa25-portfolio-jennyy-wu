@@ -186,11 +186,8 @@ main .wrapper,
 
   <section class="projects-intro">
 
-    <div class="projects-label">
-      MECHANICAL ENGINEERING · SELECTED PROJECTS
-    </div>
 
-    <h1>Explore My Work</h1>
+    <h2>Click project photos below to learn more!</h2>
 
     <p>
       Each project highlights the engineering decisions,
