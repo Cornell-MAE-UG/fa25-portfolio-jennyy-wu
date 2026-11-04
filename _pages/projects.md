@@ -215,10 +215,6 @@ permalink: /projects/
 
   <section class="projects-intro">
 
-    <div class="projects-label">
-      MECHANICAL ENGINEERING · SELECTED PROJECTS
-    </div>
-
     <h1>Explore My Work!</h1>
 
     <p>
