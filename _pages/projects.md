@@ -19,7 +19,7 @@ main .wrapper,
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1200px;
+  max-width: 1000px;
   width: calc(100% - 60px);
   margin: 0 auto;
   padding: 75px 0 90px;
