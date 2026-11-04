@@ -8,9 +8,10 @@ permalink: /projects/
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1450px;
-  width: calc(100% - 48px);
-  margin: 0 auto;
+  max-width: 1500px;
+  width: calc(100vw - 100px);
+  margin-left: 50%;
+  transform: translateX(-50%);
   padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
