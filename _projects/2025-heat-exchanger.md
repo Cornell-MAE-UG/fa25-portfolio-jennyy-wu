@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Heat Exchanger System Analysis
+permalink: /projects/heat-exchanger/
 description: Thermodynamics Coursework Project
 technologies: [Thermodynamics, Energy Balance, Heat Transfer]
 image: /assets/images/heat-exchanger.jpg

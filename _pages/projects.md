@@ -8,7 +8,7 @@ permalink: /projects/
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1100px;
+  max-width: 1500px;
   width: calc(100% - 48px);
   margin: 0 auto;
   padding: 75px 0 90px;
@@ -280,7 +280,7 @@ permalink: /projects/
     <!-- 5. FLUID MECHANICS -->
 
     <a class="project-card"
-       href="{{ '/projects/fluid-mechanical/' | relative_url }}">
+       href="{{ '/projects/fluid-mechanical-dissection/' | relative_url }}">
 
       <div class="project-image-wrap">
         <img
