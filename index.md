@@ -63,15 +63,6 @@ main .wrapper,
   min-width: 0;
 }
 
-.homepage .eyebrow {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #777;
-  margin-bottom: 35px;
-}
-
 .homepage .hero h1 {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(40px, 4.5vw, 68px);
@@ -90,11 +81,11 @@ main .wrapper,
   margin: 0;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== LINKEDIN & RESUME BUTTONS ===== */
 
 .homepage .hero-buttons {
   display: flex;
-  gap: 15px;
+  gap: 16px;
   flex-wrap: wrap;
   margin-top: 35px;
 }
@@ -103,18 +94,21 @@ main .wrapper,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
-  padding: 15px 25px;
-  border-radius: 12px;
+  min-width: 135px;
+  padding: 17px 28px;
+  border-radius: 14px;
   background: #252525;
   color: #fff !important;
-  font-size: 15px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
   font-weight: 600;
-  transition: background 0.2s, transform 0.2s;
+  line-height: 1.2;
+  text-align: center;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .homepage .hero-button:hover {
-  background: #555;
+  background: #444;
   transform: translateY(-2px);
 }
 
@@ -137,7 +131,7 @@ main .wrapper,
   box-shadow: none;
 }
 
-/* ===== SECTION HEADING ===== */
+/* ===== SELECTED WORK HEADING ===== */
 
 .homepage .section-heading {
   display: flex;
@@ -276,6 +270,7 @@ main .wrapper,
 
 .homepage .footer-links {
   display: flex;
+  align-items: center;
   gap: 35px;
 }
 
@@ -286,7 +281,6 @@ main .wrapper,
 /* ===== TABLET ===== */
 
 @media (max-width: 1000px) {
-
   .homepage .hero-layout {
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
     gap: 35px;
@@ -305,7 +299,6 @@ main .wrapper,
 /* ===== MOBILE ===== */
 
 @media (max-width: 650px) {
-
   .homepage {
     width: 90%;
   }
@@ -332,6 +325,12 @@ main .wrapper,
     max-width: 360px;
   }
 
+  .homepage .hero-button {
+    min-width: 120px;
+    font-size: 16px;
+    padding: 15px 24px;
+  }
+
   .homepage .project-grid {
     grid-template-columns: 1fr;
     gap: 40px;
@@ -344,14 +343,18 @@ main .wrapper,
   .homepage .portfolio-footer {
     margin-top: 70px;
   }
+
+  .homepage .footer-links {
+    gap: 22px;
+  }
 }
 </style>
 
 <div class="homepage" id="home">
 
-  <!-- ===== HERO ===== -->
+  <!-- ===== ABOUT / HERO ===== -->
 
-  <section class="hero">
+  <section class="hero" id="about">
 
     <div class="hero-layout">
 
@@ -428,14 +431,13 @@ main .wrapper,
         <div class="project-info">
           <div>
             <h3>ISS Mimic</h3>
-            <p>Gear Design · Mechanical Systems · Robotics</p>
           </div>
           <span class="project-year">2026</span>
         </div>
 
       </a>
 
-      <!-- 2. SUBMERSIBLE-->
+      <!-- 2. SUBMERSIBLE XRP -->
 
       <a class="project-card"
          href="{{ '/projects/submersible-xrp/' | relative_url }}">
@@ -450,7 +452,6 @@ main .wrapper,
         <div class="project-info">
           <div>
             <h3>Submersible</h3>
-            <p>Underwater Robotics · CAD · Prototyping</p>
           </div>
           <span class="project-year">2026</span>
         </div>
@@ -472,7 +473,6 @@ main .wrapper,
         <div class="project-info">
           <div>
             <h3>SmartSweep</h3>
-            <p>Product Development · Mechanical Design</p>
           </div>
           <span class="project-year">2026</span>
         </div>
@@ -494,7 +494,6 @@ main .wrapper,
         <div class="project-info">
           <div>
             <h3>AR Kart</h3>
-            <p>Steering Geometry · CAD · 3D Printing</p>
           </div>
           <span class="project-year">2025</span>
         </div>
@@ -513,12 +512,16 @@ main .wrapper,
 
     <div class="footer-links">
 
+      <a href="#about">
+        About
+      </a>
+
       <a href="{{ '/projects/' | relative_url }}">
         Projects
       </a>
 
-      <a href="#home">
-        Home
+      <a href="{{ '/cv/' | relative_url }}">
+        CV
       </a>
 
     </div>
