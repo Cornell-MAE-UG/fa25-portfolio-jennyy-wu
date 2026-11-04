@@ -1,3 +1,4 @@
+
 ---
 layout: default
 title: Home
@@ -5,20 +6,37 @@ title: Home
 
 <style>
 
-/* ===== FULL WIDTH LAYOUT ===== */
+/* =========================================
+   1. OVERRIDE JEKYLL THEME WIDTH
+   ========================================= */
 
-.page-content .wrapper,
-.page-content .container,
-main .wrapper {
-  max-width: 1500px !important;
-  width: 96% !important;
+html,
+body {
+  width: 100%;
+  max-width: none !important;
 }
 
+.page-content,
+.page-content > .wrapper,
+.page-content > .container,
+main,
+main > .wrapper,
+main > .container {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   2. HOMEPAGE CONTAINER
+   ========================================= */
+
 .homepage {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 38px;
+  width: min(96vw, 1600px) !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  padding: 0 35px !important;
+  box-sizing: border-box;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #202020;
 }
@@ -32,28 +50,31 @@ main .wrapper {
   text-decoration: none;
 }
 
-/* ===== HERO SECTION ===== */
+/* =========================================
+   3. HERO SECTION
+   ========================================= */
 
 .homepage .hero {
   padding: 85px 0 75px;
 }
 
 .homepage .hero-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 300px;
-  align-items: center;
-  gap: 75px;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 300px !important;
+  align-items: center !important;
+  gap: 70px !important;
+  width: 100% !important;
 }
 
 .homepage .hero-content {
-  min-width: 0;
+  width: 100% !important;
+  min-width: 0 !important;
 }
 
 .homepage .eyebrow {
-  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 13px;
   font-weight: 700;
-  letter-spacing: 2.3px;
+  letter-spacing: 2.2px;
   text-transform: uppercase;
   color: #777;
   margin-bottom: 32px;
@@ -61,18 +82,19 @@ main .wrapper {
 
 .homepage .hero h1 {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(42px, 5vw, 72px);
+  font-size: clamp(38px, 5vw, 70px) !important;
   font-weight: 700;
   letter-spacing: -0.055em;
   line-height: 1.1;
-  white-space: nowrap;
-  margin: 0 0 32px;
+  white-space: nowrap !important;
+  margin: 0 0 30px;
 }
 
 .homepage .hero-description {
-  max-width: 850px;
-  font-size: 20px;
-  line-height: 1.75;
+  width: 100% !important;
+  max-width: 850px !important;
+  font-size: 20px !important;
+  line-height: 1.75 !important;
   color: #666;
   margin: 0;
 }
@@ -85,19 +107,20 @@ main .wrapper {
 }
 
 .homepage .hero-links a {
-  display: inline-block;
   font-size: 16px;
   font-weight: 600;
   padding-bottom: 6px;
   border-bottom: 1px solid #222;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s;
 }
 
 .homepage .hero-links a:hover {
   opacity: 0.55;
 }
 
-/* ===== PROFILE PHOTO ===== */
+/* =========================================
+   4. PROFILE PHOTO
+   ========================================= */
 
 .homepage .hero-photo {
   width: 100%;
@@ -111,7 +134,9 @@ main .wrapper {
   display: block;
 }
 
-/* ===== SECTION HEADING ===== */
+/* =========================================
+   5. PROJECTS SECTION
+   ========================================= */
 
 .homepage .section-heading {
   display: flex;
@@ -134,12 +159,13 @@ main .wrapper {
   color: #888;
 }
 
-/* ===== FOUR PROJECTS IN ONE ROW ===== */
+/* FOUR PROJECTS ACROSS */
 
 .homepage .project-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
+  width: 100% !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 28px !important;
 }
 
 .homepage .project-card {
@@ -197,7 +223,9 @@ main .wrapper {
   padding-top: 4px;
 }
 
-/* ===== FOOTER ===== */
+/* =========================================
+   6. FOOTER
+   ========================================= */
 
 .homepage .portfolio-footer {
   margin-top: 100px;
@@ -220,32 +248,32 @@ main .wrapper {
   color: #111;
 }
 
-/* ===== TABLET ===== */
+/* =========================================
+   7. RESPONSIVE DESIGN
+   ========================================= */
 
 @media (max-width: 1050px) {
 
   .homepage .hero-layout {
-    grid-template-columns: minmax(0, 1fr) 250px;
-    gap: 35px;
+    grid-template-columns: minmax(0, 1fr) 240px !important;
+    gap: 30px !important;
   }
 
   .homepage .hero h1 {
-    font-size: clamp(36px, 5vw, 55px);
+    font-size: clamp(36px, 5vw, 55px) !important;
   }
 
   .homepage .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 40px 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
 
 }
 
-/* ===== MOBILE ===== */
-
 @media (max-width: 650px) {
 
   .homepage {
-    padding: 0 15px;
+    width: 100% !important;
+    padding: 0 20px !important;
   }
 
   .homepage .hero {
@@ -253,44 +281,31 @@ main .wrapper {
   }
 
   .homepage .hero-layout {
-    grid-template-columns: 1fr;
-    gap: 35px;
+    grid-template-columns: 1fr !important;
+    gap: 35px !important;
   }
 
   .homepage .hero h1 {
-    font-size: clamp(34px, 9vw, 48px);
-    white-space: normal;
-    margin-bottom: 22px;
+    font-size: 38px !important;
+    white-space: normal !important;
+  }
+
+  .homepage .hero-description {
+    font-size: 17px !important;
   }
 
   .homepage .eyebrow {
     font-size: 11px;
     letter-spacing: 1.4px;
-    margin-bottom: 22px;
-  }
-
-  .homepage .hero-description {
-    font-size: 17px;
-    line-height: 1.7;
-  }
-
-  .homepage .hero-links {
-    gap: 22px;
   }
 
   .homepage .hero-photo img {
-    width: 100%;
     max-width: 320px;
-    aspect-ratio: 4 / 5;
   }
 
   .homepage .project-grid {
-    grid-template-columns: 1fr;
-    gap: 38px;
-  }
-
-  .homepage .project-info h3 {
-    font-size: 23px;
+    grid-template-columns: 1fr !important;
+    gap: 38px !important;
   }
 
   .homepage .portfolio-footer {
@@ -301,9 +316,12 @@ main .wrapper {
 
 </style>
 
+
 <div class="homepage">
 
-  <!-- ===== INTRODUCTION ===== -->
+  <!-- =====================================
+       HERO / INTRODUCTION
+       ===================================== -->
 
   <section class="hero">
 
@@ -330,7 +348,7 @@ main .wrapper {
             Explore my work ↗
           </a>
 
-          <a href="#about">
+          <a href="{{ '/about/' | relative_url }}">
             More about me ↗
           </a>
 
@@ -338,7 +356,7 @@ main .wrapper {
 
       </div>
 
-      <!-- PROFILE PICTURE -->
+      <!-- PROFILE PHOTO -->
 
       <div class="hero-photo">
 
@@ -354,7 +372,9 @@ main .wrapper {
   </section>
 
 
-  <!-- ===== SELECTED WORK ===== -->
+  <!-- =====================================
+       SELECTED WORK
+       ===================================== -->
 
   <section id="projects">
 
@@ -370,7 +390,7 @@ main .wrapper {
     <div class="project-grid">
 
 
-      <!-- ===== 1. ISS MIMIC ===== -->
+      <!-- 1. ISS MIMIC -->
 
       <a class="project-card"
          href="{{ '/projects/iss-mimic/' | relative_url }}">
@@ -387,9 +407,7 @@ main .wrapper {
 
           <div>
             <h3>ISS Mimic</h3>
-            <p>
-              Gear Design · Mechanical Systems · Robotics
-            </p>
+            <p>Gear Design · Mechanical Systems · Robotics</p>
           </div>
 
           <span class="project-year">2026</span>
@@ -399,7 +417,7 @@ main .wrapper {
       </a>
 
 
-      <!-- ===== 2. SUBMERSIBLE XRP ===== -->
+      <!-- 2. SUBMERSIBLE XRP -->
 
       <a class="project-card"
          href="{{ '/projects/submersible-xrp/' | relative_url }}">
@@ -407,7 +425,7 @@ main .wrapper {
         <div class="image-wrapper">
 
           <img class="project-image"
-               src="{{ '/assets/images/submersible-xrp.jpeg' | relative_url }}"
+               src="{{ '/assets/images/submersible_xrp.jpeg' | relative_url }}"
                alt="Submersible XRP underwater robot">
 
         </div>
@@ -416,9 +434,7 @@ main .wrapper {
 
           <div>
             <h3>Submersible XRP</h3>
-            <p>
-              Underwater Robotics · CAD · Prototyping
-            </p>
+            <p>Underwater Robotics · CAD · Prototyping</p>
           </div>
 
           <span class="project-year">2026</span>
@@ -428,7 +444,7 @@ main .wrapper {
       </a>
 
 
-      <!-- ===== 3. SMARTSWEEP ===== -->
+      <!-- 3. SMARTSWEEP -->
 
       <a class="project-card"
          href="{{ '/projects/smartsweep/' | relative_url }}">
@@ -445,9 +461,7 @@ main .wrapper {
 
           <div>
             <h3>SmartSweep</h3>
-            <p>
-              Product Development · Mechanical Design
-            </p>
+            <p>Product Development · Mechanical Design</p>
           </div>
 
           <span class="project-year">2026</span>
@@ -457,7 +471,7 @@ main .wrapper {
       </a>
 
 
-      <!-- ===== 4. AR KART ===== -->
+      <!-- 4. AR KART -->
 
       <a class="project-card"
          href="{{ '/projects/ar-kart/' | relative_url }}">
@@ -474,9 +488,7 @@ main .wrapper {
 
           <div>
             <h3>AR Kart</h3>
-            <p>
-              Steering Geometry · CAD · 3D Printing
-            </p>
+            <p>Steering Geometry · CAD · 3D Printing</p>
           </div>
 
           <span class="project-year">2025</span>
@@ -491,7 +503,9 @@ main .wrapper {
   </section>
 
 
-  <!-- ===== FOOTER ===== -->
+  <!-- =====================================
+       FOOTER
+       ===================================== -->
 
   <footer class="portfolio-footer">
 
