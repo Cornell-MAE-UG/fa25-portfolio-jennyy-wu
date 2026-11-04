@@ -5,22 +5,11 @@ permalink: /projects/
 ---
 
 <style>
-/* ===== OVERRIDE DEFAULT LAYOUT WIDTH ===== */
-
-main,
-main .wrapper,
-.page-content,
-.page-content .wrapper,
-.container {
-  max-width: none !important;
-  width: 100% !important;
-}
-
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 900px;
-  width: calc(100% - 60px);
+  max-width: 1250px;
+  width: calc(100% - 48px);
   margin: 0 auto;
   padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -39,7 +28,7 @@ main .wrapper,
 /* ===== INTRODUCTION ===== */
 
 .projects-intro {
-  margin-bottom: 55px;
+  margin-bottom: 42px;
 }
 
 .projects-label {
@@ -52,11 +41,12 @@ main .wrapper,
 }
 
 .projects-intro h1 {
-  font-size: clamp(44px, 5vw, 68px);
-  font-weight: 600;
-  letter-spacing: -0.055em;
-  line-height: 1.1;
-  margin: 0 0 22px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 4vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+  margin: 0 0 20px;
 }
 
 .projects-intro p {
@@ -81,7 +71,7 @@ main .wrapper,
   min-width: 0;
 }
 
-/* ===== IMAGES ===== */
+/* ===== PROJECT IMAGES ===== */
 
 .project-image-wrap {
   width: 100%;
@@ -137,25 +127,43 @@ main .wrapper,
 
 /* ===== FOOTER ===== */
 
-.projects-footer {
+.projects-page .projects-footer {
   margin-top: 90px;
-  padding-top: 28px;
+  padding: 28px 0 0;
   border-top: 1px solid #ddd;
+  border-bottom: none;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 14px;
   color: #888;
 }
 
-.projects-footer a:hover {
+.projects-footer-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.projects-page .projects-footer a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.projects-page .projects-footer a:hover {
   color: #222;
 }
 
 /* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
+
   .projects-page {
     width: calc(100% - 36px);
     padding: 50px 0 70px;
@@ -170,6 +178,10 @@ main .wrapper,
     margin-bottom: 40px;
   }
 
+  .projects-intro h1 {
+    font-size: 38px;
+  }
+
   .projects-intro p {
     font-size: 16px;
   }
@@ -177,27 +189,39 @@ main .wrapper,
   .project-heading h2 {
     font-size: 25px;
   }
+
+  .projects-page .projects-footer {
+    font-size: 12px;
+    gap: 12px;
+  }
+
+  .projects-footer-links {
+    gap: 18px;
+  }
 }
 </style>
 
 <div class="projects-page" id="top">
 
-  <!-- INTRODUCTION -->
+  <!-- ===== INTRODUCTION ===== -->
 
   <section class="projects-intro">
 
+    <div class="projects-label">
+      MECHANICAL ENGINEERING · SELECTED PROJECTS
+    </div>
 
-    <h1>Explore My Work!</h1>
+    <h1>Explore My Work.</h1>
 
     <p>
-      Each project highlights the engineering decisions,
-      technical challenges, and lessons learned throughout
-      the design process.
+      A collection of my engineering projects, featuring CAD designs,
+      mechanical systems, and hands-on prototypes from concept
+      to final assembly.
     </p>
 
   </section>
 
-  <!-- ALL SIX PROJECTS -->
+  <!-- ===== ALL SIX PROJECTS ===== -->
 
   <div class="projects-grid">
 
@@ -220,6 +244,7 @@ main .wrapper,
       <p class="project-description">
         Gear Design · Mechanical Systems · Robotics
       </p>
+
     </a>
 
     <!-- 2. SUBMERSIBLE XRP -->
@@ -241,6 +266,7 @@ main .wrapper,
       <p class="project-description">
         Underwater Robotics · CAD · Prototyping
       </p>
+
     </a>
 
     <!-- 3. SMARTSWEEP -->
@@ -262,6 +288,7 @@ main .wrapper,
       <p class="project-description">
         Product Development · Mechanical Design
       </p>
+
     </a>
 
     <!-- 4. AR KART -->
@@ -277,33 +304,35 @@ main .wrapper,
 
       <div class="project-heading">
         <h2>AR Kart</h2>
-        <span class="project-year">2026</span>
+        <span class="project-year">2025</span>
       </div>
 
       <p class="project-description">
         Steering Geometry · CAD · 3D Printing
       </p>
+
     </a>
 
-    <!-- 5. FLUID MECHANICS -->
+    <!-- 5. FLUID-MECHANICAL DISSECTION -->
 
     <a class="project-card"
-       href="{{ '/projects/fluid-mechanical-dissection/' | relative_url }}">
+       href="{{ '/projects/fluid-mechanical/' | relative_url }}">
 
       <div class="project-image-wrap">
         <img
-          src="{{ '/assets/images/fluids.jpg' | relative_url }}"
-          alt="Fluid Mechanics">
+          src="{{ '/assets/images/lifting-device-design.png' | relative_url }}"
+          alt="Fluid-Mechanical Dissection">
       </div>
 
       <div class="project-heading">
-        <h2>Fluid Mechanics</h2>
+        <h2>Fluid-Mechanical Dissection</h2>
         <span class="project-year">2026</span>
       </div>
 
       <p class="project-description">
         Fluid Systems · Engineering Analysis
       </p>
+
     </a>
 
     <!-- 6. HEAT EXCHANGER -->
@@ -325,15 +354,35 @@ main .wrapper,
       <p class="project-description">
         Thermal Systems · Heat Transfer · Design
       </p>
+
     </a>
 
   </div>
 
-  <!-- FOOTER -->
+  <!-- ===== FOOTER ===== -->
 
   <footer class="projects-footer">
+
     <span>© 2026 Jenny Wu</span>
-    <a href="#top">Back to top ↑</a>
+
+    <div class="projects-footer-links">
+
+      <a href="{{ '/' | relative_url }}">
+        About
+      </a>
+
+      <a href="#top">
+        Projects
+      </a>
+
+      <a href="{{ '/assets/images/Resume.pdf' | relative_url }}"
+         target="_blank"
+         rel="noopener noreferrer">
+        CV
+      </a>
+
+    </div>
+
   </footer>
 
 </div>

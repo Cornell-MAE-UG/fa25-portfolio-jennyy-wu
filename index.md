@@ -472,7 +472,7 @@ main .wrapper,
       <!-- 3. SMARTSWEEP -->
 
       <a class="project-card"
-         href="{{ '/projects/smartsweep/' | relative_url }}">
+         href="{{ '/projects/smart-sweep/' | relative_url }}">
 
         <div class="image-wrapper">
           <img
