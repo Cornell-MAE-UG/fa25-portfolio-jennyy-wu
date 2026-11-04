@@ -8,8 +8,8 @@ permalink: /projects/
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1500px;
-  width: calc(100vw - 100px);
+  max-width: 1350px;
+  width: calc(100vw - 140px);
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 75px 0 90px;
