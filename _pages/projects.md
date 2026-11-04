@@ -5,18 +5,15 @@ permalink: /projects/
 ---
 
 <style>
-/* FULL-WIDTH PAGE OVERRIDE */
-main, .page-content, .wrapper, .container {
-  max-width: none !important;
-}
+/* ===== PAGE WIDTH ===== */
 
 .projects-page {
-  max-width: 1180px;
+  max-width: 1000px;
   width: calc(100% - 60px);
   margin: 0 auto;
-  padding: 85px 0 100px;
-  color: #222;
+  padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
 }
 
 .projects-page * {
@@ -28,9 +25,10 @@ main, .page-content, .wrapper, .container {
   text-decoration: none;
 }
 
-/* INTRO */
+/* ===== INTRODUCTION ===== */
+
 .projects-intro {
-  margin-bottom: 65px;
+  margin-bottom: 55px;
 }
 
 .projects-label {
@@ -39,31 +37,32 @@ main, .page-content, .wrapper, .container {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #888;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .projects-intro h1 {
-  font-size: clamp(46px, 6vw, 78px);
+  font-size: clamp(44px, 5vw, 68px);
   font-weight: 600;
   letter-spacing: -0.055em;
-  line-height: 1.05;
-  margin: 0 0 24px;
+  line-height: 1.1;
+  margin: 0 0 22px;
 }
 
 .projects-intro p {
-  max-width: 650px;
-  font-size: 19px;
+  max-width: 640px;
+  font-size: 18px;
   line-height: 1.7;
   color: #666;
   margin: 0;
 }
 
-/* GRID */
+/* ===== PROJECT GRID ===== */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 35px;
-  row-gap: 75px;
+  column-gap: 30px;
+  row-gap: 65px;
 }
 
 .project-card {
@@ -71,13 +70,14 @@ main, .page-content, .wrapper, .container {
   min-width: 0;
 }
 
-/* LARGE PHOTOS */
+/* ===== IMAGES ===== */
+
 .project-image-wrap {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 12px;
-  background: #eeeeee;
+  background: #f0f0f0;
 }
 
 .project-image-wrap img {
@@ -89,47 +89,50 @@ main, .page-content, .wrapper, .container {
 }
 
 .project-card:hover img {
-  transform: scale(1.04);
+  transform: scale(1.035);
 }
 
-/* PROJECT TEXT */
+/* ===== PROJECT TITLES ===== */
+
 .project-heading {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 12px;
+  margin-top: 17px;
 }
 
 .project-heading h2 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(24px, 2.5vw, 32px);
+  font-size: 27px;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -0.8px;
   line-height: 1.2;
   margin: 0;
 }
 
 .project-year {
+  font-size: 14px;
   color: #999;
-  font-size: 15px;
   white-space: nowrap;
 }
 
 .project-description {
-  font-size: 16px;
+  font-size: 15px;
   color: #777;
   line-height: 1.6;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
+
 .projects-footer {
-  margin-top: 100px;
-  padding-top: 30px;
+  margin-top: 90px;
+  padding-top: 28px;
   border-top: 1px solid #ddd;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
   font-size: 14px;
   color: #888;
@@ -139,37 +142,39 @@ main, .page-content, .wrapper, .container {
   color: #222;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
+
 @media (max-width: 700px) {
   .projects-page {
     width: calc(100% - 36px);
-    padding: 55px 0 70px;
+    padding: 50px 0 70px;
   }
 
   .projects-grid {
     grid-template-columns: 1fr;
-    row-gap: 48px;
+    row-gap: 45px;
   }
 
   .projects-intro {
-    margin-bottom: 45px;
+    margin-bottom: 40px;
   }
 
   .projects-intro p {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .project-heading h2 {
-    font-size: 26px;
+    font-size: 25px;
   }
 }
 </style>
 
 <div class="projects-page" id="top">
 
-  <!-- INTRODUCTION -->
+  <!-- INTRO -->
 
   <section class="projects-intro">
+
     <div class="projects-label">
       MECHANICAL ENGINEERING · SELECTED PROJECTS
     </div>
@@ -183,19 +188,21 @@ main, .page-content, .wrapper, .container {
       Click on a project to see the design process,
       challenges, and engineering behind it.
     </p>
+
   </section>
 
-  <!-- SIX PROJECTS -->
+  <!-- PROJECT GRID -->
 
   <div class="projects-grid">
 
     <!-- 1. ISS MIMIC -->
+
     <a class="project-card"
        href="{{ '/projects/iss-mimic/' | relative_url }}">
 
       <div class="project-image-wrap">
         <img
-          src="{{ '/assets/images/iss-mimic.jpeg' | relative_url }}"
+          src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
           alt="ISS Mimic">
       </div>
 
@@ -210,6 +217,7 @@ main, .page-content, .wrapper, .container {
     </a>
 
     <!-- 2. SUBMERSIBLE XRP -->
+
     <a class="project-card"
        href="{{ '/projects/submersible-xrp/' | relative_url }}">
 
@@ -230,6 +238,7 @@ main, .page-content, .wrapper, .container {
     </a>
 
     <!-- 3. SMARTSWEEP -->
+
     <a class="project-card"
        href="{{ '/projects/smart-sweep/' | relative_url }}">
 
@@ -250,6 +259,7 @@ main, .page-content, .wrapper, .container {
     </a>
 
     <!-- 4. AR KART -->
+
     <a class="project-card"
        href="{{ '/projects/ar-kart/' | relative_url }}">
 
@@ -261,7 +271,7 @@ main, .page-content, .wrapper, .container {
 
       <div class="project-heading">
         <h2>AR Kart</h2>
-        <span class="project-year">2025</span>
+        <span class="project-year">2026</span>
       </div>
 
       <p class="project-description">
@@ -270,12 +280,13 @@ main, .page-content, .wrapper, .container {
     </a>
 
     <!-- 5. FLUID MECHANICS -->
+
     <a class="project-card"
        href="{{ '/projects/fluid-mechanical/' | relative_url }}">
 
       <div class="project-image-wrap">
         <img
-          src="{{ '/assets/images/fluid-mechanics.jpeg' | relative_url }}"
+          src="{{ '/assets/images/lifting-device-design.png' | relative_url }}"
           alt="Fluid Mechanics project">
       </div>
 
@@ -290,13 +301,14 @@ main, .page-content, .wrapper, .container {
     </a>
 
     <!-- 6. HEAT EXCHANGER -->
+
     <a class="project-card"
        href="{{ '/projects/heat-exchanger/' | relative_url }}">
 
       <div class="project-image-wrap">
         <img
-          src="{{ '/assets/images/heat-exchanger.jpeg' | relative_url }}"
-          alt="Heat Exchanger project">
+          src="{{ '/assets/images/heat-exchanger.jpg' | relative_url }}"
+          alt="Heat Exchanger">
       </div>
 
       <div class="project-heading">
@@ -312,6 +324,7 @@ main, .page-content, .wrapper, .container {
   </div>
 
   <!-- FOOTER -->
+
   <footer class="projects-footer">
     <span>© 2026 Jenny Wu</span>
     <a href="#top">Back to top ↑</a>
