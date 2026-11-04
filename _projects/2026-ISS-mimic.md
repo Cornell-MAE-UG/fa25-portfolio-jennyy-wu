@@ -1,9 +1,9 @@
 ---
 layout: project
-title: Heat Exchanger System Analysis
-description: Thermodynamics Coursework Project
-technologies: [Thermodynamics, Energy Balance, Heat Transfer]
-image: /assets/images/heat-exchanger.jpg
+title: ISS Mimic
+description: Cornell Cup Robotics — Mechanical Design and Prototyping
+technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, Robotics]
+image: /assets/images/iss-mimic.jpg
 ---
 
 <style>
@@ -15,97 +15,117 @@ image: /assets/images/heat-exchanger.jpg
 }
 </style>
 <p style="max-width: 850px; margin: 0 auto 30px auto; font-size: 18px;">
-This project examines a compact water-to-water heat exchanger studied as part of an
-undergraduate thermodynamics laboratory. The objective of the experiment was to analyze
-how thermal energy is transferred between two fluid streams and how system performance
-changes under different operating conditions.
+The ISS Mimic is a Cornell Cup Robotics project designed to recreate the real-time movement of the International Space Station using an XRP robotics platform.
 
-The experiment focused on steady-flow analysis, conservation laws, and entropy generation
-in a real engineering system.
+I worked on the mechanical design and prototyping of the robot, focusing on a 360-degree rotating pillar, a gear-driven motor system, and a detachable two-axis gantry. My work involved designing components in Fusion 360, 3D printing prototypes, assembling mechanisms, and troubleshooting mechanical issues.
 </p>
 
 ---
 
 ## System Description
 
-The experimental setup consisted of a plate heat exchanger connected to two independent
-water circulation loops. One loop supplied hot water from a reservoir heated using an
-immersion heater, while the second loop supplied cold water from an insulated reservoir.
-Each loop was driven by a small pump, and inlet and outlet temperatures were measured
-using thermometers and a thermocouple.
+The ISS Mimic combines rotational and linear motion to represent the movement of the International Space Station.
 
-Thermal energy was exchanged between the two water streams through the heat exchanger
-walls without direct mixing of the fluids.
+The mechanical system includes:
 
+- A rotating pillar that allows 360-degree rotation
+- A motor-driven gear train that transfers torque to the pillar
+- A two-axis belt-driven gantry for movement along the X and Y axes
+- A detachable mounting system that allows the robot to be transferred between configurations
+- Custom 3D-printed mounts and connecting components
 
----
-
-## Thermodynamic Modeling
-
-The heat exchanger was modeled as a steady-flow control volume. The following assumptions
-were made:
-
-- Steady-state operation  
-- Incompressible liquid water  
-- Negligible kinetic and potential energy changes  
-- No shaft work within the heat exchanger  
-- Heat transfer occurs only between the two fluid streams  
-
-Under these assumptions, separate mass balances apply to each fluid stream, while energy
-is conserved across the control volume.
+My main contributions were designing the rotating pillar mechanism, improving the gear train, and developing mechanical connections for the detachable gantry.
 
 ---
 
-## Governing Balances
+## Rotating Pillar and Gear Design
 
-For steady operation, the mass balance for each stream is:
+One of the main engineering challenges was getting the motor to rotate the pillar properly.
 
-- m-dot(out) = m-dot(in)
+The original mechanism struggled to provide enough torque to rotate the assembly reliably.
 
-The steady-flow energy balance for the heat exchanger control volume is:
+To address this, I worked on a gear train consisting of:
 
-- m-dot(h)c_p(T_h(out) - T_h(in)) + m-dot(c)c_p(T_c(out) - T_c(in)) = 0
+- 11-tooth pinion gear
+- 36-tooth driven gear
+- Gear ratio of approximately 3.27:1
 
-This equation reflects that the thermal energy lost by the hot stream is gained by the
-cold stream.
+The gear ratio was calculated as:
 
-The entropy balance for steady operation is:
+Gear Ratio = 36 / 11 = 3.27
 
--  S-dot_gen = m-dot(h)(s_{h,out} - s_{h,in}) + m-dot(c)(s_{c,out} - s_{c,in}) >= 0
+This gear reduction decreased the output rotational speed while increasing the available torque.
 
-Entropy generation arises due to irreversible heat transfer across a finite temperature
-difference.
+Ideally, the output torque increases by a factor of approximately 3.27, before accounting for mechanical losses.
 
----
-
-## Effect of Operating Conditions on Performance
-
-#### Parallel Flow vs Counterflow Operation
-
-The heat exchanger was operated in both parallel-flow and counterflow configurations.
-In parallel flow, the hot and cold water streams entered the heat exchanger from the same
-end and flowed in the same direction. In counterflow operation, the streams entered from
-opposite ends and flowed in opposite directions.
-
-During parallel-flow operation, a large temperature difference existed near the inlet,
-but the temperature difference decreased rapidly along the length of the exchanger.
-This resulted in lower overall heat transfer effectiveness.
-
-In contrast, counterflow operation maintained a more uniform temperature difference
-between the two streams along the exchanger length. As a result, the cold outlet
-temperature could approach the hot inlet temperature more closely, leading to improved
-thermal performance. This behavior is consistent with thermodynamic theory and explains
-why counterflow heat exchangers are commonly preferred in engineering applications.
-
-Changes in flow rate also affect system performance. Increasing the flow rate of one
-stream increases the rate of heat transfer but may reduce the temperature change of that
-stream due to decreased residence time.
+I also worked on the positioning of the gears and motor mount to ensure proper engagement and smooth rotation.
 
 ---
 
-## Engineering Relevance
+## Motor Mount Design and Assembly
 
-Heat exchangers are widely used in applications such as power generation, HVAC systems,
-automotive cooling, and chemical processing. Understanding the thermodynamic behavior of
-these systems is essential for designing efficient energy systems and minimizing
-irreversibilities in real-world engineering applications.
+Another challenge involved designing a motor mount that could fit within the surrounding assembly.
+
+Although the original mount fit in the Fusion 360 CAD model, it could not be installed easily because nearby components blocked the assembly path.
+
+I redesigned the motor positioning to make the mount easier to install while maintaining proper gear alignment.
+
+This taught me that a design must not only fit in CAD but also be practical to manufacture and assemble.
+
+---
+
+## Two-Axis Gantry System
+
+The ISS Mimic also uses a belt-driven gantry to provide movement along two axes.
+
+Motors rotate pulleys, which drive belts connected to the moving assembly. Rails guide the movement and help maintain alignment.
+
+I worked on the detachable mounting system and 3D-printed connecting components so the robot could be removed from the gantry without rebuilding the entire assembly.
+
+This required considering:
+
+- Mechanical alignment
+- Mounting strength
+- Clearance between moving parts
+- Ease of assembly and removal
+- Compatibility with the XRP platform
+
+---
+
+## CAD and 3D Printing
+
+I used Fusion 360 to design and modify mechanical components throughout the project.
+
+The parts were manufactured using 3D printing, which allowed us to test different designs and make adjustments quickly.
+
+Important design considerations included:
+
+- Gear spacing and alignment
+- Clearance between moving components
+- Snap-fit connections
+- Print orientation and support structures
+- Ease of assembly
+
+Several components required changes after physical testing because their real-world fit differed from what we expected in CAD.
+
+---
+
+## Testing and Troubleshooting
+
+Testing focused on identifying mechanical issues that prevented the robot from moving properly.
+
+For the rotating pillar, I investigated the torque required to start rotation and used that information to guide the gear reduction design.
+
+I also checked the fit of the motor mount, gear engagement, and clearance between components.
+
+The process involved repeatedly designing, printing, assembling, and adjusting components.
+
+---
+
+## Engineering Lessons
+
+This project taught me the importance of designing mechanical systems with both performance and assembly in mind.
+
+I learned how gear ratios affect torque and speed, how small alignment issues can affect mechanical motion, and why physical prototyping is essential even when a design looks correct in CAD.
+
+Most importantly, I gained experience taking a mechanical design from an initial idea through CAD, manufacturing, assembly, and troubleshooting.
