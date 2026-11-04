@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Submersible XRP
+permalink: /projects/submersible-xrp/
 description: Cornell Cup Robotics — Underwater Robotics and Mechanical Design
 technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterproofing, Robotics]
 image: /assets/images/submersible.jpeg

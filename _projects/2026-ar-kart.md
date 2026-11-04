@@ -1,6 +1,7 @@
 ---
 layout: project
 title: AR Kart XRP
+permalink: /projects/ar-kart/
 description: Cornell Cup Robotics — Mechanical Design, Steering, and Prototyping
 technologies: [Fusion 360, CAD, 3D Printing, Ackermann Steering, Drivetrain, Robotics]
 image: /assets/images/ar-kart.png
