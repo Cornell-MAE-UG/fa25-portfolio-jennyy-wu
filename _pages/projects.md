@@ -5,11 +5,11 @@ permalink: /projects/
 ---
 
 <style>
-/* ===== PAGE WIDTH ===== */
+/* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1000px;
-  width: calc(100% - 60px);
+  max-width: 1100px;
+  width: calc(100% - 48px);
   margin: 0 auto;
   padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
@@ -49,7 +49,7 @@ permalink: /projects/
 }
 
 .projects-intro p {
-  max-width: 640px;
+  max-width: 800px;
   font-size: 18px;
   line-height: 1.7;
   color: #666;
@@ -171,7 +171,7 @@ permalink: /projects/
 
 <div class="projects-page" id="top">
 
-  <!-- INTRO -->
+  <!-- INTRODUCTION -->
 
   <section class="projects-intro">
 
@@ -179,19 +179,17 @@ permalink: /projects/
       MECHANICAL ENGINEERING · SELECTED PROJECTS
     </div>
 
-    <h1>Things I've built.</h1>
+    <h1>Explore My Work</h1>
 
     <p>
-      A collection of projects I've worked on,
-      from robotics and mechanical mechanisms
-      to hands-on design and prototyping.
-      Click on a project to see the design process,
-      challenges, and engineering behind it.
+      Each project highlights the engineering decisions,
+      technical challenges, and lessons learned throughout
+      the design process.
     </p>
 
   </section>
 
-  <!-- PROJECT GRID -->
+  <!-- ALL SIX PROJECTS -->
 
   <div class="projects-grid">
 
@@ -287,7 +285,7 @@ permalink: /projects/
       <div class="project-image-wrap">
         <img
           src="{{ '/assets/images/lifting-device-design.png' | relative_url }}"
-          alt="Fluid Mechanics project">
+          alt="Fluid Mechanics">
       </div>
 
       <div class="project-heading">
