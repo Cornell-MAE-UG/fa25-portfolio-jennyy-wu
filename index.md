@@ -4,38 +4,37 @@ title: Home
 ---
 
 <style>
-/* ========================================
-   RESET PAGE WIDTH
-======================================== */
+/* ===== REMOVE THE THEME'S NARROW WIDTH ===== */
 
+main,
+main .wrapper,
 .page-content,
 .page-content > .wrapper,
-.page-content > .container,
-main,
-main > .wrapper,
-main > .container {
+.container {
   width: 100% !important;
   max-width: none !important;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
-.page-heading,
-.post-header {
-  display: none !important;
+.page-content {
+  padding-top: 0 !important;
 }
 
-/* ========================================
-   HOMEPAGE
-======================================== */
+.page-content > .wrapper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ===== HOMEPAGE ===== */
 
 .homepage {
-  width: 86% !important;
-  max-width: 1250px !important;
-  margin: 0 auto !important;
-  padding: 0 10px !important;
+  width: 90%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #202020;
+  color: #222;
 }
 
 .homepage * {
@@ -47,20 +46,17 @@ main > .container {
   text-decoration: none;
 }
 
-/* ========================================
-   HERO
-======================================== */
+/* ===== HERO ===== */
 
 .homepage .hero {
-  padding: 75px 0 75px;
+  padding: 105px 0 90px;
 }
 
 .homepage .hero-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 290px;
+  grid-template-columns: minmax(0, 1.8fr) minmax(0, 0.75fr);
   align-items: center;
   gap: 65px;
-  width: 100%;
 }
 
 .homepage .hero-content {
@@ -68,41 +64,38 @@ main > .container {
 }
 
 .homepage .eyebrow {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 2.2px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: #777;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
 }
 
 .homepage .hero h1 {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(38px, 5vw, 68px);
+  font-size: clamp(40px, 4.5vw, 68px);
   font-weight: 700;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.05em;
   line-height: 1.1;
   white-space: nowrap;
-  margin: 0 0 30px;
+  margin: 0 0 35px;
 }
 
 .homepage .hero-description {
-  width: 100%;
-  max-width: 800px;
-  font-size: 19px;
-  line-height: 1.75;
+  max-width: 750px;
+  font-size: 18px;
+  line-height: 1.8;
   color: #666;
   margin: 0;
 }
 
-/* ========================================
-   LINKEDIN AND RESUME BUTTONS
-======================================== */
+/* ===== BUTTONS ===== */
 
-.homepage .hero-links {
+.homepage .hero-buttons {
   display: flex;
+  gap: 15px;
   flex-wrap: wrap;
-  gap: 16px;
   margin-top: 35px;
 }
 
@@ -110,67 +103,64 @@ main > .container {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #252525;
-  color: #ffffff !important;
-  border: none !important;
+  min-width: 120px;
+  padding: 15px 25px;
   border-radius: 12px;
-  padding: 14px 27px;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none !important;
-  transition: background 0.2s ease,
-              transform 0.2s ease;
+  background: #252525;
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .homepage .hero-button:hover {
-  background: #444;
+  background: #555;
   transform: translateY(-2px);
 }
 
-/* ========================================
-   PROFILE PHOTO
-======================================== */
+/* ===== PROFILE PHOTO ===== */
 
 .homepage .hero-photo {
   width: 100%;
 }
 
 .homepage .hero-photo img {
+  display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center;
   border-radius: 14px;
-  display: block;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
 }
 
-/* ========================================
-   SECTION HEADING
-======================================== */
+/* ===== SECTION HEADING ===== */
 
 .homepage .section-heading {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #d8d8d8;
-  padding: 24px 0;
-  margin-bottom: 18px;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #ddd;
+  padding: 25px 0 35px;
 }
 
 .homepage .section-heading h2 {
-  font-family: Georgia, serif;
-  font-size: 23px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
   font-weight: 700;
   margin: 0;
 }
 
 .homepage .section-heading span {
-  font-size: 14px;
   color: #888;
+  font-size: 13px;
 }
 
-/* ========================================
-   PROJECT GRID
-======================================== */
+/* ===== PROJECT GRID ===== */
 
 .homepage .project-grid {
   display: grid;
@@ -184,62 +174,79 @@ main > .container {
   min-width: 0;
 }
 
-/* Images fill their containers completely */
-
 .homepage .image-wrapper {
+  display: block;
   width: 100%;
-  aspect-ratio: 1.45 / 1;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: 12px;
-  background: #eeeeee;
-  display: block;
+  background: #eee;
   padding: 0 !important;
   margin: 0 !important;
 }
 
-.homepage .project-image {
+.homepage .image-wrapper img.project-image {
+  display: block !important;
   width: 100% !important;
   height: 100% !important;
-  aspect-ratio: auto !important;
+  max-width: none !important;
+  max-height: none !important;
   object-fit: cover !important;
-  object-position: center;
-  display: block;
-  margin: 0 !important;
+  object-position: center !important;
+  aspect-ratio: auto !important;
   padding: 0 !important;
-  border-radius: 0;
-  box-shadow: none;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
   transition: transform 0.35s ease;
 }
 
 .homepage .project-card:hover .project-image {
-  transform: scale(1.045);
+  transform: scale(1.04);
 }
 
-/* ========================================
-   PROJECT TEXT
-======================================== */
+/* INDIVIDUAL PHOTO FRAMING */
+
+.homepage .project-card:nth-child(1) img {
+  object-position: center 45% !important;
+}
+
+.homepage .project-card:nth-child(2) img {
+  object-position: center center !important;
+}
+
+.homepage .project-card:nth-child(3) img {
+  object-position: center 35% !important;
+}
+
+.homepage .project-card:nth-child(4) img {
+  object-position: center center !important;
+}
+
+/* ===== PROJECT TEXT ===== */
 
 .homepage .project-info {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 10px;
-  padding-top: 15px;
+  gap: 12px;
+  padding-top: 17px;
 }
 
 .homepage .project-info h3 {
-  font-family: Georgia, serif;
-  font-size: 21px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
   font-weight: 700;
+  letter-spacing: -0.5px;
   line-height: 1.2;
-  margin: 0 0 10px;
-  letter-spacing: -0.4px;
+  margin: 0 0 12px;
 }
 
 .homepage .project-info p {
   font-size: 14px;
+  line-height: 1.6;
   color: #777;
-  line-height: 1.55;
   margin: 0;
 }
 
@@ -247,81 +254,63 @@ main > .container {
   font-size: 13px;
   color: #999;
   white-space: nowrap;
-  padding-top: 4px;
+  padding-top: 5px;
 }
 
-/* ========================================
-   FOOTER
-======================================== */
+/* ===== FOOTER ===== */
 
 .homepage .portfolio-footer {
-  margin-top: 95px;
+  margin-top: 100px;
+  padding: 35px 0 60px;
   border-top: 1px solid #ddd;
-  padding: 30px 0 55px;
+  background: transparent !important;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
   font-size: 14px;
   color: #777;
-  background: transparent !important;
-  box-shadow: none !important;
 }
 
 .homepage .footer-links {
   display: flex;
-  gap: 28px;
-}
-
-.homepage .footer-links a {
-  color: #777;
-  transition: color 0.2s;
+  gap: 35px;
 }
 
 .homepage .footer-links a:hover {
-  color: #111;
+  color: #222;
 }
 
-.site-footer,
-footer.site-footer {
-  background: transparent !important;
-  box-shadow: none !important;
-}
+/* ===== TABLET ===== */
 
-/* ========================================
-   TABLET
-======================================== */
-
-@media (max-width: 1050px) {
+@media (max-width: 1000px) {
 
   .homepage .hero-layout {
-    grid-template-columns: minmax(0, 1fr) 240px;
-    gap: 30px;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 35px;
   }
 
   .homepage .hero h1 {
-    font-size: clamp(36px, 5vw, 55px);
+    font-size: clamp(34px, 5vw, 52px);
   }
 
   .homepage .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 45px 22px;
   }
 }
 
-/* ========================================
-   MOBILE
-======================================== */
+/* ===== MOBILE ===== */
 
 @media (max-width: 650px) {
 
   .homepage {
-    width: 100% !important;
-    padding: 0 20px !important;
+    width: 90%;
   }
 
   .homepage .hero {
-    padding: 45px 0 60px;
+    padding: 55px 0 65px;
   }
 
   .homepage .hero-layout {
@@ -330,39 +319,36 @@ footer.site-footer {
   }
 
   .homepage .hero h1 {
-    font-size: 38px;
+    font-size: clamp(34px, 9vw, 46px);
     white-space: normal;
   }
 
   .homepage .hero-description {
-    font-size: 17px;
-  }
-
-  .homepage .eyebrow {
-    font-size: 11px;
-    letter-spacing: 1.4px;
+    font-size: 16px;
   }
 
   .homepage .hero-photo img {
-    max-width: 320px;
+    max-width: 360px;
   }
 
   .homepage .project-grid {
     grid-template-columns: 1fr;
-    gap: 38px;
+    gap: 40px;
+  }
+
+  .homepage .project-info h3 {
+    font-size: 22px;
   }
 
   .homepage .portfolio-footer {
-    margin-top: 65px;
+    margin-top: 70px;
   }
 }
 </style>
 
-<div class="homepage" id="top">
+<div class="homepage" id="home">
 
-  <!-- =====================================
-       HERO
-  ===================================== -->
+  <!-- ===== HERO ===== -->
 
   <section class="hero">
 
@@ -379,14 +365,14 @@ footer.site-footer {
         <p class="hero-description">
           I'm a mechanical engineering student at Cornell
           University with a passion for robotics, product
-          design, and hands-on problem solving.
-          I love turning ideas into real, working things.
+          design, and hands-on problem solving. I love
+          turning ideas into real, working things.
         </p>
 
-        <div class="hero-links">
+        <div class="hero-buttons">
 
           <a
-            href="https://www.linkedin.com/in/"
+            href="https://www.linkedin.com/in/jenny-wu/"
             class="hero-button"
             target="_blank"
             rel="noopener noreferrer">
@@ -394,7 +380,7 @@ footer.site-footer {
           </a>
 
           <a
-            href="{{ '/assets/Jenny_Wu_Resume.pdf' | relative_url }}"
+            href="{{ '/assets/Resume.pdf' | relative_url }}"
             class="hero-button"
             target="_blank"
             rel="noopener noreferrer">
@@ -411,8 +397,7 @@ footer.site-footer {
 
         <img
           src="{{ '/assets/images/profile.png' | relative_url }}"
-          alt="Jenny Wu"
-        >
+          alt="Jenny Wu">
 
       </div>
 
@@ -420,9 +405,7 @@ footer.site-footer {
 
   </section>
 
-  <!-- =====================================
-       SELECTED WORK
-  ===================================== -->
+  <!-- ===== SELECTED WORK ===== -->
 
   <section id="projects">
 
@@ -439,22 +422,18 @@ footer.site-footer {
          href="{{ '/projects/iss-mimic/' | relative_url }}">
 
         <div class="image-wrapper">
-
-          <img class="project-image"
-               src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
-               alt="ISS Mimic robotic mechanism">
-
+          <img
+            class="project-image"
+            src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
+            alt="ISS Mimic robotics project">
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>ISS Mimic</h3>
             <p>Gear Design · Mechanical Systems · Robotics</p>
           </div>
-
           <span class="project-year">2026</span>
-
         </div>
 
       </a>
@@ -465,22 +444,18 @@ footer.site-footer {
          href="{{ '/projects/submersible-xrp/' | relative_url }}">
 
         <div class="image-wrapper">
-
-          <img class="project-image"
-               src="{{ '/assets/images/submersible_xrp.jpeg' | relative_url }}"
-               alt="Submersible XRP underwater robot">
-
+          <img
+            class="project-image"
+            src="{{ '/assets/images/submersible.jpeg' | relative_url }}"
+            alt="Submersible XRP underwater robot">
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>Submersible XRP</h3>
             <p>Underwater Robotics · CAD · Prototyping</p>
           </div>
-
           <span class="project-year">2026</span>
-
         </div>
 
       </a>
@@ -491,22 +466,18 @@ footer.site-footer {
          href="{{ '/projects/smartsweep/' | relative_url }}">
 
         <div class="image-wrapper">
-
-          <img class="project-image"
-               src="{{ '/assets/images/smart_sweep.jpeg' | relative_url }}"
-               alt="SmartSweep mechanical prototype">
-
+          <img
+            class="project-image"
+            src="{{ '/assets/images/smartsweep.jpeg' | relative_url }}"
+            alt="SmartSweep mechanical prototype">
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>SmartSweep</h3>
             <p>Product Development · Mechanical Design</p>
           </div>
-
           <span class="project-year">2026</span>
-
         </div>
 
       </a>
@@ -517,22 +488,18 @@ footer.site-footer {
          href="{{ '/projects/ar-kart/' | relative_url }}">
 
         <div class="image-wrapper">
-
-          <img class="project-image"
-               src="{{ '/assets/images/ar-kart.png' | relative_url }}"
-               alt="AR Kart robotic vehicle">
-
+          <img
+            class="project-image"
+            src="{{ '/assets/images/ar-kart.png' | relative_url }}"
+            alt="AR Kart RC car prototype">
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>AR Kart</h3>
             <p>Steering Geometry · CAD · 3D Printing</p>
           </div>
-
           <span class="project-year">2025</span>
-
         </div>
 
       </a>
@@ -541,9 +508,7 @@ footer.site-footer {
 
   </section>
 
-  <!-- =====================================
-       FOOTER
-  ===================================== -->
+  <!-- ===== FOOTER ===== -->
 
   <footer class="portfolio-footer">
 
@@ -555,7 +520,7 @@ footer.site-footer {
         Projects
       </a>
 
-      <a href="#top">
+      <a href="#home">
         Home
       </a>
 
