@@ -6,12 +6,9 @@ title: Home
 
 <style>
 
-/* =========================================
-   1. OVERRIDE JEKYLL THEME WIDTH
-   ========================================= */
+/* ===== REMOVE THEME WIDTH RESTRICTIONS ===== */
 
-html,
-body {
+html, body {
   width: 100%;
   max-width: none !important;
 }
@@ -27,9 +24,7 @@ main > .container {
   box-sizing: border-box;
 }
 
-/* =========================================
-   2. HOMEPAGE CONTAINER
-   ========================================= */
+/* ===== HOMEPAGE ===== */
 
 .homepage {
   width: min(96vw, 1600px) !important;
@@ -50,25 +45,22 @@ main > .container {
   text-decoration: none;
 }
 
-/* =========================================
-   3. HERO SECTION
-   ========================================= */
+/* ===== HERO ===== */
 
 .homepage .hero {
   padding: 85px 0 75px;
 }
 
 .homepage .hero-layout {
-  display: grid !important;
-  grid-template-columns: minmax(0, 1fr) 300px !important;
-  align-items: center !important;
-  gap: 70px !important;
-  width: 100% !important;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: center;
+  gap: 70px;
+  width: 100%;
 }
 
 .homepage .hero-content {
-  width: 100% !important;
-  min-width: 0 !important;
+  min-width: 0;
 }
 
 .homepage .eyebrow {
@@ -82,49 +74,53 @@ main > .container {
 
 .homepage .hero h1 {
   font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(38px, 5vw, 70px) !important;
+  font-size: clamp(38px, 5vw, 70px);
   font-weight: 700;
   letter-spacing: -0.055em;
   line-height: 1.1;
-  white-space: nowrap !important;
+  white-space: nowrap;
   margin: 0 0 30px;
 }
 
 .homepage .hero-description {
-  width: 100% !important;
-  max-width: 850px !important;
-  font-size: 20px !important;
-  line-height: 1.75 !important;
+  width: 100%;
+  max-width: 850px;
+  font-size: 20px;
+  line-height: 1.75;
   color: #666;
   margin: 0;
 }
 
+/* ===== BLACK BUTTONS ===== */
+
 .homepage .hero-links {
   display: flex;
-  gap: 40px;
-  margin-top: 35px;
   flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 35px;
 }
 
-.homepage .hero-links a {
+.homepage .hero-links .hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #252525;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 12px;
+  padding: 14px 27px;
   font-size: 16px;
-  font-weight: 600;
-  padding-bottom: 6px;
-  border-bottom: 1px solid #222;
-  transition: opacity 0.2s;
+  font-weight: 500;
+  text-decoration: none !important;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.homepage .hero-links a:hover {
-  opacity: 0.55;
+.homepage .hero-links .hero-button:hover {
+  background: #444;
+  transform: translateY(-2px);
 }
 
-/* =========================================
-   4. PROFILE PHOTO
-   ========================================= */
-
-.homepage .hero-photo {
-  width: 100%;
-}
+/* ===== PROFILE PHOTO ===== */
 
 .homepage .hero-photo img {
   width: 100%;
@@ -134,9 +130,7 @@ main > .container {
   display: block;
 }
 
-/* =========================================
-   5. PROJECTS SECTION
-   ========================================= */
+/* ===== SECTION HEADINGS ===== */
 
 .homepage .section-heading {
   display: flex;
@@ -159,13 +153,13 @@ main > .container {
   color: #888;
 }
 
-/* FOUR PROJECTS ACROSS */
+/* ===== PROJECT GRID ===== */
 
 .homepage .project-grid {
-  width: 100% !important;
-  display: grid !important;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-  gap: 28px !important;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
 }
 
 .homepage .project-card {
@@ -177,7 +171,7 @@ main > .container {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  background: #eeeeee;
+  background: #eee;
 }
 
 .homepage .project-image {
@@ -223,9 +217,7 @@ main > .container {
   padding-top: 4px;
 }
 
-/* =========================================
-   6. FOOTER
-   ========================================= */
+/* ===== CLEAN FOOTER ===== */
 
 .homepage .portfolio-footer {
   margin-top: 100px;
@@ -237,6 +229,8 @@ main > .container {
   flex-wrap: wrap;
   font-size: 14px;
   color: #777;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .homepage .footer-links {
@@ -248,26 +242,31 @@ main > .container {
   color: #111;
 }
 
-/* =========================================
-   7. RESPONSIVE DESIGN
-   ========================================= */
+.site-footer,
+footer.site-footer {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ===== TABLET ===== */
 
 @media (max-width: 1050px) {
 
   .homepage .hero-layout {
-    grid-template-columns: minmax(0, 1fr) 240px !important;
-    gap: 30px !important;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 30px;
   }
 
   .homepage .hero h1 {
-    font-size: clamp(36px, 5vw, 55px) !important;
+    font-size: clamp(36px, 5vw, 55px);
   }
 
   .homepage .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
 }
+
+/* ===== MOBILE ===== */
 
 @media (max-width: 650px) {
 
@@ -281,17 +280,17 @@ main > .container {
   }
 
   .homepage .hero-layout {
-    grid-template-columns: 1fr !important;
-    gap: 35px !important;
+    grid-template-columns: 1fr;
+    gap: 35px;
   }
 
   .homepage .hero h1 {
-    font-size: 38px !important;
-    white-space: normal !important;
+    font-size: 38px;
+    white-space: normal;
   }
 
   .homepage .hero-description {
-    font-size: 17px !important;
+    font-size: 17px;
   }
 
   .homepage .eyebrow {
@@ -304,24 +303,20 @@ main > .container {
   }
 
   .homepage .project-grid {
-    grid-template-columns: 1fr !important;
-    gap: 38px !important;
+    grid-template-columns: 1fr;
+    gap: 38px;
   }
 
   .homepage .portfolio-footer {
     margin-top: 65px;
   }
-
 }
 
 </style>
 
-
 <div class="homepage">
 
-  <!-- =====================================
-       HERO / INTRODUCTION
-       ===================================== -->
+  <!-- ===== HERO ===== -->
 
   <section class="hero">
 
@@ -344,12 +339,20 @@ main > .container {
 
         <div class="hero-links">
 
-          <a href="#projects">
-            Explore my work ↗
+          <a
+            href="https://www.linkedin.com/in/"
+            class="hero-button"
+            target="_blank"
+            rel="noopener noreferrer">
+            LinkedIn
           </a>
 
-          <a href="{{ '/about/' | relative_url }}">
-            More about me ↗
+          <a
+            href="{{ '/assets/Jenny_Wu_Resume.pdf' | relative_url }}"
+            class="hero-button"
+            target="_blank"
+            rel="noopener noreferrer">
+            Resume
           </a>
 
         </div>
@@ -361,7 +364,7 @@ main > .container {
       <div class="hero-photo">
 
         <img
-          src="{{ '/assets/images/profile.jpg' | relative_url }}"
+          src="{{ '/assets/images/profile.png' | relative_url }}"
           alt="Jenny Wu"
         >
 
@@ -371,141 +374,106 @@ main > .container {
 
   </section>
 
-
-  <!-- =====================================
-       SELECTED WORK
-       ===================================== -->
+  <!-- ===== SELECTED WORK ===== -->
 
   <section id="projects">
 
     <div class="section-heading">
-
       <h2>Selected Work</h2>
-
       <span>01 / Projects</span>
-
     </div>
-
 
     <div class="project-grid">
 
-
-      <!-- 1. ISS MIMIC -->
+      <!-- ISS MIMIC -->
 
       <a class="project-card"
          href="{{ '/projects/iss-mimic/' | relative_url }}">
 
         <div class="image-wrapper">
-
           <img class="project-image"
                src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
-               alt="ISS Mimic robotic mechanism">
-
+               alt="ISS Mimic robotics project">
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>ISS Mimic</h3>
             <p>Gear Design · Mechanical Systems · Robotics</p>
           </div>
-
           <span class="project-year">2026</span>
-
         </div>
 
       </a>
 
-
-      <!-- 2. SUBMERSIBLE XRP -->
+      <!-- SUBMERSIBLE XRP -->
 
       <a class="project-card"
          href="{{ '/projects/submersible-xrp/' | relative_url }}">
 
         <div class="image-wrapper">
-
           <img class="project-image"
-               src="{{ '/assets/images/submersible_xrp.jpeg' | relative_url }}"
+               src="{{ '/assets/images/submersible-xrp.jpeg' | relative_url }}"
                alt="Submersible XRP underwater robot">
-
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>Submersible XRP</h3>
             <p>Underwater Robotics · CAD · Prototyping</p>
           </div>
-
           <span class="project-year">2026</span>
-
         </div>
 
       </a>
 
-
-      <!-- 3. SMARTSWEEP -->
+      <!-- SMARTSWEEP -->
 
       <a class="project-card"
          href="{{ '/projects/smartsweep/' | relative_url }}">
 
         <div class="image-wrapper">
-
           <img class="project-image"
                src="{{ '/assets/images/smartsweep.jpg' | relative_url }}"
                alt="SmartSweep mechanical prototype">
-
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>SmartSweep</h3>
             <p>Product Development · Mechanical Design</p>
           </div>
-
           <span class="project-year">2026</span>
-
         </div>
 
       </a>
 
-
-      <!-- 4. AR KART -->
+      <!-- AR KART -->
 
       <a class="project-card"
          href="{{ '/projects/ar-kart/' | relative_url }}">
 
         <div class="image-wrapper">
-
           <img class="project-image"
                src="{{ '/assets/images/ar-kart.png' | relative_url }}"
                alt="AR Kart robotic vehicle">
-
         </div>
 
         <div class="project-info">
-
           <div>
             <h3>AR Kart</h3>
             <p>Steering Geometry · CAD · 3D Printing</p>
           </div>
-
           <span class="project-year">2025</span>
-
         </div>
 
       </a>
-
 
     </div>
 
   </section>
 
-
-  <!-- =====================================
-       FOOTER
-       ===================================== -->
+  <!-- ===== FOOTER ===== -->
 
   <footer class="portfolio-footer">
 
@@ -513,20 +481,9 @@ main > .container {
 
     <div class="footer-links">
 
-      <a href="https://www.linkedin.com/"
-         target="_blank"
-         rel="noopener noreferrer">
-        LinkedIn
-      </a>
+      <a href="#projects">Projects</a>
 
-      <a href="{{ '/assets/Jenny_Wu_Resume.pdf' | relative_url }}"
-         target="_blank">
-        Resume
-      </a>
-
-      <a href="mailto:YOUR_EMAIL@example.com">
-        Email
-      </a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
 
     </div>
 
