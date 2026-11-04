@@ -435,7 +435,7 @@ main .wrapper,
 
       </a>
 
-      <!-- 2. SUBMERSIBLE XRP -->
+      <!-- 2. SUBMERSIBLE-->
 
       <a class="project-card"
          href="{{ '/projects/submersible-xrp/' | relative_url }}">
@@ -449,7 +449,7 @@ main .wrapper,
 
         <div class="project-info">
           <div>
-            <h3>Submersible XRP</h3>
+            <h3>Submersible</h3>
             <p>Underwater Robotics · CAD · Prototyping</p>
           </div>
           <span class="project-year">2026</span>
