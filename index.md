@@ -357,10 +357,6 @@ main .wrapper,
 
       <div class="hero-content">
 
-        <div class="eyebrow">
-          MECHANICAL ENGINEERING · CORNELL UNIVERSITY
-        </div>
-
         <h1>Hi, I'm Jenny.</h1>
 
         <p class="hero-description">
