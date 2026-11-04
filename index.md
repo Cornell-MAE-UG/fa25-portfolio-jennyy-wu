@@ -408,7 +408,7 @@ main .wrapper,
 
     <div class="section-heading">
       <h2>Selected Work</h2>
-      <span>01 / Projects</span>
+      <span>Projects</span>
     </div>
 
     <div class="project-grid">
