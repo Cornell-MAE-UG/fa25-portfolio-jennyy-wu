@@ -19,7 +19,7 @@ main .wrapper,
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1000px;
+  max-width: 900px;
   width: calc(100% - 60px);
   margin: 0 auto;
   padding: 75px 0 90px;
@@ -187,7 +187,7 @@ main .wrapper,
   <section class="projects-intro">
 
 
-    <h1>Click project photos below to learn more!</h1>
+    <h1>Explore My Work!</h1>
 
     <p>
       Each project highlights the engineering decisions,
