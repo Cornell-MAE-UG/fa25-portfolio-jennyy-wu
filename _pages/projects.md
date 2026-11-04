@@ -160,6 +160,14 @@ permalink: /projects/
   color: #222;
 }
 
+/* Prevent the shared layout's footer styling
+   from turning this footer navy. */
+
+.projects-page footer.projects-footer {
+  background: none !important;
+  color: #888 !important;
+}
+
 /* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
@@ -211,12 +219,10 @@ permalink: /projects/
       MECHANICAL ENGINEERING · SELECTED PROJECTS
     </div>
 
-    <h1>Explore My Work.</h1>
+    <h1>Explore My Work!</h1>
 
     <p>
-      A collection of my engineering projects, featuring CAD designs,
-      mechanical systems, and hands-on prototypes from concept
-      to final assembly.
+      From CAD models and technical drawings to hands-on prototypes, each project shows how I work through design challenges and bring my ideas to life.
     </p>
 
   </section>
@@ -361,11 +367,12 @@ permalink: /projects/
 
   <!-- ===== FOOTER ===== -->
 
-  <footer class="projects-footer">
+  <div class="projects-footer">
 
     <span>© 2026 Jenny Wu</span>
 
-    <div class="projects-footer-links">
+    <nav class="projects-footer-links"
+         aria-label="Footer navigation">
 
       <a href="{{ '/' | relative_url }}">
         About
@@ -381,8 +388,8 @@ permalink: /projects/
         CV
       </a>
 
-    </div>
+    </nav>
 
-  </footer>
+  </div>
 
 </div>
