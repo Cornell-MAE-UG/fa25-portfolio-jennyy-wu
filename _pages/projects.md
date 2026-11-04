@@ -5,11 +5,22 @@ permalink: /projects/
 ---
 
 <style>
+/* ===== OVERRIDE DEFAULT LAYOUT WIDTH ===== */
+
+main,
+main .wrapper,
+.page-content,
+.page-content .wrapper,
+.container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1500px;
-  width: calc(100% - 48px);
+  max-width: 1650px;
+  width: calc(100% - 40px);
   margin: 0 auto;
   padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
