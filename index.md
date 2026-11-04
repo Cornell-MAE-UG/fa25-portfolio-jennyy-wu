@@ -1,9 +1,12 @@
+---
+layout: default
+title: Home
+---
 
 <style>
-
 /* ========================================
-   REMOVE UNWANTED TOP SPACING AND LINE
-   ======================================== */
+   RESET PAGE WIDTH
+======================================== */
 
 .page-content,
 .page-content > .wrapper,
@@ -16,7 +19,6 @@ main > .container {
   box-sizing: border-box;
 }
 
-/* Hide theme-generated page headings */
 .page-heading,
 .post-header {
   display: none !important;
@@ -24,13 +26,13 @@ main > .container {
 
 /* ========================================
    HOMEPAGE
-   ======================================== */
+======================================== */
 
 .homepage {
-  width: 90% !important;
-  max-width: 1350px !important;
+  width: 86% !important;
+  max-width: 1250px !important;
   margin: 0 auto !important;
-  padding: 0 20px !important;
+  padding: 0 10px !important;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #202020;
@@ -47,7 +49,7 @@ main > .container {
 
 /* ========================================
    HERO
-   ======================================== */
+======================================== */
 
 .homepage .hero {
   padding: 75px 0 75px;
@@ -95,7 +97,7 @@ main > .container {
 
 /* ========================================
    LINKEDIN AND RESUME BUTTONS
-   ======================================== */
+======================================== */
 
 .homepage .hero-links {
   display: flex;
@@ -116,7 +118,8 @@ main > .container {
   font-size: 16px;
   font-weight: 500;
   text-decoration: none !important;
-  transition: background 0.2s ease, transform 0.2s ease;
+  transition: background 0.2s ease,
+              transform 0.2s ease;
 }
 
 .homepage .hero-button:hover {
@@ -126,7 +129,7 @@ main > .container {
 
 /* ========================================
    PROFILE PHOTO
-   ======================================== */
+======================================== */
 
 .homepage .hero-photo {
   width: 100%;
@@ -142,7 +145,7 @@ main > .container {
 
 /* ========================================
    SECTION HEADING
-   ======================================== */
+======================================== */
 
 .homepage .section-heading {
   display: flex;
@@ -166,13 +169,13 @@ main > .container {
 }
 
 /* ========================================
-   FOUR PROJECTS IN ONE ROW
-   ======================================== */
+   PROJECT GRID
+======================================== */
 
 .homepage .project-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 26px;
+  gap: 24px;
   width: 100%;
 }
 
@@ -181,24 +184,40 @@ main > .container {
   min-width: 0;
 }
 
+/* Images fill their containers completely */
+
 .homepage .image-wrapper {
   width: 100%;
+  aspect-ratio: 1.45 / 1;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 12px;
   background: #eeeeee;
+  display: block;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .homepage .project-image {
-  width: 100%;
-  aspect-ratio: 1.65 / 1;
-  object-fit: cover;
+  width: 100% !important;
+  height: 100% !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+  object-position: center;
   display: block;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 0;
+  box-shadow: none;
   transition: transform 0.35s ease;
 }
 
 .homepage .project-card:hover .project-image {
   transform: scale(1.045);
 }
+
+/* ========================================
+   PROJECT TEXT
+======================================== */
 
 .homepage .project-info {
   display: flex;
@@ -232,8 +251,8 @@ main > .container {
 }
 
 /* ========================================
-   CLEAN FOOTER
-   ======================================== */
+   FOOTER
+======================================== */
 
 .homepage .portfolio-footer {
   margin-top: 95px;
@@ -272,7 +291,7 @@ footer.site-footer {
 
 /* ========================================
    TABLET
-   ======================================== */
+======================================== */
 
 @media (max-width: 1050px) {
 
@@ -292,7 +311,7 @@ footer.site-footer {
 
 /* ========================================
    MOBILE
-   ======================================== */
+======================================== */
 
 @media (max-width: 650px) {
 
@@ -337,14 +356,13 @@ footer.site-footer {
     margin-top: 65px;
   }
 }
-
 </style>
 
 <div class="homepage" id="top">
 
   <!-- =====================================
        HERO
-       ===================================== -->
+  ===================================== -->
 
   <section class="hero">
 
@@ -402,10 +420,9 @@ footer.site-footer {
 
   </section>
 
-
   <!-- =====================================
        SELECTED WORK
-       ===================================== -->
+  ===================================== -->
 
   <section id="projects">
 
@@ -415,7 +432,6 @@ footer.site-footer {
     </div>
 
     <div class="project-grid">
-
 
       <!-- 1. ISS MIMIC -->
 
@@ -443,7 +459,6 @@ footer.site-footer {
 
       </a>
 
-
       <!-- 2. SUBMERSIBLE XRP -->
 
       <a class="project-card"
@@ -470,7 +485,6 @@ footer.site-footer {
 
       </a>
 
-
       <!-- 3. SMARTSWEEP -->
 
       <a class="project-card"
@@ -479,7 +493,7 @@ footer.site-footer {
         <div class="image-wrapper">
 
           <img class="project-image"
-               src="{{ '/assets/images/smart_sweep.jpg' | relative_url }}"
+               src="{{ '/assets/images/smart_sweep.jpeg' | relative_url }}"
                alt="SmartSweep mechanical prototype">
 
         </div>
@@ -496,7 +510,6 @@ footer.site-footer {
         </div>
 
       </a>
-
 
       <!-- 4. AR KART -->
 
@@ -528,10 +541,9 @@ footer.site-footer {
 
   </section>
 
-
   <!-- =====================================
        FOOTER
-       ===================================== -->
+  ===================================== -->
 
   <footer class="portfolio-footer">
 
