@@ -8,13 +8,8 @@ image: /assets/images/iss-mimic.jpg
 ---
 
 <style>
-/* ===== PAGE WIDTH ===== */
 
-.page-content .wrapper,
-.page-content .container {
-  max-width: none !important;
-  width: 100% !important;
-}
+/* ===== PAGE WIDTH ===== */
 
 .iss-page {
   max-width: 1200px;
@@ -22,13 +17,42 @@ image: /assets/images/iss-mimic.jpg
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 75px 0 100px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  color: #222;
   box-sizing: border-box;
 }
 
-.iss-page * {
-  box-sizing: border-box;
+/* Prevent the default Jekyll wrapper from
+   restricting the project content */
+
+.page-content .wrapper,
+.page-content .container {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+/* Make sure project images remain in normal flow */
+
+.iss-page img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  float: none;
+  position: static;
+}
+
+/* Responsive widths */
+
+@media (max-width: 900px) {
+  .iss-page {
+    width: calc(100vw - 48px);
+    padding-top: 45px;
+  }
+}
+
+@media (max-width: 600px) {
+  .iss-page {
+    width: calc(100vw - 32px);
+    padding-top: 30px;
+  }
 }
 
 /* ===== TYPOGRAPHY ===== */
