@@ -9,8 +9,9 @@ permalink: /projects/
 
 .projects-page {
   max-width: 1100px;
-  width: calc(100% - 80px);
-  margin: 0 auto;
+  width: calc(100vw - 80px);
+  margin-left: 50%;
+  transform: translateX(-50%);
   padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
