@@ -394,17 +394,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       </p>
     </div>
 
-    <figure class="iss-full">
-      <div class="iss-placeholder wide">
-        <div class="iss-placeholder-icon">+</div>
-        <div class="iss-placeholder-title">
-          Full Assembly — Isometric View
-        </div>
-        <div class="iss-placeholder-note">
-          Add a Fusion 360 rendering of the
-          complete ISS Mimic assembly.
-        </div>
-      </div>
+    <figure class="iss-hero">
+      <img
+        src="{{ '/assets/images/iss_full.png' | relative_url }}"
+        alt="Full Assembly — Isometric View"
+        loading="lazy"
+      >
       <figcaption>
         Figure 2. Isometric CAD view of the complete assembly.
       </figcaption>
