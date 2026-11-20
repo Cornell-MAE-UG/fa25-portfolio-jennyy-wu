@@ -571,22 +571,6 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
     <div class="iss-gallery">
 
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Original Motor Mount
-          </div>
-          <div class="iss-placeholder-note">
-            CAD of the original centrally
-            positioned motor mount.
-          </div>
-        </div>
-        <figcaption>
-          Figure 8. Original motor mount with limited installation access.
-        </figcaption>
-      </figure>
-
       <figure class="iss-hero">
       <img
         src="{{ '/assets/images/motor_mount.jpeg' | relative_url }}"
@@ -598,27 +582,16 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       </figcaption>
     </figure>
 
-
-
-
-
-
-
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Redesigned Motor Mount
-          </div>
-          <div class="iss-placeholder-note">
-            Updated CAD showing the motor
-            repositioned toward the side.
-          </div>
-        </div>
-        <figcaption>
-          Figure 9. Revised motor mount with improved assembly access.
-        </figcaption>
-      </figure>
+      <figure class="iss-hero">
+      <img
+        src="{{ '/assets/images/motor_mount.jpeg' | relative_url }}"
+        alt="Updated motor repositioned toward the side"
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 9. Revised motor mount with improved assembly access.
+      </figcaption>
+    </figure>
 
     </div>
 
