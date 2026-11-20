@@ -370,11 +370,12 @@ h1.project-title {
 .iss-page .iss-main-title {
   display: block !important;
   width: 100%;
-  margin: 0 auto 28px !important;
+  margin: 0 auto 24px !important;
   padding: 0;
   text-align: center !important;
+
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(52px, 6vw, 76px);
+  font-size: clamp(44px, 5vw, 58px);
   font-weight: 700;
   letter-spacing: -0.045em;
   line-height: 1.1;
@@ -413,6 +414,14 @@ h1.project-title {
   padding-bottom: 16px !important;
 }
 
+/* Hide the original title from the project layout */
+.post-header,
+.project-header,
+.page-heading,
+h1.post-title,
+h1.project-title {
+  display: none !important;
+}
 
 </style>
 
