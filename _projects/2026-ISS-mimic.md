@@ -488,16 +488,6 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       </div>
     </div>
 
-    <div class="iss-equation">
-      <div class="iss-equation-main">
-        Gear Ratio = 36 / 11 = 3.27
-      </div>
-      <div class="iss-equation-note">
-        Ideal torque multiplication = 3.27×,
-        neglecting mechanical losses.
-      </div>
-    </div>
-
     <div class="iss-text">
       <p>
         The 3.27:1 gear reduction decreases the
@@ -517,39 +507,23 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
     </div>
 
     <div class="iss-gallery">
+      <img
+        src="{{ '/assets/images/spur_gear.png' | relative_url }}"
+        alt="Close-up Fusion 360 view of the 11-tooth pinion and 36-tooth gear."
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 6. CAD model of the spur gear pair.
+      </figcaption>
 
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Spur Gear CAD Model
-          </div>
-          <div class="iss-placeholder-note">
-            Close-up Fusion 360 view of the
-            11-tooth pinion and 36-tooth gear.
-          </div>
-        </div>
-        <figcaption>
-          Figure 6. CAD model of the spur gear pair.
-        </figcaption>
-      </figure>
-
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Physical Gear Assembly
-          </div>
-          <div class="iss-placeholder-note">
-            Photo of the 3D-printed gears installed
-            in the rotating pillar mechanism.
-          </div>
-        </div>
-        <figcaption>
-          Figure 7. Manufactured spur gear assembly.
-        </figcaption>
-      </figure>
-
+      <img
+        src="{{ '/assets/images/spur_gear.png' | relative_url }}"
+        alt="Photo of the 3D-printed gears installed in the rotating pillar mechanism."
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 7. Manufactured spur gear assembly.
+      </figcaption>
     </div>
 
   </section>
