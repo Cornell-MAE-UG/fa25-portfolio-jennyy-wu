@@ -405,36 +405,16 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       </figcaption>
     </figure>
 
-    <div class="iss-gallery">
-
-      <figure class="iss-hero">
+    <figure class="iss-hero">
       <img
         src="{{ '/assets/images/iss_exploded.png' | relative_url }}"
-        alt="Exploded CAD showing the motor, gears, pillar, and mounts."
+        alt="Exploded CAD view of the ISS Mimic assembly"
         loading="lazy"
       >
       <figcaption>
         Figure 3. Exploded view of the mechanical components.
       </figcaption>
     </figure>
-
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Side / Section View
-          </div>
-          <div class="iss-placeholder-note">
-            Side or section view showing the
-            internal arrangement and clearances.
-          </div>
-        </div>
-        <figcaption>
-          Figure 4. Internal arrangement of the assembly.
-        </figcaption>
-      </figure>
-
-    </div>
 
   </section>
 
