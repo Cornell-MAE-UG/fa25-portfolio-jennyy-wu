@@ -587,6 +587,23 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         </figcaption>
       </figure>
 
+      <figure class="iss-hero">
+      <img
+        src="{{ '/assets/images/motor_mount.jpeg' | relative_url }}"
+        alt="Original centrally positioned motor mount"
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 8. Original motor mount with limited installation access.
+      </figcaption>
+    </figure>
+
+
+
+
+
+
+
       <figure>
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
