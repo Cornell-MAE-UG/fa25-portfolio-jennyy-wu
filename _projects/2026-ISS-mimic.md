@@ -451,23 +451,20 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       </p>
     </div>
 
-    <figure class="iss-full">
-      <div class="iss-placeholder wide">
-        <div class="iss-placeholder-icon">+</div>
-        <div class="iss-placeholder-title">
-          Spur Gear Technical Drawing
-        </div>
-        <div class="iss-placeholder-note">
-          Add an annotated drawing showing the
-          pinion, driven gear, pitch circles,
-          tooth profiles, pressure angle,
-          and center distance.
-        </div>
-      </div>
+    <figure class="iss-hero">
+      <img
+        src="{{ '/assets/images/gear_drawing.png' | relative_url }}"
+        alt="annotated drawing of gears"
+        loading="lazy"
+      >
       <figcaption>
         Figure 5. Spur gear geometry and design parameters.
       </figcaption>
     </figure>
+
+
+
+
 
     <h3>Gear Ratio Calculations</h3>
 
@@ -670,61 +667,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
     </div>
 
-    <h3>Detachable Mounting Mechanism</h3>
-
-    <div class="iss-text">
-      <p>
-        The mounting connection needed to hold
-        the robot securely during operation while
-        still allowing it to be detached when needed.
-      </p>
-
-      <p>
-        I designed connecting components with
-        attention to alignment, fit, and assembly.
-        Snap-fit features and custom mounting
-        geometry helped make the connection
-        practical for repeated use.
-      </p>
-    </div>
-
-    <div class="iss-gallery">
-
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Detachable Mount CAD
-          </div>
-          <div class="iss-placeholder-note">
-            CAD close-up of the connection
-            and mounting features.
-          </div>
-        </div>
-        <figcaption>
-          Figure 12. CAD design of the detachable mounting system.
-        </figcaption>
-      </figure>
-
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Mounting Connection Detail
-          </div>
-          <div class="iss-placeholder-note">
-            Physical photo showing how the
-            robot attaches to the gantry.
-          </div>
-        </div>
-        <figcaption>
-          Figure 13. Physical detachable mounting connection.
-        </figcaption>
-      </figure>
-
-    </div>
-
-  </section>
+  <section>
 
 
   <!-- ===== TESTING AND RESULTS ===== -->
