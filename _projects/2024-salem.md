@@ -1,6 +1,6 @@
 ---
 layout: project
-title: SALEM Fire Suppression Robot
+title: SALEM (Semi-Autonomous Lightweight Extinguishing Machine)
 permalink: /projects/salem/
 description: Sikorsky STEM Challenge | High School
 image: /assets/images/salem.png
