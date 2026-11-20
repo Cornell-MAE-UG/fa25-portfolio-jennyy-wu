@@ -1,7 +1,7 @@
 ---
 layout: project
-title: Sikorsky Cargo Transport System
-permalink: /projects/sikorsky-cargo-transport/
+title: Cargo Transport System
+permalink: /projects/cargo-transport/
 description: Sikorsky STEM Challenge | High School
 image: /assets/images/cargo_transport.jpg
 ---

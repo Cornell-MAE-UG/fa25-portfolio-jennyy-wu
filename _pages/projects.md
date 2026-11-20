@@ -335,10 +335,10 @@ permalink: /projects/
        href="{{ '/projects/salem/' | relative_url }}">
       <div class="project-image-wrap">
         <img src="{{ '/assets/images/salem.png' | relative_url }}"
-             alt="SALEM fire suppression robot prototype">
+             alt="Fire suppression machine">
       </div>
       <div class="project-heading">
-        <h2>SALEM Fire Suppression Robot</h2>
+        <h2>SALEM (Semi-Autonomous Lightweight Extinguishing Machine)</h2>
         <span class="project-year">2024</span>
       </div>
       <p class="project-description">
@@ -346,15 +346,15 @@ permalink: /projects/
       </p>
     </a>
 
-    <!-- 8. SIKORSKY CARGO TRANSPORT -->
+    <!-- 8. CARGO TRANSPORT SYSTEM-->
     <a class="project-card"
-       href="{{ '/projects/sikorsky-cargo-transport/' | relative_url }}">
+       href="{{ '/projects/cargo-transport/' | relative_url }}">
       <div class="project-image-wrap">
         <img src="{{ '/assets/images/cargo_transport.jpg' | relative_url }}"
-             alt="SIKORSKY CARGO TRANSPORT">
+             alt="CARGO TRANSPORT SYSTEM">
       </div>
       <div class="project-heading">
-        <h2>Sikorsky Cargo Transport System</h2>
+        <h2>Cargo Transport System</h2>
         <span class="project-year">2023</span>
       </div>
       <p class="project-description">
