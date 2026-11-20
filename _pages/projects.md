@@ -8,7 +8,7 @@ permalink: /projects/
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1000px;
+  max-width: 1100px;
   width: calc(100% - 80px);
   margin: 0 auto;
   padding: 75px 0 90px;
