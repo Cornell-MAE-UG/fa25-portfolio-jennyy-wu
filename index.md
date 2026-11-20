@@ -51,7 +51,7 @@ main .wrapper,
 /* ===== HERO ===== */
 
 .homepage .hero {
-  padding: 35px 0 90px;
+  padding: 45px 0 90px;
 }
 
 .homepage .hero-layout {
