@@ -8,8 +8,8 @@ permalink: /projects/
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  width: calc(100vw - 80px);
-  max-width: 1250px;
+  width: 85vw;
+  max-width: 900px;
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 75px 0 90px;
@@ -300,7 +300,7 @@ permalink: /projects/
 
     <!-- 5. FLUID-MECHANICAL DISSECTION -->
     <a class="project-card"
-       href="{{ '/projects/fluid-mechanical/' | relative_url }}">
+       href="{{ '/projects/fluid-mechanical-dissection/' | relative_url }}">
       <div class="project-image-wrap">
         <img src="{{ '/assets/images/vacuum_pump.JPG' | relative_url }}"
              alt="Fluid-Mechanical Dissection">
