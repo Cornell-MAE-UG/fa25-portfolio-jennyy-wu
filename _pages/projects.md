@@ -8,10 +8,9 @@ permalink: /projects/
 /* ===== PROJECTS PAGE ===== */
 
 .projects-page {
-  max-width: 1200px;
-  width: calc(100vw - 160px);
-  margin-left: 50%;
-  transform: translateX(-50%);
+  max-width: 1000px;
+  width: calc(100% - 80px);
+  margin: 0 auto;
   padding: 75px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
@@ -63,8 +62,8 @@ permalink: /projects/
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 30px;
-  row-gap: 65px;
+  column-gap: 26px;
+  row-gap: 55px;
 }
 
 .project-card {
@@ -92,6 +91,19 @@ permalink: /projects/
 
 .project-card:hover img {
   transform: scale(1.035);
+}
+
+.project-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 30px;
+  background: #213d55;
+  color: white;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
 }
 
 /* ===== PROJECT TITLES ===== */
@@ -161,9 +173,6 @@ permalink: /projects/
   color: #222;
 }
 
-/* Prevent the shared layout's footer styling
-   from turning this footer navy. */
-
 .projects-page footer.projects-footer {
   background: none !important;
   color: #888 !important;
@@ -172,7 +181,6 @@ permalink: /projects/
 /* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
-
   .projects-page {
     width: calc(100% - 36px);
     padding: 50px 0 70px;
@@ -199,6 +207,10 @@ permalink: /projects/
     font-size: 25px;
   }
 
+  .project-image-placeholder {
+    font-size: 22px;
+  }
+
   .projects-page .projects-footer {
     font-size: 12px;
     gap: 12px;
@@ -212,181 +224,155 @@ permalink: /projects/
 
 <div class="projects-page" id="top">
 
-  <!-- ===== INTRODUCTION ===== -->
-
   <section class="projects-intro">
-
     <h1>Explore My Work!</h1>
-
     <p>
       From CAD models and technical drawings to hands-on prototypes, each project shows how I work through design challenges and bring my ideas to life.
     </p>
-
   </section>
-
-  <!-- ===== ALL SIX PROJECTS ===== -->
 
   <div class="projects-grid">
 
     <!-- 1. ISS MIMIC -->
-
     <a class="project-card"
        href="{{ '/projects/iss-mimic/' | relative_url }}">
-
       <div class="project-image-wrap">
-        <img
-          src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
-          alt="ISS Mimic">
+        <img src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
+             alt="ISS Mimic">
       </div>
-
       <div class="project-heading">
         <h2>ISS Mimic</h2>
         <span class="project-year">2026</span>
       </div>
-
       <p class="project-description">
         Gear Design · Mechanical Systems · Robotics
       </p>
-
     </a>
 
     <!-- 2. SUBMERSIBLE XRP -->
-
     <a class="project-card"
        href="{{ '/projects/submersible-xrp/' | relative_url }}">
-
       <div class="project-image-wrap">
-        <img
-          src="{{ '/assets/images/submersible.jpeg' | relative_url }}"
-          alt="Submersible XRP">
+        <img src="{{ '/assets/images/submersible.jpeg' | relative_url }}"
+             alt="Submersible XRP">
       </div>
-
       <div class="project-heading">
         <h2>Submersible XRP</h2>
         <span class="project-year">2026</span>
       </div>
-
       <p class="project-description">
         Underwater Robotics · CAD · Prototyping
       </p>
-
     </a>
 
     <!-- 3. SMARTSWEEP -->
-
     <a class="project-card"
        href="{{ '/projects/smart-sweep/' | relative_url }}">
-
       <div class="project-image-wrap">
-        <img
-          src="{{ '/assets/images/smartsweep.jpeg' | relative_url }}"
-          alt="SmartSweep">
+        <img src="{{ '/assets/images/smartsweep.jpeg' | relative_url }}"
+             alt="SmartSweep">
       </div>
-
       <div class="project-heading">
         <h2>SmartSweep</h2>
         <span class="project-year">2026</span>
       </div>
-
       <p class="project-description">
         Product Development · Mechanical Design
       </p>
-
     </a>
 
     <!-- 4. AR KART -->
-
     <a class="project-card"
        href="{{ '/projects/ar-kart/' | relative_url }}">
-
       <div class="project-image-wrap">
-        <img
-          src="{{ '/assets/images/ar-kart.png' | relative_url }}"
-          alt="AR Kart">
+        <img src="{{ '/assets/images/ar-kart.png' | relative_url }}"
+             alt="AR Kart">
       </div>
-
       <div class="project-heading">
         <h2>AR Kart</h2>
         <span class="project-year">2025</span>
       </div>
-
       <p class="project-description">
         Steering Geometry · CAD · 3D Printing
       </p>
-
     </a>
 
     <!-- 5. FLUID-MECHANICAL DISSECTION -->
-
     <a class="project-card"
        href="{{ '/projects/fluid-mechanical/' | relative_url }}">
-
       <div class="project-image-wrap">
-        <img
-          src="{{ '/assets/images/lifting-device-design.png' | relative_url }}"
-          alt="Fluid-Mechanical Dissection">
+        <img src="{{ '/assets/images/lifting-device-design.png' | relative_url }}"
+             alt="Fluid-Mechanical Dissection">
       </div>
-
       <div class="project-heading">
         <h2>Fluid-Mechanical Dissection</h2>
         <span class="project-year">2026</span>
       </div>
-
       <p class="project-description">
         Fluid Systems · Engineering Analysis
       </p>
-
     </a>
 
     <!-- 6. HEAT EXCHANGER -->
-
     <a class="project-card"
        href="{{ '/projects/heat-exchanger/' | relative_url }}">
-
       <div class="project-image-wrap">
-        <img
-          src="{{ '/assets/images/heat-exchanger.jpg' | relative_url }}"
-          alt="Heat Exchanger">
+        <img src="{{ '/assets/images/heat-exchanger.jpg' | relative_url }}"
+             alt="Heat Exchanger">
       </div>
-
       <div class="project-heading">
         <h2>Heat Exchanger</h2>
         <span class="project-year">2025</span>
       </div>
-
       <p class="project-description">
         Thermal Systems · Heat Transfer · Design
       </p>
+    </a>
 
+    <!-- 7. SALEM -->
+    <a class="project-card"
+       href="{{ '/projects/salem/' | relative_url }}">
+      <div class="project-image-wrap">
+        <img src="{{ '/assets/images/salem.png' | relative_url }}"
+             alt="SALEM fire suppression robot prototype">
+      </div>
+      <div class="project-heading">
+        <h2>SALEM Fire Suppression Robot</h2>
+        <span class="project-year">2024</span>
+      </div>
+      <p class="project-description">
+        Sikorsky STEM Challenge · Robotics · Prototyping
+      </p>
+    </a>
+
+    <!-- 8. SIKORSKY CARGO TRANSPORT -->
+    <a class="project-card"
+       href="{{ '/projects/sikorsky-cargo-transport/' | relative_url }}">
+      <div class="project-image-wrap">
+        <div class="project-image-placeholder">SIKORSKY CARGO TRANSPORT</div>
+      </div>
+      <div class="project-heading">
+        <h2>Sikorsky Cargo Transport System</h2>
+        <span class="project-year">2023</span>
+      </div>
+      <p class="project-description">
+        Hoist Design · Pulleys · Arduino · Color Sensing
+      </p>
     </a>
 
   </div>
 
-  <!-- ===== FOOTER ===== -->
-
   <div class="projects-footer">
-
     <span>© 2026 Jenny Wu</span>
 
     <nav class="projects-footer-links"
          aria-label="Footer navigation">
-
-      <a href="{{ '/' | relative_url }}">
-        About
-      </a>
-
-      <a href="#top">
-        Projects
-      </a>
-
+      <a href="{{ '/' | relative_url }}">About</a>
+      <a href="#top">Projects</a>
       <a href="{{ '/assets/images/Resume.pdf' | relative_url }}"
          target="_blank"
-         rel="noopener noreferrer">
-        CV
-      </a>
-
+         rel="noopener noreferrer">CV</a>
     </nav>
-
   </div>
 
 </div>
