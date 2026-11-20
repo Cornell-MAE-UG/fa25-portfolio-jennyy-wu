@@ -12,11 +12,13 @@ image: /assets/images/iss-mimic.jpg
 /* ===== PAGE WIDTH ===== */
 
 .iss-page {
-  max-width: 1200px;
-  width: calc(100vw - 160px);
+  width: 85vw;
+  max-width: 900px;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 75px 0 100px;
+  padding: 45px 0 90px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
   box-sizing: border-box;
 }
 
@@ -41,17 +43,10 @@ image: /assets/images/iss-mimic.jpg
 
 /* Responsive widths */
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .iss-page {
-    width: calc(100vw - 48px);
-    padding-top: 45px;
-  }
-}
-
-@media (max-width: 600px) {
-  .iss-page {
-    width: calc(100vw - 32px);
-    padding-top: 30px;
+    width: calc(100% - 36px);
+    padding: 50px 0 70px;
   }
 }
 
