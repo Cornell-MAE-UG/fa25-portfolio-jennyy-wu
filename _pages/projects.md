@@ -270,7 +270,7 @@ permalink: /projects/
     <a class="project-card"
        href="{{ '/projects/smart-sweep/' | relative_url }}">
       <div class="project-image-wrap">
-        <img src="{{ '/assets/images/smartsweep.jpeg' | relative_url }}"
+        <img src="{{ '/assets/images/smartsweep.png' | relative_url }}"
              alt="SmartSweep">
       </div>
       <div class="project-heading">

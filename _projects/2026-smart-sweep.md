@@ -3,7 +3,7 @@ layout: project
 title: MAE2250 Open Design Project
 permalink: /projects/smart-sweep/
 description: Client Outline and Pitch
-image: /assets/images/smartsweep.jpeg
+image: /assets/images/smartsweep.png
 technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC Motor Integration, Electrical Wiring, Testing & Iteration]
 ---
 

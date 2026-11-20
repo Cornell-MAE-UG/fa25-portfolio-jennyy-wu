@@ -477,7 +477,7 @@ main .wrapper,
         <div class="image-wrapper">
           <img
             class="project-image"
-            src="{{ '/assets/images/smartsweep.jpeg' | relative_url }}"
+            src="{{ '/assets/images/smartsweep.png' | relative_url }}"
             alt="SmartSweep mechanical prototype">
         </div>
 
