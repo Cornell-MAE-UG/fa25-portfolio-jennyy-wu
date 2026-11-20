@@ -7,46 +7,33 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 ---
 
 <style>
-
-/* ===== PAGE WIDTH ===== */
+/* ===== PAGE WIDTH AND ALIGNMENT ===== */
 
 .iss-page {
   width: 85vw;
   max-width: 900px;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 45px 0 90px;
+  padding: 30px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
+  text-align: center;
   box-sizing: border-box;
 }
 
-/* Prevent the default Jekyll wrapper from
-   restricting the project content */
-
-.page-content .wrapper,
-.page-content .container {
-  max-width: none !important;
-  width: 100% !important;
+.iss-page * {
+  box-sizing: border-box;
 }
 
-/* Make sure project images remain in normal flow */
-
-.iss-page img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  float: none;
-  position: static;
-}
-
-/* Responsive widths */
-
-@media (max-width: 700px) {
-  .iss-page {
-    width: calc(100% - 36px);
-    padding: 50px 0 70px;
-  }
+/* Center the title created by the project layout */
+.page-content h1,
+.post-header h1,
+.post-title,
+.project-header h1,
+.project-title {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 /* ===== TYPOGRAPHY ===== */
@@ -59,6 +46,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   line-height: 1.2;
   margin: 0 0 22px;
   color: #171717;
+  text-align: center;
 }
 
 .iss-page h3 {
@@ -67,6 +55,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   letter-spacing: -0.025em;
   margin: 36px 0 15px;
   color: #222;
+  text-align: center;
 }
 
 .iss-page p {
@@ -74,39 +63,37 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   line-height: 1.85;
   color: #444;
   margin: 0 0 20px;
-}
-
-.iss-page strong {
-  color: #222;
+  text-align: center;
 }
 
 .iss-page section {
-  margin-bottom: 95px;
+  margin-bottom: 85px;
 }
 
 .iss-text {
-  max-width: 850px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.iss-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #999;
-  margin-bottom: 16px;
-}
+/* ===== ROLE / PROJECT / TEAM ===== */
 
-/* ===== PROJECT METADATA ===== */
-
-.iss-meta {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-  padding: 26px 0;
-  margin: 10px 0 45px;
+.iss-page .iss-meta {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 25px;
+  align-items: start;
+  width: 100%;
+  margin: 0 auto 55px;
+  padding: 22px 0 28px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.iss-meta > div {
+  min-width: 0;
+  text-align: center;
 }
 
 .iss-meta-heading {
@@ -124,34 +111,22 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   color: #333;
 }
 
-/* ===== IMAGES AND GALLERIES ===== */
-
-.iss-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 28px;
-  margin: 32px 0 38px;
-}
-
-.iss-gallery.three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
+/* ===== IMAGES ===== */
 
 .iss-page figure {
   margin: 0;
   min-width: 0;
-}
-
-.iss-full {
-  margin: 32px 0 40px !important;
+  text-align: center;
 }
 
 .iss-page img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 3px;
+  margin: 0 auto;
+  border-radius: 4px;
+  float: none;
 }
 
 .iss-page figcaption {
@@ -159,16 +134,53 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   color: #888;
   line-height: 1.65;
   margin-top: 11px;
+  text-align: center;
 }
 
-/* ===== PHOTO PLACEHOLDERS ===== */
+.iss-full {
+  width: 100%;
+  margin: 32px auto 40px !important;
+}
+
+/* Smaller, centered main project photo */
+.iss-page .iss-hero {
+  width: 70%;
+  max-width: 630px;
+  margin: 35px auto 40px !important;
+  display: block;
+  float: none;
+}
+
+.iss-page .iss-hero img,
+.iss-page .iss-hero .iss-placeholder {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== IMAGE GALLERIES ===== */
+
+.iss-page .iss-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  width: 100%;
+  margin: 32px auto 38px;
+}
+
+.iss-page .iss-gallery.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* ===== IMAGE PLACEHOLDERS ===== */
 
 .iss-placeholder {
   width: 100%;
   aspect-ratio: 4 / 3;
   background: #f5f5f3;
   border: 1px dashed #d5d5d2;
-  border-radius: 3px;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -206,7 +218,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   max-width: 330px;
 }
 
-/* ===== TECHNICAL DETAILS ===== */
+/* ===== ENGINEERING SPECIFICATIONS ===== */
 
 .iss-specs {
   display: grid;
@@ -218,7 +230,8 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 .iss-spec {
   background: #f7f7f6;
   padding: 25px;
-  border-radius: 3px;
+  border-radius: 4px;
+  text-align: center;
 }
 
 .iss-spec-number {
@@ -240,6 +253,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   padding: 30px;
   text-align: center;
   margin: 32px 0;
+  border-radius: 4px;
 }
 
 .iss-equation-main {
@@ -254,36 +268,34 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   margin-top: 10px;
 }
 
-/* ===== DIVIDERS ===== */
-
-.iss-divider {
-  border: 0;
-  border-top: 1px solid #e9e9e9;
-  margin: 65px 0;
-}
-
 /* ===== MOBILE ===== */
-
-@media (max-width: 900px) {
-  .iss-page {
-    width: calc(100vw - 48px);
-    padding-top: 45px;
-  }
-}
 
 @media (max-width: 700px) {
   .iss-page {
-    width: calc(100vw - 32px);
-    padding-top: 30px;
+    width: calc(100% - 36px);
+    padding: 25px 0 70px;
   }
 
   .iss-page section {
     margin-bottom: 65px;
   }
 
-  .iss-gallery,
-  .iss-gallery.three,
-  .iss-meta {
+  .iss-page .iss-meta {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px;
+  }
+
+  .iss-meta-value {
+    font-size: 13px;
+  }
+
+  .iss-page .iss-hero {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .iss-page .iss-gallery,
+  .iss-page .iss-gallery.three {
     grid-template-columns: 1fr;
   }
 
@@ -295,108 +307,25 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
     font-size: 15px;
   }
 }
-
-/* ===== CENTER ALL ISS MIMIC CONTENT ===== */
-
-/* Center the overall project page */
-.iss-page {
-  width: 85vw;
-  max-width: 900px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-/* Center headings and paragraphs */
-.iss-page h2,
-.iss-page h3,
-.iss-page p,
-.iss-page .iss-label {
-  text-align: center;
-}
-
-/* Center narrower text sections */
-.iss-page .iss-text {
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Center the project information */
-.iss-page .iss-meta {
-  text-align: center;
-}
-
-.iss-page .iss-meta-heading,
-.iss-page .iss-meta-value {
-  text-align: center;
-}
-
-/* Center all image galleries */
-.iss-page .iss-gallery {
-  justify-content: center;
-}
-
-/* Center photos and CAD drawings */
-.iss-page figure {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.iss-page img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Center image captions */
-.iss-page figcaption {
-  text-align: center;
-}
-
-/* Center technical details */
-.iss-page .iss-spec,
-.iss-page .iss-equation {
-  text-align: center;
-}
-
-/* Center placeholders */
-.iss-page .iss-placeholder {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-/* Mobile: match Projects page */
-@media (max-width: 700px) {
-  .iss-page {
-    width: calc(100% - 36px);
-  }
-}
 </style>
-
 
 <div class="iss-page">
 
-  <!-- ================================== -->
-  <!-- PROJECT OVERVIEW -->
-  <!-- ================================== -->
+  <!-- ===== PROJECT OVERVIEW ===== -->
 
   <section>
 
+    <div class="iss-meta">
       <div>
         <div class="iss-meta-heading">Role</div>
         <div class="iss-meta-value">
-          Mechanical Design & Prototyping
+          Mechanical Design &amp; Prototyping
         </div>
       </div>
 
       <div>
-        <div class="iss-meta-heading">Project</div>
-        <div class="iss-meta-value">
-          ISS Mimic
-        </div>
+        <div class="iss-meta-heading">Year</div>
+        <div class="iss-meta-value">2025–2026</div>
       </div>
 
       <div>
@@ -405,63 +334,55 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
           Cornell Cup Robotics
         </div>
       </div>
-
     </div>
 
     <h2>Project Overview</h2>
 
     <div class="iss-text">
-
       <p>
         The ISS Mimic is a Cornell Cup Robotics project
-        designed to recreate the real-time movement of the
-        International Space Station using an XRP robotics
-        platform. Developed in collaboration with Boeing
-        and Intel, the project combines a rotating pillar
-        and a two-axis gantry to represent the movement
-        of the ISS.
+        designed to recreate the real-time movement of
+        the International Space Station using an XRP
+        robotics platform. Developed in collaboration
+        with Boeing and Intel, the project combines
+        rotational and linear motion to create an
+        interactive representation of the ISS.
       </p>
 
       <p>
         I worked on the mechanical design and prototyping
         of the robot, focusing on the rotating pillar,
-        gear-driven motor system, and detachable gantry.
-        My work involved designing components in Fusion 360,
-        3D printing prototypes, assembling mechanisms,
-        and troubleshooting mechanical problems that came
-        up during testing.
+        gear-driven motor system, and detachable two-axis
+        gantry. My work involved designing components
+        in Fusion 360, 3D printing prototypes, assembling
+        mechanisms, and troubleshooting mechanical issues
+        during testing.
       </p>
-
     </div>
 
-    <!-- HERO PHOTO -->
+    <!-- MAIN PROJECT PHOTO -->
 
-    <figure class="iss-full">
-
-      <div class="project-image-wrap">
-        <img src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
-             alt="ISS Mimic">
-      </div>
-
+    <figure class="iss-hero">
+      <img
+        src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
+        alt="ISS Mimic robotic system"
+        loading="lazy"
+      >
       <figcaption>
         Figure 1. ISS Mimic robotic system.
       </figcaption>
-
     </figure>
 
   </section>
 
 
-  <!-- ================================== -->
-  <!-- CAD DRAWINGS -->
-  <!-- ================================== -->
+  <!-- ===== CAD DRAWINGS ===== -->
 
   <section>
 
     <h2>Fusion 360 CAD Drawings</h2>
 
     <div class="iss-text">
-
       <p>
         I used Fusion 360 to design and modify the
         mechanical components of the ISS Mimic.
@@ -472,59 +393,47 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
       <p>
         The CAD models helped us understand how the
-        different mechanisms fit together, check
-        clearances, and plan the assembly before
-        manufacturing the parts.
+        mechanisms fit together, check clearances,
+        and plan the assembly before manufacturing
+        the parts.
       </p>
-
     </div>
 
-    <!-- FULL ASSEMBLY CAD -->
-
     <figure class="iss-full">
-
       <div class="iss-placeholder wide">
         <div class="iss-placeholder-icon">+</div>
         <div class="iss-placeholder-title">
           Full Assembly — Isometric View
         </div>
         <div class="iss-placeholder-note">
-          Fusion 360 isometric rendering of the
+          Add a Fusion 360 rendering of the
           complete ISS Mimic assembly.
         </div>
       </div>
-
       <figcaption>
-        Figure 2. Isometric CAD view of the complete mechanical assembly.
+        Figure 2. Isometric CAD view of the complete assembly.
       </figcaption>
-
     </figure>
-
-    <!-- EXPLODED AND SIDE VIEWS -->
 
     <div class="iss-gallery">
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
             Exploded Assembly View
           </div>
           <div class="iss-placeholder-note">
-            Exploded CAD showing how the motor,
-            gears, pillar, and mounts fit together.
+            Exploded CAD showing the motor,
+            gears, pillar, and mounts.
           </div>
         </div>
-
         <figcaption>
           Figure 3. Exploded view of the mechanical components.
         </figcaption>
-
       </figure>
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -535,11 +444,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             internal arrangement and clearances.
           </div>
         </div>
-
         <figcaption>
-          Figure 4. Internal arrangement of the mechanical assembly.
+          Figure 4. Internal arrangement of the assembly.
         </figcaption>
-
       </figure>
 
     </div>
@@ -547,16 +454,13 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   </section>
 
 
-  <!-- ================================== -->
-  <!-- SPUR GEAR DESIGN -->
-  <!-- ================================== -->
+  <!-- ===== SPUR GEAR DESIGN ===== -->
 
   <section>
 
-    <h2>Rotating Pillar & Spur Gear Design</h2>
+    <h2>Rotating Pillar &amp; Spur Gear Design</h2>
 
     <div class="iss-text">
-
       <p>
         One of the main engineering challenges was
         getting the motor to rotate the pillar properly.
@@ -580,78 +484,63 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         making it easier for the motor to rotate
         the assembly.
       </p>
-
     </div>
 
-    <!-- SPUR GEAR TECHNICAL DRAWING -->
+    <!-- TECHNICAL GEAR DRAWING -->
 
     <figure class="iss-full">
-
       <div class="iss-placeholder wide">
         <div class="iss-placeholder-icon">+</div>
         <div class="iss-placeholder-title">
           Spur Gear Technical Drawing
         </div>
         <div class="iss-placeholder-note">
-          Add your gear drawing showing the pinion,
-          driven gear, pitch circles, pressure angle,
-          tooth profiles, and center distance.
+          Add an annotated drawing showing the
+          pinion, driven gear, pitch circles,
+          tooth profiles, pressure angle,
+          and center distance.
         </div>
       </div>
-
       <figcaption>
-        Figure 5. Spur gear geometry and important design parameters.
+        Figure 5. Spur gear geometry and design parameters.
       </figcaption>
-
     </figure>
 
     <h3>Gear Ratio Calculations</h3>
 
     <div class="iss-specs">
-
       <div class="iss-spec">
         <div class="iss-spec-number">11</div>
-        <div class="iss-spec-name">
-          Pinion teeth
-        </div>
+        <div class="iss-spec-name">Pinion teeth</div>
       </div>
 
       <div class="iss-spec">
         <div class="iss-spec-number">36</div>
-        <div class="iss-spec-name">
-          Driven gear teeth
-        </div>
+        <div class="iss-spec-name">Driven gear teeth</div>
       </div>
 
       <div class="iss-spec">
         <div class="iss-spec-number">3.27:1</div>
-        <div class="iss-spec-name">
-          Gear reduction
-        </div>
+        <div class="iss-spec-name">Gear reduction</div>
       </div>
-
     </div>
 
     <div class="iss-equation">
-
       <div class="iss-equation-main">
         Gear Ratio = 36 / 11 = 3.27
       </div>
-
       <div class="iss-equation-note">
-        Ideal output torque increases by 3.27x,
+        Ideal torque multiplication = 3.27×,
         neglecting mechanical losses.
       </div>
-
     </div>
 
     <div class="iss-text">
-
       <p>
         The 3.27:1 gear reduction decreases the
         output rotational speed by approximately
-        69.4% while ideally multiplying the output
-        torque by 3.27.
+        69.4% while ideally multiplying the
+        output torque by 3.27.
       </p>
 
       <p>
@@ -662,15 +551,11 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         so alignment and clearance were important
         considerations during assembly.
       </p>
-
     </div>
-
-    <!-- GEAR CAD IMAGES -->
 
     <div class="iss-gallery">
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -681,15 +566,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             11-tooth pinion and 36-tooth gear.
           </div>
         </div>
-
         <figcaption>
           Figure 6. CAD model of the spur gear pair.
         </figcaption>
-
       </figure>
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -700,11 +582,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             in the rotating pillar mechanism.
           </div>
         </div>
-
         <figcaption>
           Figure 7. Manufactured spur gear assembly.
         </figcaption>
-
       </figure>
 
     </div>
@@ -712,26 +592,25 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   </section>
 
 
-  <!-- ================================== -->
-  <!-- MOTOR MOUNT DESIGN -->
-  <!-- ================================== -->
+  <!-- ===== MOTOR MOUNT ===== -->
 
   <section>
 
-    <h2>Motor Mount Design & Assembly</h2>
+    <h2>Motor Mount Design &amp; Assembly</h2>
 
     <div class="iss-text">
-
       <p>
-        Another challenge involved designing a motor
-        mount that could fit within the surrounding
-        assembly while maintaining proper gear alignment.
+        Another challenge involved designing a
+        motor mount that could fit within the
+        surrounding assembly while maintaining
+        proper gear alignment.
       </p>
 
       <p>
-        The original motor mount fit in the Fusion 360
-        model, but it was difficult to install because
-        nearby components blocked the assembly path.
+        The original motor mount fit in the
+        Fusion 360 model, but it was difficult
+        to install because nearby components
+        blocked the assembly path.
         Although everything appeared to fit in CAD,
         there was not enough room to physically
         position the motor during installation.
@@ -741,39 +620,32 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         I redesigned the motor positioning by moving
         the mount toward the side of the assembly.
         This improved access during installation
-        while keeping the motor aligned with the
-        driven gear.
+        while keeping the motor aligned with
+        the driven gear.
       </p>
-
     </div>
 
     <h3>Design Iterations</h3>
 
-    <!-- BEFORE / AFTER CAD -->
-
     <div class="iss-gallery">
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
             Original Motor Mount
           </div>
           <div class="iss-placeholder-note">
-            CAD of the original centrally positioned
-            motor mount.
+            CAD of the original centrally
+            positioned motor mount.
           </div>
         </div>
-
         <figcaption>
           Figure 8. Original motor mount with limited installation access.
         </figcaption>
-
       </figure>
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -784,11 +656,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             repositioned toward the side.
           </div>
         </div>
-
         <figcaption>
           Figure 9. Revised motor mount with improved assembly access.
         </figcaption>
-
       </figure>
 
     </div>
@@ -796,7 +666,6 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
     <h3>Motor Mount Engineering Drawing</h3>
 
     <div class="iss-text">
-
       <p>
         The mount also needed to maintain gear
         alignment and provide clearance around
@@ -805,11 +674,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         overall geometry, and available space
         around the motor.
       </p>
-
     </div>
 
     <figure class="iss-full">
-
       <div class="iss-placeholder wide">
         <div class="iss-placeholder-icon">+</div>
         <div class="iss-placeholder-title">
@@ -820,15 +687,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
           dimensions, mounting holes, and clearances.
         </div>
       </div>
-
       <figcaption>
         Figure 10. Technical drawing of the redesigned motor mount.
       </figcaption>
-
     </figure>
 
     <div class="iss-text">
-
       <p>
         This redesign highlighted an important
         difference between CAD and physical assembly:
@@ -838,22 +702,18 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         in the design process helped avoid
         additional problems during prototyping.
       </p>
-
     </div>
 
   </section>
 
 
-  <!-- ================================== -->
-  <!-- TWO-AXIS GANTRY -->
-  <!-- ================================== -->
+  <!-- ===== TWO-AXIS GANTRY ===== -->
 
   <section>
 
     <h2>Two-Axis Belt-Driven Gantry</h2>
 
     <div class="iss-text">
-
       <p>
         In addition to the rotating pillar,
         the ISS Mimic uses a belt-driven gantry
@@ -876,15 +736,11 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         between moving components, and ease of
         installation and removal.
       </p>
-
     </div>
-
-    <!-- GANTRY CAD AND PHOTO -->
 
     <div class="iss-gallery">
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -895,15 +751,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             two-axis gantry and belt system.
           </div>
         </div>
-
         <figcaption>
           Figure 11. CAD model of the belt-driven gantry.
         </figcaption>
-
       </figure>
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -914,11 +767,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             belts, pulleys, and mounting structure.
           </div>
         </div>
-
         <figcaption>
           Figure 12. Assembled two-axis gantry.
         </figcaption>
-
       </figure>
 
     </div>
@@ -926,7 +777,6 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
     <h3>Detachable Mounting Mechanism</h3>
 
     <div class="iss-text">
-
       <p>
         The mounting connection needed to hold
         the robot securely during operation while
@@ -940,13 +790,11 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         geometry helped make the connection
         practical for repeated use.
       </p>
-
     </div>
 
     <div class="iss-gallery">
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -957,15 +805,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             and mounting features.
           </div>
         </div>
-
         <figcaption>
           Figure 13. CAD design of the detachable mounting system.
         </figcaption>
-
       </figure>
 
       <figure>
-
         <div class="iss-placeholder">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -976,11 +821,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             robot attaches to the gantry.
           </div>
         </div>
-
         <figcaption>
           Figure 14. Physical detachable mounting connection.
         </figcaption>
-
       </figure>
 
     </div>
@@ -988,16 +831,13 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   </section>
 
 
-  <!-- ================================== -->
-  <!-- MANUFACTURING -->
-  <!-- ================================== -->
+  <!-- ===== MANUFACTURING ===== -->
 
   <section>
 
-    <h2>3D Printing & Prototyping</h2>
+    <h2>3D Printing &amp; Prototyping</h2>
 
     <div class="iss-text">
-
       <p>
         Most of the custom mechanical components
         were manufactured using 3D printing.
@@ -1022,15 +862,11 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         structures, snap-fit geometry, and clearances
         between moving components.
       </p>
-
     </div>
-
-    <!-- PROTOTYPING GALLERY -->
 
     <div class="iss-gallery three">
 
       <figure>
-
         <div class="iss-placeholder square">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -1040,15 +876,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             Collection of designed parts.
           </div>
         </div>
-
         <figcaption>
           Figure 15. Custom mechanical components designed in Fusion 360.
         </figcaption>
-
       </figure>
 
       <figure>
-
         <div class="iss-placeholder square">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -1058,15 +891,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             Printed gears, mounts, and connectors.
           </div>
         </div>
-
         <figcaption>
           Figure 16. Manufactured prototype components.
         </figcaption>
-
       </figure>
 
       <figure>
-
         <div class="iss-placeholder square">
           <div class="iss-placeholder-icon">+</div>
           <div class="iss-placeholder-title">
@@ -1076,11 +906,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
             Physical assembly and fit testing.
           </div>
         </div>
-
         <figcaption>
           Figure 17. Prototype assembly and testing.
         </figcaption>
-
       </figure>
 
     </div>
@@ -1088,16 +916,13 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   </section>
 
 
-  <!-- ================================== -->
-  <!-- TESTING AND RESULTS -->
-  <!-- ================================== -->
+  <!-- ===== TESTING AND RESULTS ===== -->
 
   <section>
 
-    <h2>Testing & Results</h2>
+    <h2>Testing &amp; Results</h2>
 
     <div class="iss-text">
-
       <p>
         Testing focused on identifying mechanical
         issues that prevented the robot from moving
@@ -1123,13 +948,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         helped us identify problems and
         improve the reliability of the mechanism.
       </p>
-
     </div>
 
-    <!-- TESTING PHOTO -->
-
     <figure class="iss-full">
-
       <div class="iss-placeholder wide">
         <div class="iss-placeholder-icon">+</div>
         <div class="iss-placeholder-title">
@@ -1140,17 +961,14 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
           rotating pillar and gear assembly.
         </div>
       </div>
-
       <figcaption>
         Figure 18. Completed rotating pillar mechanism after redesign.
       </figcaption>
-
     </figure>
 
     <h3>Video of the Mechanism in Action</h3>
 
     <div class="iss-text">
-
       <p>
         The video below demonstrates the redesigned
         gear assembly driving the rotating pillar.
@@ -1158,13 +976,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
         mechanism was able to rotate successfully
         during testing.
       </p>
-
     </div>
 
-    <!-- VIDEO PLACEHOLDER -->
-
     <figure class="iss-full">
-
       <div class="iss-placeholder wide">
         <div class="iss-placeholder-icon">▶</div>
         <div class="iss-placeholder-title">
@@ -1175,11 +989,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
           video showing the working mechanism.
         </div>
       </div>
-
       <figcaption>
         Video 1. Testing the redesigned rotating pillar assembly.
       </figcaption>
-
     </figure>
 
   </section>
