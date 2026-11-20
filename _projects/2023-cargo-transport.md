@@ -6,10 +6,6 @@ description: Sikorsky STEM Challenge | High School
 image: /assets/images/cargo_transport.jpg
 ---
 
-# Sikorsky Cargo Transport System
-
-**Sikorsky STEM Challenge · 2023 · High school team project**
-
 Our team built a semi-autonomous cargo transport system that could pick up a payload, move along a test frame, identify a destination by its roof color, and lower the payload there.
 
 The mechanical design used a motor-driven hoist drum, rope, pulleys, and a magnetic hook. We used an Arduino Uno and color sensor to control the sequence: lower the hook to collect a payload, lift it, travel to the selected destination, and lower it again.

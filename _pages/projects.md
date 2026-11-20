@@ -12,7 +12,7 @@ permalink: /projects/
   max-width: 900px;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 75px 0 90px;
+  padding: 35px 0 90px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
 }
