@@ -7,14 +7,14 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 ---
 
 <style>
-/* ===== PAGE WIDTH AND ALIGNMENT ===== */
+/* ===== ISS MIMIC PROJECT PAGE ===== */
 
 .iss-page {
   width: 85vw;
   max-width: 900px;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 30px 0 90px;
+  padding: 20px 0 80px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
   text-align: center;
@@ -25,45 +25,46 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   box-sizing: border-box;
 }
 
-/* Center the title created by the project layout */
-.page-content h1,
-.post-header h1,
-.post-title,
-.project-header h1,
-.project-title {
-  text-align: center !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
+/* ===== TITLES AND TEXT ===== */
 
-/* ===== TYPOGRAPHY ===== */
+.iss-page .iss-main-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 5vw, 58px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  color: #222;
+  text-align: center;
+  margin: 0 auto 24px;
+}
 
 .iss-page h2 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(29px, 3.2vw, 39px);
-  font-weight: 700;
-  letter-spacing: -0.04em;
-  line-height: 1.2;
-  margin: 0 0 22px;
+  font-size: clamp(29px, 3vw, 38px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
   color: #171717;
   text-align: center;
+  margin: 0 0 25px;
 }
 
 .iss-page h3 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 21px;
-  font-weight: 650;
+  font-weight: 500;
   letter-spacing: -0.025em;
-  margin: 36px 0 15px;
   color: #222;
   text-align: center;
+  margin: 34px 0 16px;
 }
 
 .iss-page p {
   font-size: 16px;
   line-height: 1.85;
   color: #444;
-  margin: 0 0 20px;
   text-align: center;
+  margin: 0 0 20px;
 }
 
 .iss-page section {
@@ -73,27 +74,24 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 .iss-text {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
-/* ===== ROLE / PROJECT / TEAM ===== */
+/* ===== PROJECT METADATA ===== */
 
 .iss-page .iss-meta {
-  display: grid !important;
-  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
   align-items: start;
   width: 100%;
-  margin: 0 auto 55px;
-  padding: 22px 0 28px;
+  margin: 0 auto 38px;
+  padding: 16px 0;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
-  text-align: center;
 }
 
 .iss-meta > div {
   min-width: 0;
-  text-align: center;
 }
 
 .iss-meta-heading {
@@ -111,7 +109,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   color: #333;
 }
 
-/* ===== IMAGES ===== */
+/* ===== PHOTOS AND FIGURES ===== */
 
 .iss-page figure {
   margin: 0;
@@ -122,40 +120,34 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 .iss-page img {
   display: block;
   width: 100%;
-  max-width: 100%;
   height: auto;
   margin: 0 auto;
   border-radius: 4px;
-  float: none;
 }
 
 .iss-page figcaption {
   font-size: 12px;
-  color: #888;
   line-height: 1.65;
+  color: #888;
   margin-top: 11px;
   text-align: center;
 }
 
-.iss-full {
+.iss-page .iss-full {
   width: 100%;
-  margin: 32px auto 40px !important;
+  margin: 32px auto 40px;
 }
 
-/* Smaller, centered main project photo */
+/* Main project photo: smaller and centered */
+
 .iss-page .iss-hero {
   width: 70%;
   max-width: 630px;
-  margin: 35px auto 40px !important;
-  display: block;
-  float: none;
+  margin: 35px auto 40px;
 }
 
-.iss-page .iss-hero img,
-.iss-page .iss-hero .iss-placeholder {
+.iss-page .iss-hero img {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* ===== IMAGE GALLERIES ===== */
@@ -199,22 +191,22 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
 .iss-placeholder-icon {
   font-size: 27px;
-  color: #aaa;
   font-weight: 300;
+  color: #aaa;
   margin-bottom: 13px;
 }
 
 .iss-placeholder-title {
   font-size: 14px;
-  font-weight: 650;
+  font-weight: 600;
   color: #777;
   margin-bottom: 8px;
 }
 
 .iss-placeholder-note {
   font-size: 12px;
-  color: #aaa;
   line-height: 1.6;
+  color: #aaa;
   max-width: 330px;
 }
 
@@ -236,7 +228,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
 .iss-spec-number {
   font-size: 31px;
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -1px;
   color: #222;
   margin-bottom: 7px;
@@ -244,16 +236,16 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
 .iss-spec-name {
   font-size: 12px;
-  color: #777;
   line-height: 1.5;
+  color: #777;
 }
 
 .iss-equation {
   background: #f7f7f6;
   padding: 30px;
-  text-align: center;
   margin: 32px 0;
   border-radius: 4px;
+  text-align: center;
 }
 
 .iss-equation-main {
@@ -273,7 +265,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 @media (max-width: 700px) {
   .iss-page {
     width: calc(100% - 36px);
-    padding: 25px 0 70px;
+    padding: 20px 0 65px;
   }
 
   .iss-page section {
@@ -281,7 +273,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   }
 
   .iss-page .iss-meta {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
   }
 
@@ -307,127 +299,14 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
     font-size: 15px;
   }
 }
-
-/* ===== FINAL TITLE AND SPACING FIX ===== */
-
-/* Center ISS Mimic title generated by Jekyll */
-body .post-header,
-body .project-header,
-body .page-header {
-  text-align: center !important;
-}
-
-body .post-header h1,
-body .project-header h1,
-body .page-header h1,
-body h1.post-title,
-body h1.project-title,
-body .page-content > h1 {
-  text-align: center !important;
-  width: 100% !important;
-  max-width: none !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
-/* Reduce space below the title */
-body .post-header,
-body .project-header,
-body .page-header {
-  margin-bottom: 10px !important;
-  padding-bottom: 0 !important;
-}
-
-/* Reduce space above the metadata row */
-.iss-page {
-  padding-top: 0 !important;
-}
-
-/* Make Role / Year / Team more compact */
-.iss-page .iss-meta {
-  margin-top: 0 !important;
-  margin-bottom: 30px !important;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
-}
-
-/* Reduce gap before Project Overview */
-.iss-page section:first-child h2 {
-  margin-top: 0 !important;
-}
-
-/* ===== FINAL TITLE AND HEADING DESIGN ===== */
-
-/* Hide the title generated by the outer layout */
-.post-header,
-.project-header,
-h1.post-title,
-h1.project-title {
-  display: none !important;
-}
-
-/* Main title: large, bold, perfectly centered */
-.iss-page .iss-main-title {
-  display: block !important;
-  width: 100%;
-  margin: 0 auto 24px !important;
-  padding: 0;
-  text-align: center !important;
-
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(44px, 5vw, 58px);
-  font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 1.1;
-  color: #222;
-}
-
-/* Smaller, lighter section headings */
-.iss-page h2 {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(29px, 3vw, 38px);
-  font-weight: 400 !important;
-  letter-spacing: -0.035em;
-  line-height: 1.25;
-  margin: 0 0 25px;
-  text-align: center;
-}
-
-/* Smaller subheadings */
-.iss-page h3 {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 500 !important;
-  margin: 34px 0 16px;
-  text-align: center;
-}
-
-/* Tighten title and metadata spacing */
-.iss-page {
-  padding-top: 20px !important;
-}
-
-.iss-page .iss-meta {
-  margin-top: 0 !important;
-  margin-bottom: 38px !important;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
-}
-
-/* Hide the original title from the project layout */
-.post-header,
-.project-header,
-.page-heading,
-h1.post-title,
-h1.project-title {
-  display: none !important;
-}
-
 </style>
 
 <div class="iss-page">
 
-    <h1 class="iss-main-title">ISS Mimic</h1>
+  <!-- ===== MAIN TITLE ===== -->
+
+  <h1 class="iss-main-title">ISS Mimic</h1>
+
 
   <!-- ===== PROJECT OVERVIEW ===== -->
 
@@ -477,8 +356,6 @@ h1.project-title {
         during testing.
       </p>
     </div>
-
-    <!-- MAIN PROJECT PHOTO -->
 
     <figure class="iss-hero">
       <img
@@ -603,8 +480,6 @@ h1.project-title {
         the assembly.
       </p>
     </div>
-
-    <!-- TECHNICAL GEAR DRAWING -->
 
     <figure class="iss-full">
       <div class="iss-placeholder wide">
@@ -829,7 +704,7 @@ h1.project-title {
           </div>
         </div>
         <figcaption>
-          Figure 11. CAD model of the belt-driven gantry.
+          Figure 10. CAD model of the belt-driven gantry.
         </figcaption>
       </figure>
 
@@ -845,7 +720,7 @@ h1.project-title {
           </div>
         </div>
         <figcaption>
-          Figure 12. Assembled two-axis gantry.
+          Figure 11. Assembled two-axis gantry.
         </figcaption>
       </figure>
 
@@ -883,7 +758,7 @@ h1.project-title {
           </div>
         </div>
         <figcaption>
-          Figure 13. CAD design of the detachable mounting system.
+          Figure 12. CAD design of the detachable mounting system.
         </figcaption>
       </figure>
 
@@ -899,13 +774,14 @@ h1.project-title {
           </div>
         </div>
         <figcaption>
-          Figure 14. Physical detachable mounting connection.
+          Figure 13. Physical detachable mounting connection.
         </figcaption>
       </figure>
 
     </div>
 
   </section>
+
 
   <!-- ===== TESTING AND RESULTS ===== -->
 
@@ -953,7 +829,7 @@ h1.project-title {
         </div>
       </div>
       <figcaption>
-        Figure 18. Completed rotating pillar mechanism after redesign.
+        Figure 14. Completed rotating pillar mechanism after redesign.
       </figcaption>
     </figure>
 
