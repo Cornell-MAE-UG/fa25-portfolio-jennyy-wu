@@ -3,8 +3,9 @@ layout: project
 title: Fluid-Mechanical Dissection
 permalink: /projects/fluid-mechanical-dissection/
 description: MAE 3230 Fluid Mechanics Project
+image: /assets/images/vacuum_pump.JPG
 ---
 
 #Fluid-Mechanical Dissection
 
-This section will document my upcoming fluid-mechanical dissection project for MAE 3230.
+My group is taking apart a rotary-vane vacuum pump to understand how it creates suction.
