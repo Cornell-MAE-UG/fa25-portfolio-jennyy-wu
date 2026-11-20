@@ -503,25 +503,33 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       </p>
     </div>
 
+    
     <div class="iss-gallery">
-      <img
-        src="{{ '/assets/images/spur_gear.png' | relative_url }}"
-        alt="Close-up Fusion 360 view of the 11-tooth pinion and 36-tooth gear."
-        loading="lazy"
-      >
-      <figcaption>
-        Figure 6. CAD model of the spur gear pair.
-      </figcaption>
 
-      <img
+    <figure>
+        <img
         src="{{ '/assets/images/spur_gear.png' | relative_url }}"
-        alt="Photo of the 3D-printed gears installed in the rotating pillar mechanism."
+        alt="Fusion 360 CAD model of the spur gear pair"
         loading="lazy"
-      >
-      <figcaption>
+        >
+        <figcaption>
+        Figure 6. CAD model of the spur gear pair.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img
+        src="{{ '/assets/images/spur_gear.png' | relative_url }}"
+        alt="Manufactured spur gear assembly"
+        loading="lazy"
+        >
+        <figcaption>
         Figure 7. Manufactured spur gear assembly.
-      </figcaption>
+        </figcaption>
+    </figure>
+
     </div>
+
 
   </section>
 
@@ -667,7 +675,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
     </div>
 
-  <section>
+  </section>
 
 
   <!-- ===== TESTING AND RESULTS ===== -->
