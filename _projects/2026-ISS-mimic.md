@@ -35,7 +35,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   line-height: 1.1;
   color: #222;
   text-align: center;
-  margin: 0 auto 24px;
+  margin: 0 auto 14px;
 }
 
 .iss-page h2 {
@@ -82,10 +82,10 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 25px;
-  align-items: start;
+  align-items: center;
   width: 100%;
-  margin: 0 auto 38px;
-  padding: 16px 0;
+  margin: 0 auto 20px;
+  padding: 8px 0;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
