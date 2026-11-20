@@ -4,7 +4,6 @@ title: ISS Mimic
 permalink: /projects/iss-mimic/
 description: Cornell Cup Robotics — Mechanical Design and Prototyping
 technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, Robotics]
-image: /assets/images/iss-mimic.jpg
 ---
 
 <style>
@@ -367,13 +366,9 @@ image: /assets/images/iss-mimic.jpg
     <figure class="iss-full">
 
       <div class="iss-placeholder wide">
-        <div class="iss-placeholder-icon">+</div>
-        <div class="iss-placeholder-title">
+        <div class="iss-mimic">+</div>
+        <div class="iss-mimic">
           Complete ISS Mimic
-        </div>
-        <div class="iss-placeholder-note">
-          Add a high-quality photo of the complete robot
-          or a full-assembly CAD rendering.
         </div>
       </div>
 
