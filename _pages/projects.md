@@ -301,7 +301,7 @@ permalink: /projects/
     <a class="project-card"
        href="{{ '/projects/fluid-mechanical/' | relative_url }}">
       <div class="project-image-wrap">
-        <img src="{{ '/assets/images/lifting-device-design.png' | relative_url }}"
+        <img src="{{ '/assets/images/vacuum_pump.JPG' | relative_url }}"
              alt="Fluid-Mechanical Dissection">
       </div>
       <div class="project-heading">
@@ -341,7 +341,7 @@ permalink: /projects/
         <span class="project-year">2024</span>
       </div>
       <p class="project-description">
-        Sikorsky STEM Challenge · Robotics · Prototyping
+        Robotics · Prototyping
       </p>
     </a>
 
@@ -349,14 +349,15 @@ permalink: /projects/
     <a class="project-card"
        href="{{ '/projects/sikorsky-cargo-transport/' | relative_url }}">
       <div class="project-image-wrap">
-        <div class="project-image-placeholder">SIKORSKY CARGO TRANSPORT</div>
+        <img src="{{ '/assets/images/cargo_transport.jpg' | relative_url }}"
+             alt="SIKORSKY CARGO TRANSPORT">
       </div>
       <div class="project-heading">
         <h2>Sikorsky Cargo Transport System</h2>
         <span class="project-year">2023</span>
       </div>
       <p class="project-description">
-        Hoist Design · Pulleys · Arduino · Color Sensing
+        Hoist Design · Pulleys · Color Sensing
       </p>
     </a>
 
