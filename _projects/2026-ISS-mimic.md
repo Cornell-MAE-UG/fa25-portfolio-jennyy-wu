@@ -104,7 +104,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
   padding: 26px 0;
-  margin: 35px 0 45px;
+  margin: 10px 0 45px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -295,6 +295,85 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
     font-size: 15px;
   }
 }
+
+/* ===== CENTER ALL ISS MIMIC CONTENT ===== */
+
+/* Center the overall project page */
+.iss-page {
+  width: 85vw;
+  max-width: 900px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+/* Center headings and paragraphs */
+.iss-page h2,
+.iss-page h3,
+.iss-page p,
+.iss-page .iss-label {
+  text-align: center;
+}
+
+/* Center narrower text sections */
+.iss-page .iss-text {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center the project information */
+.iss-page .iss-meta {
+  text-align: center;
+}
+
+.iss-page .iss-meta-heading,
+.iss-page .iss-meta-value {
+  text-align: center;
+}
+
+/* Center all image galleries */
+.iss-page .iss-gallery {
+  justify-content: center;
+}
+
+/* Center photos and CAD drawings */
+.iss-page figure {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.iss-page img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Center image captions */
+.iss-page figcaption {
+  text-align: center;
+}
+
+/* Center technical details */
+.iss-page .iss-spec,
+.iss-page .iss-equation {
+  text-align: center;
+}
+
+/* Center placeholders */
+.iss-page .iss-placeholder {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Mobile: match Projects page */
+@media (max-width: 700px) {
+  .iss-page {
+    width: calc(100% - 36px);
+  }
+}
 </style>
 
 
@@ -305,12 +384,6 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   <!-- ================================== -->
 
   <section>
-
-    <div class="iss-label">
-      Cornell Cup Robotics / Mechanical Engineering
-    </div>
-
-    <div class="iss-meta">
 
       <div>
         <div class="iss-meta-heading">Role</div>
@@ -365,11 +438,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
     <figure class="iss-full">
 
-      <div class="iss-placeholder wide">
-        <div class="iss-mimic">+</div>
-        <div class="iss-mimic">
-          Complete ISS Mimic
-        </div>
+      <div class="project-image-wrap">
+        <img src="{{ '/assets/images/iss-mimic.jpg' | relative_url }}"
+             alt="ISS Mimic">
       </div>
 
       <figcaption>
