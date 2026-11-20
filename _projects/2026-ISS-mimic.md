@@ -407,21 +407,16 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 
     <div class="iss-gallery">
 
-      <figure>
-        <div class="iss-placeholder">
-          <div class="iss-placeholder-icon">+</div>
-          <div class="iss-placeholder-title">
-            Exploded Assembly View
-          </div>
-          <div class="iss-placeholder-note">
-            Exploded CAD showing the motor,
-            gears, pillar, and mounts.
-          </div>
-        </div>
-        <figcaption>
-          Figure 3. Exploded view of the mechanical components.
-        </figcaption>
-      </figure>
+      <figure class="iss-hero">
+      <img
+        src="{{ '/assets/images/iss_exploded.png' | relative_url }}"
+        alt="Exploded CAD showing the motor, gears, pillar, and mounts."
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 3. Exploded view of the mechanical components.
+      </figcaption>
+    </figure>
 
       <figure>
         <div class="iss-placeholder">
