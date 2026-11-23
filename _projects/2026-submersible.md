@@ -3,18 +3,18 @@ layout: project
 title: Submersible XRP
 permalink: /projects/submersible-xrp/
 description: Cornell Cup Robotics — Underwater Robotics and Mechanical Design
-technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterproofing, Robotics]
+technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterproofing, Robotics, MATLAB, System Dynamics, Feedback Control]
 ---
 
 <style>
-/* ===== SUBMERSIBLE XRP PROJECT PAGE ===== */
+/* ===== PAGE LAYOUT ===== */
 
 .sub-page {
   width: 85vw;
   max-width: 900px;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 20px 0 80px;
+  padding: 20px 0 65px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
   text-align: center;
@@ -25,15 +25,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
   box-sizing: border-box;
 }
 
-/* ===== TITLES AND TEXT ===== */
-
 .sub-page .sub-main-title {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(44px, 5vw, 58px);
+  font-size: clamp(42px, 5vw, 56px);
   font-weight: 700;
   letter-spacing: -0.045em;
-  line-height: 1.1;
-  margin: 0 auto 14px;
+  margin: 0 0 16px;
 }
 
 .sub-page h2 {
@@ -42,15 +39,13 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
   font-weight: 400;
   letter-spacing: -0.035em;
   line-height: 1.25;
-  color: #171717;
   margin: 0 0 18px;
 }
 
 .sub-page h3 {
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 500;
-  letter-spacing: -0.025em;
-  margin: 24px 0 14px;
+  margin: 26px 0 14px;
 }
 
 .sub-page p {
@@ -61,7 +56,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 }
 
 .sub-page section {
-  margin-bottom: 42px;
+  margin-bottom: 48px;
 }
 
 .sub-text {
@@ -71,14 +66,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
 /* ===== PROJECT METADATA ===== */
 
-.sub-page .sub-meta {
+.sub-meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 25px;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto 20px;
-  padding: 8px 0;
+  gap: 20px;
+  padding: 20px 0;
+  margin: 0 auto 30px;
   border-top: 1px solid #e6e6e6;
   border-bottom: 1px solid #e6e6e6;
 }
@@ -93,12 +86,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 }
 
 .sub-meta-value {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
   color: #333;
 }
 
-/* ===== IMAGES AND CAPTIONS ===== */
+/* ===== IMAGES ===== */
 
 .sub-page figure {
   margin: 0;
@@ -109,7 +102,6 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
   display: block;
   width: 100%;
   height: auto;
-  margin: 0 auto;
   border-radius: 4px;
 }
 
@@ -117,33 +109,53 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
   font-size: 12px;
   line-height: 1.65;
   color: #888;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 
-.sub-page .sub-hero {
+.sub-hero {
   width: 70%;
   max-width: 630px;
-  margin: 22px auto;
+  margin: 24px auto !important;
 }
 
-.sub-page .sub-full {
-  width: 100%;
-  margin: 22px auto;
-}
-
-.sub-page .sub-gallery {
+.sub-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  width: 100%;
-  margin: 22px auto;
+  max-width: 800px;
+  margin: 24px auto;
+  align-items: start;
 }
 
-.sub-page .sub-gallery figure {
+.sub-gallery figure {
   width: 100%;
 }
 
-/* ===== PLACEHOLDERS ===== */
+.sub-gallery img {
+  height: 280px;
+  object-fit: contain;
+}
+
+.sub-full {
+  max-width: 800px;
+  margin: 24px auto !important;
+}
+
+/* ===== BALLAST PHOTOS ===== */
+
+.sub-ballast-gallery {
+  max-width: 800px;
+  gap: 22px;
+}
+
+.sub-ballast-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  background: #f7f7f6;
+}
+
+/* ===== IMAGE PLACEHOLDERS ===== */
 
 .sub-placeholder {
   width: 100%;
@@ -153,10 +165,10 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
+  justify-content: center;
   padding: 25px;
+  text-align: center;
 }
 
 .sub-placeholder.wide {
@@ -167,7 +179,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
   font-size: 27px;
   font-weight: 300;
   color: #aaa;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 .sub-placeholder-title {
@@ -181,26 +193,26 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
   font-size: 12px;
   line-height: 1.6;
   color: #aaa;
-  max-width: 330px;
+  max-width: 300px;
 }
 
-/* ===== ENGINEERING CALLOUTS ===== */
+/* ===== ENGINEERING DETAILS ===== */
 
 .sub-specs {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin: 18px 0 20px;
+  margin: 24px auto;
 }
 
 .sub-spec {
   background: #f7f7f6;
-  padding: 25px 15px;
+  padding: 24px 15px;
   border-radius: 4px;
 }
 
 .sub-spec-number {
-  font-size: 31px;
+  font-size: 30px;
   font-weight: 600;
   letter-spacing: -1px;
   margin-bottom: 7px;
@@ -213,9 +225,10 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 }
 
 .sub-equation {
+  max-width: 800px;
   background: #f7f7f6;
-  padding: 30px 20px;
-  margin: 22px auto;
+  padding: 28px 20px;
+  margin: 24px auto;
   border-radius: 4px;
 }
 
@@ -227,8 +240,24 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
 .sub-equation-note {
   font-size: 12px;
-  color: #888;
   line-height: 1.7;
+  color: #888;
+}
+
+.sub-project-note {
+  font-size: 12px !important;
+  color: #888 !important;
+  letter-spacing: 0.02em;
+}
+
+/* ===== ALIGN SHARED PAGE FOOTER ===== */
+
+.page-content > .wrapper,
+.page-content > .container,
+main.page-content > .wrapper {
+  width: 85vw !important;
+  max-width: 900px !important;
+  box-sizing: border-box;
 }
 
 /* ===== MOBILE ===== */
@@ -236,14 +265,14 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 @media (max-width: 700px) {
   .sub-page {
     width: calc(100% - 36px);
-    padding: 20px 0 65px;
+    padding: 20px 0 60px;
   }
 
   .sub-page section {
-    margin-bottom: 35px;
+    margin-bottom: 38px;
   }
 
-  .sub-page .sub-meta {
+  .sub-meta {
     gap: 10px;
   }
 
@@ -251,33 +280,45 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
     font-size: 13px;
   }
 
-  .sub-page .sub-hero {
+  .sub-hero {
     width: 100%;
-    max-width: 100%;
   }
 
-  .sub-page .sub-gallery,
+  .sub-gallery,
   .sub-specs {
     grid-template-columns: 1fr;
   }
 
+  .sub-gallery img,
+  .sub-ballast-gallery img {
+    height: auto;
+    max-height: 360px;
+  }
+
   .sub-page p {
     font-size: 15px;
+  }
+
+  .page-content > .wrapper,
+  .page-content > .container,
+  main.page-content > .wrapper {
+    width: calc(100% - 36px) !important;
   }
 }
 </style>
 
 <div class="sub-page">
 
-  <!-- ===== MAIN TITLE ===== -->
+  <!-- ===== TITLE ===== -->
 
   <h1 class="sub-main-title">Submersible XRP</h1>
 
   <!-- ===== PROJECT OVERVIEW ===== -->
 
-  <section>
+  <section id="overview">
 
     <div class="sub-meta">
+
       <div>
         <div class="sub-meta-heading">Role</div>
         <div class="sub-meta-value">
@@ -287,7 +328,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
       <div>
         <div class="sub-meta-heading">Year</div>
-        <div class="sub-meta-value">2026–Present</div>
+        <div class="sub-meta-value">
+          2026–Present
+        </div>
       </div>
 
       <div>
@@ -296,6 +339,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
           Cornell Cup Robotics
         </div>
       </div>
+
     </div>
 
     <h2>Project Overview</h2>
@@ -326,7 +370,6 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
       <img
         src="{{ '/assets/images/submersible.jpeg' | relative_url }}"
         alt="Submersible XRP underwater robotics project"
-        loading="lazy"
       >
       <figcaption>
         Figure 1. Submersible XRP robotic system.
@@ -337,7 +380,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
   <!-- ===== SYSTEM DESIGN ===== -->
 
-  <section>
+  <section id="system-design">
 
     <h2>System Design &amp; CAD Assembly</h2>
 
@@ -363,6 +406,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
     </div>
 
     <div class="sub-specs">
+
       <div class="sub-spec">
         <div class="sub-spec-number">2</div>
         <div class="sub-spec-name">Propulsion thrusters</div>
@@ -377,6 +421,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
         <div class="sub-spec-number">1</div>
         <div class="sub-spec-name">Water sampling syringe</div>
       </div>
+
     </div>
 
     <div class="sub-gallery">
@@ -388,8 +433,8 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Full CAD Assembly
           </div>
           <div class="sub-placeholder-note">
-            Fusion 360 isometric view of the
-            complete submersible.
+            Add a Fusion 360 isometric view
+            of the complete submersible.
           </div>
         </div>
         <figcaption>
@@ -404,7 +449,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Internal Component Layout
           </div>
           <div class="sub-placeholder-note">
-            CAD view showing the electronics,
+            Add a CAD view of the electronics,
             syringes, motors, and mounting trays.
           </div>
         </div>
@@ -419,7 +464,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
   <!-- ===== BALLAST SYSTEM ===== -->
 
-  <section>
+  <section id="ballast">
 
     <h2>Syringe-Based Ballast System</h2>
 
@@ -430,19 +475,17 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
         by N20 motors and rack-and-pinion mechanisms.
         The motor rotates a pinion gear, which drives
         a linear rack connected to the syringe plunger.
-        This converts the motor's rotational motion
-        into the linear motion needed to draw in
-        or expel water.
+        This converts rotational motion into the
+        linear motion needed to draw in or expel water.
       </p>
 
       <p>
         Retracting the plunger draws water into the
         syringe, increasing the robot's mass and
-        helping it sink. Extending the plunger
-        expels water, decreasing its mass and
-        allowing the robot to rise. This provides
-        a way to adjust buoyancy without relying
-        entirely on the thrusters.
+        helping it sink. Extending the plunger expels
+        water, decreasing its mass and allowing the
+        robot to rise. This provides a way to adjust
+        buoyancy without relying entirely on the thrusters.
       </p>
 
       <p>
@@ -455,29 +498,31 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
       </p>
     </div>
 
+    <div class="sub-gallery sub-ballast-gallery">
 
-    <div class="iss-gallery">
+      <figure>
+        <img
+          src="{{ '/assets/images/motor_mount.jpeg' | relative_url }}"
+          alt="Motor mounting and syringe actuation prototype"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 4. 3D-printed motor mounting and
+          syringe actuation components.
+        </figcaption>
+      </figure>
 
-      <figure class="iss-hero">
-      <img
-        src="{{ '/assets/images/motor_mount.jpeg' | relative_url }}"
-        alt="Close-up of the motor, pinion rack, and syringe plunger."
-        loading="lazy"
-      >
-      <figcaption>
-        Figure 4. CAD model of the syringe actuation mechanism.
-      </figcaption>
-    </figure>
-        <figure class="iss-hero">
-      <img
-        src="{{ '/assets/images/sub_ballast.jpeg' | relative_url }}"
-        alt="Assembled motor-driven syringe mechanism"
-        loading="lazy"
-      >
-      <figcaption>
-        Figure 5. Physical prototype of the ballast system.
-      </figcaption>
-    </figure>
+      <figure>
+        <img
+          src="{{ '/assets/images/sub_ballast.jpeg' | relative_url }}"
+          alt="Physical rack-and-pinion ballast prototype"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 5. Physical prototype of the
+          rack-and-pinion ballast system.
+        </figcaption>
+      </figure>
 
     </div>
 
@@ -485,14 +530,14 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
   <!-- ===== BUOYANCY ===== -->
 
-  <section>
+  <section id="buoyancy">
 
     <h2>Buoyancy &amp; Housing Optimization</h2>
 
     <div class="sub-text">
       <p>
-        One of the biggest engineering challenges was
-        that our original housing was too buoyant.
+        One of the biggest engineering challenges
+        was that our original housing was too buoyant.
         Because the enclosure displaced a relatively
         large volume of water, the upward buoyant
         force exceeded the robot's weight, even
@@ -500,19 +545,20 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
       </p>
 
       <p>
-        According to Archimedes' principle, the
-        buoyant force depends on the volume of
-        water displaced by the robot:
+        According to Archimedes' principle,
+        the buoyant force depends on the volume
+        of water displaced by the robot:
       </p>
     </div>
 
     <div class="sub-equation">
       <div class="sub-equation-main">
-        F<sub>b</sub> = ρ<sub>water</sub> × g × V<sub>displaced</sub>
+        F<sub>b</sub> =
+        ρ<sub>water</sub> × g × V<sub>displaced</sub>
       </div>
       <div class="sub-equation-note">
-        Buoyant force = water density × gravitational acceleration
-        × displaced volume
+        Buoyant force = water density × gravitational
+        acceleration × displaced volume
       </div>
     </div>
 
@@ -531,9 +577,9 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
         This required balancing the packaging of
         internal components with the amount of
         water the ballast system could take in.
-        The goal is to reduce the robot's excess
-        buoyancy so the syringes can effectively
-        control its depth.
+        The goal is to reduce excess buoyancy
+        so the syringes can effectively
+        control the robot's depth.
       </p>
     </div>
 
@@ -546,7 +592,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Original Housing
           </div>
           <div class="sub-placeholder-note">
-            CAD view showing the initial
+            Add CAD view of the initial
             cylindrical enclosure.
           </div>
         </div>
@@ -562,12 +608,13 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Reduced-Volume Housing
           </div>
           <div class="sub-placeholder-note">
-            Updated CAD design showing the
-            more compact enclosure.
+            Add updated CAD design showing
+            the more compact enclosure.
           </div>
         </div>
         <figcaption>
-          Figure 7. Housing redesign to reduce displaced volume.
+          Figure 7. Housing redesign to reduce
+          displaced volume.
         </figcaption>
       </figure>
 
@@ -577,7 +624,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
   <!-- ===== WATERPROOFING ===== -->
 
-  <section>
+  <section id="waterproofing">
 
     <h2>Waterproof Housing Design</h2>
 
@@ -585,25 +632,25 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
       <p>
         Waterproofing was another major challenge
         because even a small leak could damage
-        the electronics inside the robot. Our
-        original design used a cylindrical tube
-        with end caps containing openings for
-        external connections.
+        the electronics inside the robot.
+        Our original design used a cylindrical
+        tube with end caps containing openings
+        for external connections.
       </p>
 
       <p>
         During manufacturing, we drilled the
         port holes before fully tightening the
         end caps. When the caps were installed
-        in their final positions, the holes no
-        longer aligned correctly.
+        in their final positions, the holes
+        no longer aligned correctly.
       </p>
 
       <p>
         We attempted to correct the problem
         by redrilling the openings and applying
-        sealing material, but the repairs did
-        not produce a reliable watertight seal.
+        sealing material, but these repairs
+        did not produce a reliable watertight seal.
       </p>
     </div>
 
@@ -617,8 +664,8 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
         openings directly into the 3D-printed
         components. This approach aims to
         improve alignment, reduce potential
-        leak paths, and make assembly more
-        consistent.
+        leak paths, and make assembly
+        more consistent.
       </p>
 
       <p>
@@ -639,8 +686,8 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Original End Cap
           </div>
           <div class="sub-placeholder-note">
-            Photo or CAD view showing the
-            drilled ports and alignment issue.
+            Add photo or CAD view showing
+            the drilled ports and alignment issue.
           </div>
         </div>
         <figcaption>
@@ -655,12 +702,13 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Redesigned End Cap
           </div>
           <div class="sub-placeholder-note">
-            CAD view of the updated port
-            geometry and sealing features.
+            Add CAD view of the updated
+            port geometry and sealing features.
           </div>
         </div>
         <figcaption>
-          Figure 9. Redesigned end cap with integrated ports.
+          Figure 9. Redesigned end cap
+          with integrated ports.
         </figcaption>
       </figure>
 
@@ -670,7 +718,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
   <!-- ===== PROTOTYPING ===== -->
 
-  <section>
+  <section id="prototyping">
 
     <h2>3D Printing &amp; Prototyping</h2>
 
@@ -706,7 +754,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             3D-Printed Components
           </div>
           <div class="sub-placeholder-note">
-            Photograph of printed housing,
+            Add photograph of printed housing,
             mounting, or syringe components.
           </div>
         </div>
@@ -722,8 +770,8 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Internal Assembly
           </div>
           <div class="sub-placeholder-note">
-            Photograph showing the mechanical
-            components installed inside the housing.
+            Add photograph showing components
+            installed inside the housing.
           </div>
         </div>
         <figcaption>
@@ -735,9 +783,152 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
   </section>
 
+  <!-- ===== SYSTEM DYNAMICS ===== -->
+
+  <section id="system-dynamics">
+
+    <h2>System Dynamics &amp; Control Modeling</h2>
+
+    <p class="sub-project-note">
+      MAE 3260 System Dynamics — Super Sub Bros.
+    </p>
+
+    <div class="sub-text">
+      <p>
+        Alongside the mechanical development of
+        the Submersible XRP, I began studying
+        the robot's motion as part of MAE 3260:
+        System Dynamics. Our project, "Super Sub Bros.,"
+        investigates how two side-by-side thrusters
+        produce forward motion and allow the robot
+        to change its heading underwater.
+      </p>
+
+      <p>
+        My role focuses on developing mathematical
+        models using Newton's laws and differential
+        equations, then deriving transfer functions
+        relating thruster inputs to the robot's motion.
+        We plan to use MATLAB to simulate the
+        robot's open-loop response and study how
+        different thrust inputs affect its movement.
+      </p>
+    </div>
+
+    <h3>Dual-Thruster Motion Model</h3>
+
+    <div class="sub-text">
+      <p>
+        When both thrusters generate equal thrust,
+        their forces combine to move the robot
+        forward. When the thrust differs between
+        the two sides, the resulting moment causes
+        the robot to turn. Our model will describe
+        both forward and rotational motion.
+      </p>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Equations of Motion
+          </div>
+          <div class="sub-placeholder-note">
+            Add free-body diagram showing
+            both thruster forces, geometry,
+            and yaw moment.
+          </div>
+        </div>
+        <figcaption>
+          Figure 12. Dual-thruster free-body diagram.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            MATLAB Open-Loop Response
+          </div>
+          <div class="sub-placeholder-note">
+            Add MATLAB heading response
+            plot for a selected thrust input.
+          </div>
+        </div>
+        <figcaption>
+          Figure 13. Open-loop heading simulation.
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <h3>Feedback Control &amp; 90° Turn</h3>
+
+    <div class="sub-text">
+      <p>
+        The next stage is to investigate feedback
+        control for a commanded 90° turn.
+        Using the mathematical model, we plan
+        to design a controller and compare
+        open-loop and closed-loop responses.
+        We will evaluate turning accuracy,
+        response time, and the robot's ability
+        to reach the desired heading.
+      </p>
+
+      <p>
+        This analysis connects our mechanical
+        design decisions with the robot's
+        dynamic behavior, providing a better
+        understanding of how thruster inputs
+        affect underwater movement.
+      </p>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Feedback-Control Diagram
+          </div>
+          <div class="sub-placeholder-note">
+            Add controller, robot dynamics,
+            heading output, and feedback loop.
+          </div>
+        </div>
+        <figcaption>
+          Figure 14. Closed-loop control block diagram.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Open-Loop vs. Closed-Loop
+          </div>
+          <div class="sub-placeholder-note">
+            Add MATLAB comparison of heading
+            responses for a commanded 90° turn.
+          </div>
+        </div>
+        <figcaption>
+          Figure 15. Planned heading-response comparison.
+        </figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
   <!-- ===== TESTING ===== -->
 
-  <section>
+  <section id="testing">
 
     <h2>Testing &amp; Results</h2>
 
@@ -790,12 +981,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Waterproofing Test
           </div>
           <div class="sub-placeholder-note">
-            Photo of the empty housing
+            Add photo of the empty housing
             during submerged leak testing.
           </div>
         </div>
         <figcaption>
-          Figure 12. Housing leak-testing setup.
+          Figure 16. Housing leak-testing setup.
         </figcaption>
       </figure>
 
@@ -806,12 +997,12 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
             Ballast Mechanism Test
           </div>
           <div class="sub-placeholder-note">
-            Photo of the syringe and
+            Add photo of the syringe and
             rack-and-pinion test setup.
           </div>
         </div>
         <figcaption>
-          Figure 13. Testing the syringe actuation system.
+          Figure 17. Testing the syringe actuation system.
         </figcaption>
       </figure>
 
@@ -821,15 +1012,15 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
 
     <div class="sub-text">
       <p>
-        The initial thruster and syringe
-        actuation tests demonstrated that
-        the individual mechanisms could move
-        as intended. The housing redesign
-        is focused on improving waterproofing
-        and reducing displaced volume.
-        Further testing is needed to verify
-        the revised enclosure and demonstrate
-        reliable buoyancy control underwater.
+        Initial thruster and syringe actuation
+        tests demonstrated that the individual
+        mechanisms could move as intended.
+        The housing redesign is focused on
+        improving waterproofing and reducing
+        displaced volume. Further testing
+        is needed to verify the revised
+        enclosure and demonstrate reliable
+        buoyancy control underwater.
       </p>
     </div>
 
