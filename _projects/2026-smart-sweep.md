@@ -505,6 +505,102 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
   }
 }
 
+
+/* ===== YELLOW ACCENT FOR TRIAL 01 ===== */
+
+.smart-page .smart-test-card:first-child {
+  background: #FAF6E9;
+  border-color: #EEE5C9;
+}
+
+.smart-page .smart-test-card:first-child .smart-test-label,
+.smart-page .smart-test-card:first-child .smart-test-percent {
+  color: #B38A3E;
+}
+
+.smart-page .smart-test-card:first-child .smart-test-bar {
+  background: #EBDFC2;
+}
+
+.smart-page .smart-test-card:first-child .smart-test-bar > div {
+  background: #B38A3E;
+}
+
+.smart-page .smart-test-card:first-child .smart-test-count {
+  color: #9B8358;
+}
+
+existing testing HTML. Just add this CSS at the very bottom of your <style> section to override the previous styling:
+
+/* ===== MINIMAL TEST RESULTS ===== */
+
+.smart-page .smart-test-dashboard {
+  max-width: 720px;
+  margin: 22px auto 26px;
+}
+
+.smart-page .smart-test-cards {
+  gap: 12px;
+}
+
+.smart-page .smart-test-card {
+  padding: 18px 20px;
+  background: #F5F7F4;
+  border: 1px solid #E7ECE7;
+  border-radius: 5px;
+}
+
+.smart-page .smart-test-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #829087;
+}
+
+.smart-page .smart-test-percent {
+  font-size: 27px;
+  font-weight: 500;
+  color: #5E806D;
+  margin: 12px 0 15px;
+  letter-spacing: -0.8px;
+}
+
+.smart-page .smart-test-bar {
+  height: 4px;
+  background: #E0E8E1;
+  margin-bottom: 10px;
+}
+
+.smart-page .smart-test-bar > div {
+  background: #6D927C;
+}
+
+.smart-page .smart-test-count {
+  font-size: 11px;
+  color: #7A847D;
+}
+
+.smart-page .smart-test-overall {
+  margin-top: 14px;
+  padding-top: 17px;
+  border-color: #E5E9E5;
+}
+
+.smart-page .smart-test-overall span {
+  font-size: 10px;
+  color: #829087;
+}
+
+.smart-page .smart-test-overall strong {
+  font-size: 25px;
+  font-weight: 500;
+  color: #5E806D;
+}
+
+.smart-page .smart-test-overall p {
+  font-size: 12px;
+  color: #888;
+}
+
 </style>
 
 <div class="smart-page">
@@ -678,21 +774,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 
     <div class="smart-text">
       <p>
-        We built a functional prototype to evaluate
-        whether rotating strip brushes could effectively
-        remove objects from a cylindrical surface.
-        Testing also helped us compare brush lengths
-        and identify changes needed before the final
-        assembly.
-      </p>
-
-      <p>
-        For the removal test, five sticky-note rings
-        were attached to a rod to represent objects
-        that needed to be dislodged. We operated
-        the brush for approximately ten revolutions
-        and recorded how many rings were removed
-        across three trials.
+        Five sticky-note rings were attached to a rod, and the brush was rotated approximately ten times per trial.
       </p>
     </div>
 
@@ -781,11 +863,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 
     <div class="smart-text">
       <p>
-        The brush passed our functional test criteria,
-        but the shorter bristles did not consistently
-        reach objects farther from the shaft. Based
-        on these observations, we selected longer
-        brushes for the next prototype iteration.
+        Testing showed that longer bristles provided better reach, so we selected them for the next prototype.
       </p>
     </div>
 
