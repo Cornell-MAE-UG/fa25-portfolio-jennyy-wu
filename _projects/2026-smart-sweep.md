@@ -175,36 +175,41 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 /* ===== CONCEPT DEVELOPMENT PHOTOS ===== */
 
 .smart-page .smart-concept-gallery {
-  max-width: 720px;
-  gap: 12px;
-  margin: 22px auto 0;
+  max-width: 860px;
+  gap: 8px;
+  margin: 18px auto 0;
 }
 
 .smart-page .smart-concept-gallery img {
   width: 100%;
-  height: 370px;
+  height: 410px;
   object-fit: contain;
 }
 
 /* ===== BRUSH CAD COMPARISON ===== */
 
 .smart-page .brush-comparison {
-  max-width: 720px;
-  gap: 12px;
-  margin: 22px auto 20px;
+  max-width: 860px;
+  gap: 8px;
+  margin: 18px auto 16px;
 }
 
 .smart-page .brush-comparison img {
   width: 100%;
-  height: 370px;
+  height: 410px;
   object-fit: contain !important;
   object-position: center;
   background: transparent;
 }
 
-/* Tighten space between sections */
+/* ===== SECTION SPACING ===== */
+
 .smart-page #concept {
-  margin-bottom: 25px;
+  margin-bottom: 18px;
+}
+
+.smart-page #brush-testing {
+  margin-top: 0;
 }
 
 /* ===== METRIC CARDS ===== */
@@ -846,8 +851,6 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
       <span class="smart-test-count">
         5 of 5 rings removed
       </span>
-    </div>
-
     </div>
 
     <div class="smart-test-overall">
