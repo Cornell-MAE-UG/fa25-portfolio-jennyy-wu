@@ -409,14 +409,14 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       <div class="smart-meta-item">
         <div class="smart-meta-heading">Role</div>
         <div class="smart-meta-value">
-          Project Lead &amp; Mechanical Design
+          Project Lead &amp; Meche
         </div>
       </div>
 
       <div class="smart-meta-item">
         <div class="smart-meta-heading">Year</div>
         <div class="smart-meta-value">
-          Spring 2026
+          2026
         </div>
       </div>
 
