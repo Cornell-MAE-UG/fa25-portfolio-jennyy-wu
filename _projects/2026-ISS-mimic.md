@@ -68,7 +68,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
 }
 
 .iss-page section {
-  margin-bottom: 85px;
+  margin-bottom: 55px;
 }
 
 .iss-text {
@@ -299,6 +299,60 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
     font-size: 15px;
   }
 }
+
+/* ===== VERTICAL SPACING REFINEMENTS ===== */
+
+/* Space between major sections */
+.iss-page section {
+  margin-bottom: 55px !important;
+}
+
+/* Space below section headings */
+.iss-page h2 {
+  margin-bottom: 20px;
+}
+
+/* Space above smaller headings */
+.iss-page h3 {
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+
+/* Space between paragraphs */
+.iss-page p {
+  margin-bottom: 16px;
+}
+
+/* Space around full-width images */
+.iss-page .iss-full {
+  margin-top: 25px !important;
+  margin-bottom: 25px !important;
+}
+
+/* Space around image galleries */
+.iss-page .iss-gallery {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Captions closer to images */
+.iss-page figcaption {
+  margin-top: 8px;
+}
+
+/* Space around gear calculations */
+.iss-page .iss-specs {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .iss-page section {
+    margin-bottom: 45px !important;
+  }
+}
+
 </style>
 
 <div class="iss-page">
@@ -494,12 +548,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       </p>
 
       <p>
-        I also worked on positioning the gears
-        and motor mount to maintain proper gear
-        engagement. Small changes in spacing
-        can affect how smoothly the gears mesh,
-        so alignment and clearance were important
-        considerations during assembly.
+        I adjusted the gear spacing and motor mount position to improve tooth engagement and prevent interference during assembly. These changes helped resolve the initial stalling issue and allowed the pillar to rotate successfully.
       </p>
     </div>
 
