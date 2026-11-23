@@ -14,7 +14,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
   max-width: 900px;
   margin-left: 50%;
   transform: translateX(-50%);
-  padding: 20px 0 75px;
+  padding: 20px 0 45px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   color: #222;
   text-align: center;
@@ -52,7 +52,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
   font-size: 21px;
   font-weight: 500;
   letter-spacing: -0.02em;
-  margin: 26px 0 14px;
+  margin: 24px 0 14px;
 }
 
 .smart-page p {
@@ -63,7 +63,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 }
 
 .smart-page section {
-  margin-bottom: 45px;
+  margin-bottom: 36px;
 }
 
 .smart-text {
@@ -128,15 +128,15 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
   width: 100%;
   height: auto;
   margin: 0 auto;
-  border-radius: 3px;
+  border-radius: 4px;
   box-shadow: none;
 }
 
 .smart-page figcaption {
   font-size: 12px;
-  line-height: 1.65;
+  line-height: 1.5;
   color: #888;
-  margin-top: 8px;
+  margin-top: 9px;
 }
 
 .smart-hero {
@@ -145,28 +145,62 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
   margin: 24px auto !important;
 }
 
-.smart-gallery {
+/* ===== SIDE-BY-SIDE IMAGE GALLERIES ===== */
+
+.smart-page .smart-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 22px;
   width: 100%;
-  margin: 24px auto;
+  max-width: 800px;
+  margin: 24px auto 12px;
   align-items: start;
 }
 
-.smart-gallery figure {
+.smart-page .smart-gallery figure {
   width: 100%;
+  min-width: 0;
+  margin: 0;
 }
 
-.smart-gallery img {
+.smart-page .smart-gallery img {
+  display: block;
   width: 100%;
-  height: 285px;
+  height: 315px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 4px;
+}
+
+/* ===== CONCEPT DEVELOPMENT PHOTOS ===== */
+
+.smart-page .smart-concept-gallery {
+  max-width: 780px;
+  gap: 20px;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.smart-page .smart-concept-gallery img {
+  height: 320px;
   object-fit: contain;
 }
 
-.smart-full {
+/* ===== BRUSH CAD COMPARISON ===== */
+
+.smart-page .brush-comparison {
+  max-width: 700px;
+  gap: 20px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.smart-page .brush-comparison img {
   width: 100%;
-  margin: 24px auto !important;
+  height: 300px;
+  object-fit: contain !important;
+  object-position: center;
+  background: transparent;
 }
 
 /* ===== METRIC CARDS ===== */
@@ -181,7 +215,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 .smart-spec {
   background: #f7f7f6;
   padding: 25px 14px;
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .smart-spec-number {
@@ -197,52 +231,93 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
   line-height: 1.6;
 }
 
-/* ===== TEST RESULTS ===== */
+/* ===== BRUSH TEST RESULTS ===== */
 
-.smart-results {
-  max-width: 800px;
-  margin: 20px auto 28px;
+.smart-page .smart-results {
+  width: 100%;
+  max-width: 760px;
+  margin: 18px auto 24px;
   text-align: left;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #e3e3e3;
 }
 
-.smart-result-row {
+.smart-page .smart-result-row {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 18px;
-  padding: 15px 0;
-  border-bottom: 1px solid #e8e8e8;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  padding: 14px 16px;
+  border-bottom: 1px solid #e3e3e3;
+  align-items: center;
 }
 
-.smart-result-label {
-  font-size: 13px;
+.smart-page .smart-result-label {
+  font-size: 14px;
   font-weight: 600;
   color: #333;
 }
 
-.smart-result-value {
+.smart-page .smart-result-value {
   font-size: 14px;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #555;
 }
 
-/* ===== REPORT LINK ===== */
+/* ===== FINAL PROTOTYPE VIDEO ===== */
 
-.smart-report-card {
-  max-width: 700px;
-  margin: 25px auto;
-  padding: 28px 24px;
+.smart-page .smartsweep-final-video {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto 32px;
+  text-align: center;
+}
+
+.smart-page .smartsweep-final-video video {
+  display: block;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  margin: 0 auto;
+  background: #111;
+  border-radius: 7px;
+  box-shadow: none;
+}
+
+.smart-page .smartsweep-video-caption {
+  max-width: 450px;
+  margin: 12px auto 0;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #888;
+}
+
+/* ===== FINAL CLIENT REPORT ===== */
+
+.smart-page .smartsweep-final-report {
+  width: 100%;
+  max-width: 800px;
+  margin: 30px auto 0;
+  padding: 35px 25px;
   background: #f7f7f6;
-  border-radius: 3px;
+  border-radius: 4px;
+  text-align: center;
 }
 
-.smart-report-card p {
-  font-size: 14px;
+.smart-page .smartsweep-final-report h3 {
+  font-size: 21px;
+  font-weight: 600;
+  margin: 0 0 16px;
 }
 
-.smart-report-card a {
+.smart-page .smartsweep-final-report p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.smart-page .smartsweep-final-report a {
   display: inline-block;
-  margin-top: 5px;
   color: #222;
   font-size: 15px;
   font-weight: 600;
@@ -251,16 +326,25 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
   padding-bottom: 4px;
 }
 
+.smart-page .smartsweep-final-report a:hover {
+  border-color: #222;
+}
+
 /* ===== MOBILE ===== */
 
 @media (max-width: 700px) {
+
   .smart-page {
     width: calc(100% - 36px);
-    padding: 20px 0 65px;
+    padding: 20px 0 35px;
   }
 
   .smart-page section {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
+  }
+
+  .smart-page p {
+    font-size: 15px;
   }
 
   .smart-meta {
@@ -276,83 +360,38 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
     width: 100%;
   }
 
-  .smart-gallery,
+  .smart-page .smart-gallery {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    gap: 22px;
+  }
+
+  .smart-page .smart-gallery img,
+  .smart-page .smart-concept-gallery img,
+  .smart-page .brush-comparison img {
+    height: auto;
+    max-height: 340px;
+    object-fit: contain;
+  }
+
   .smart-specs {
     grid-template-columns: 1fr;
   }
 
-  .smart-gallery img {
-    height: auto;
+  .smart-page .smart-result-row {
+    grid-template-columns: 110px 1fr;
+    gap: 10px;
+    padding: 13px 8px;
   }
 
-  .smart-result-row {
-    grid-template-columns: 1fr;
-    gap: 5px;
+  .smart-page .smartsweep-final-video video {
+    width: min(280px, 100%);
   }
 
-  .smart-page p {
-    font-size: 15px;
+  .smart-page .smartsweep-final-report {
+    padding: 28px 18px;
   }
 }
-
-/* ===== CONCEPT DEVELOPMENT SPACING ===== */
-
-/* Reduce excessive space between sections */
-.smart-page section {
-  margin-bottom: 35px;
-}
-
-/* Bring the images closer together */
-.smart-page .smart-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  width: 100%;
-  max-width: 800px;
-  margin: 24px auto 0;
-  align-items: start;
-}
-
-/* Make the photos fill their columns */
-.smart-page .smart-gallery figure {
-  width: 100%;
-  margin: 0;
-}
-
-.smart-page .smart-gallery img {
-  display: block;
-  width: 100%;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 4px;
-}
-
-/* Keep captions close to the photos */
-.smart-page .smart-gallery figcaption {
-  margin-top: 8px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #888;
-}
-
-/* Reduce spacing before the next heading */
-.smart-page .smart-gallery + h2,
-.smart-page section + section h2 {
-  margin-top: 0;
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-  .smart-page .smart-gallery {
-    grid-template-columns: 1fr;
-    gap: 22px;
-  }
-
-  .smart-page .smart-gallery img {
-    height: auto;
-  }
-}
-
 </style>
 
 <div class="smart-page">
@@ -490,7 +529,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       </p>
     </div>
 
-    <div class="smart-gallery">
+    <div class="smart-gallery smart-concept-gallery">
 
       <figure>
         <img
@@ -544,7 +583,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       </p>
     </div>
 
-    <div class="smart-gallery">
+    <div class="smart-gallery brush-comparison">
 
       <figure>
         <img
@@ -570,19 +609,31 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 
     </div>
 
+    <!-- ===== BRUSH REMOVAL TEST RESULTS ===== -->
+
     <div class="smart-results">
+
       <div class="smart-result-row">
         <div class="smart-result-label">Trial 1</div>
-        <div class="smart-result-value">3 of 5 rings removed</div>
+        <div class="smart-result-value">
+          3 of 5 rings removed
+        </div>
       </div>
+
       <div class="smart-result-row">
         <div class="smart-result-label">Trial 2</div>
-        <div class="smart-result-value">5 of 5 rings removed</div>
+        <div class="smart-result-value">
+          5 of 5 rings removed
+        </div>
       </div>
+
       <div class="smart-result-row">
         <div class="smart-result-label">Trial 3</div>
-        <div class="smart-result-value">5 of 5 rings removed</div>
+        <div class="smart-result-value">
+          5 of 5 rings removed
+        </div>
       </div>
+
     </div>
 
     <div class="smart-text">
@@ -708,25 +759,33 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
     </div>
 
     <div class="smart-specs">
+
       <div class="smart-spec">
         <div class="smart-spec-number">1.75 cm</div>
-        <div class="smart-spec-label">Crank arm length</div>
+        <div class="smart-spec-label">
+          Crank arm length
+        </div>
       </div>
 
       <div class="smart-spec">
         <div class="smart-spec-number">100 g</div>
-        <div class="smart-spec-label">Load producing rotation</div>
+        <div class="smart-spec-label">
+          Load producing rotation
+        </div>
       </div>
 
       <div class="smart-spec">
         <div class="smart-spec-number">0.02 N·m</div>
-        <div class="smart-spec-label">Estimated torque requirement</div>
+        <div class="smart-spec-label">
+          Estimated torque requirement
+        </div>
       </div>
+
     </div>
 
   </section>
 
-  <!-- ===== RESULTS ===== -->
+  <!-- ===== FINAL RESULTS ===== -->
 
   <section id="results">
 
@@ -753,11 +812,16 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       </p>
     </div>
 
-    <!-- ===== FINAL PROTOTYPE VIDEO ===== -->
+    <!-- ===== WORKING PROTOTYPE VIDEO ===== -->
 
     <div class="smartsweep-final-video">
 
-      <video controls playsinline preload="metadata">
+      <video
+        controls
+        playsinline
+        preload="metadata"
+        aria-label="SmartSweep working prototype demonstration"
+      >
         <source
           src="{{ '/assets/videos/smartsweep-demo.mp4' | relative_url }}"
           type="video/mp4"
@@ -766,8 +830,8 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       </video>
 
       <p class="smartsweep-video-caption">
-        Final prototype demonstrating the counter-rotating
-        brush mechanism in action.
+        Final prototype demonstrating the
+        counter-rotating brush mechanism in action.
       </p>
 
     </div>
@@ -783,10 +847,11 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
         prototype development, testing, and recommendations.
       </p>
 
-      <!-- Keep your existing working report link here -->
-      <a href="YOUR_EXISTING_REPORT_LINK"
+      <a
+        href="https://docs.google.com/document/d/1K4rZF0i-Lw44lrSVzpyYk6Z6Sbv8mkQhzqhPHqws2ZQ/edit"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+      >
         View Full Client Report ↗
       </a>
 
