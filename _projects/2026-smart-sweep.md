@@ -294,6 +294,65 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
     font-size: 15px;
   }
 }
+
+/* ===== CONCEPT DEVELOPMENT SPACING ===== */
+
+/* Reduce excessive space between sections */
+.smart-page section {
+  margin-bottom: 35px;
+}
+
+/* Bring the images closer together */
+.smart-page .smart-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  max-width: 800px;
+  margin: 24px auto 0;
+  align-items: start;
+}
+
+/* Make the photos fill their columns */
+.smart-page .smart-gallery figure {
+  width: 100%;
+  margin: 0;
+}
+
+.smart-page .smart-gallery img {
+  display: block;
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Keep captions close to the photos */
+.smart-page .smart-gallery figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #888;
+}
+
+/* Reduce spacing before the next heading */
+.smart-page .smart-gallery + h2,
+.smart-page section + section h2 {
+  margin-top: 0;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .smart-page .smart-gallery {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .smart-page .smart-gallery img {
+    height: auto;
+  }
+}
+
 </style>
 
 <div class="smart-page">
