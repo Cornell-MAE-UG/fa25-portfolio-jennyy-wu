@@ -1,259 +1,717 @@
 ---
 layout: project
-title: MAE2250 Open Design Project
+title: SmartSweep
 permalink: /projects/smart-sweep/
-description: Client Outline and Pitch
-image: /assets/images/smartsweep.png
-technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC Motor Integration, Electrical Wiring, Testing & Iteration]
+description: Spotted Lanternfly Removal — Mechanical Design and Prototyping
+technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC Motor Integration, Testing]
 ---
 
 <style>
-.page-content,
-.wrapper,
-.container {
-    max-width: 800px !important;
-    width: 92% !important;
+/* ===== SMARTSWEEP PROJECT PAGE ===== */
+
+.smart-page {
+  width: 85vw;
+  max-width: 900px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 0 75px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.smart-page * {
+  box-sizing: border-box;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+.smart-page .smart-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(40px, 5vw, 54px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+  margin: 0 0 16px;
+  color: #171717;
+}
+
+.smart-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 3vw, 38px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+  margin: 0 0 18px;
+  color: #171717;
+}
+
+.smart-page h3 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 26px 0 14px;
+}
+
+.smart-page p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #444;
+  margin: 0 0 14px;
+}
+
+.smart-page section {
+  margin-bottom: 45px;
+}
+
+.smart-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== METADATA ===== */
+
+.smart-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: start;
+  width: 100%;
+  padding: 20px 0;
+  margin: 0 auto 28px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.smart-meta-item {
+  min-width: 0;
+}
+
+.smart-meta-heading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 9px;
+}
+
+.smart-meta-value {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.smart-report-link {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 3px;
+}
+
+.smart-report-link:hover {
+  color: #111;
+  border-color: #111;
+}
+
+/* ===== IMAGES ===== */
+
+.smart-page figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.smart-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+.smart-page figcaption {
+  font-size: 12px;
+  line-height: 1.65;
+  color: #888;
+  margin-top: 8px;
+}
+
+.smart-hero {
+  width: 70%;
+  max-width: 630px;
+  margin: 24px auto !important;
+}
+
+.smart-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 24px auto;
+  align-items: start;
+}
+
+.smart-gallery figure {
+  width: 100%;
+}
+
+.smart-gallery img {
+  width: 100%;
+  height: 285px;
+  object-fit: contain;
+}
+
+.smart-full {
+  width: 100%;
+  margin: 24px auto !important;
+}
+
+/* ===== METRIC CARDS ===== */
+
+.smart-specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.smart-spec {
+  background: #f7f7f6;
+  padding: 25px 14px;
+  border-radius: 3px;
+}
+
+.smart-spec-number {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  margin-bottom: 7px;
+}
+
+.smart-spec-label {
+  font-size: 12px;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* ===== TEST RESULTS ===== */
+
+.smart-results {
+  max-width: 800px;
+  margin: 20px auto 28px;
+  text-align: left;
+  border-top: 1px solid #e8e8e8;
+}
+
+.smart-result-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.smart-result-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #333;
+}
+
+.smart-result-value {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #555;
+}
+
+/* ===== REPORT LINK ===== */
+
+.smart-report-card {
+  max-width: 700px;
+  margin: 25px auto;
+  padding: 28px 24px;
+  background: #f7f7f6;
+  border-radius: 3px;
+}
+
+.smart-report-card p {
+  font-size: 14px;
+}
+
+.smart-report-card a {
+  display: inline-block;
+  margin-top: 5px;
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #888;
+  padding-bottom: 4px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+  .smart-page {
+    width: calc(100% - 36px);
+    padding: 20px 0 65px;
+  }
+
+  .smart-page section {
+    margin-bottom: 35px;
+  }
+
+  .smart-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 14px;
+  }
+
+  .smart-meta-value {
+    font-size: 13px;
+  }
+
+  .smart-hero {
+    width: 100%;
+  }
+
+  .smart-gallery,
+  .smart-specs {
+    grid-template-columns: 1fr;
+  }
+
+  .smart-gallery img {
+    height: auto;
+  }
+
+  .smart-result-row {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .smart-page p {
+    font-size: 15px;
+  }
 }
 </style>
 
+<div class="smart-page">
 
-<div style="display: flex; align-items: flex-start; gap: 50px; margin-top: 30px;">
+  <!-- ===== TITLE ===== -->
 
-  <div style="max-width: 850px; font-size: 18px; line-height: 1.5; padding: 20px 0;">
-    <p>
-      This Open Design Project focused on developing a functional prototype for spotted lanternfly removal using a dual counter-rotating brush system. The project involved CAD design, prototyping, testing, and iterative improvements to optimize brush performance and assembly. This page documents the client pitch, functional prototype, and final client report milestones.
-    </p>
-  </div>
+  <h1 class="smart-title">SmartSweep</h1>
+
+  <!-- ===== OVERVIEW ===== -->
+
+  <section id="overview">
+
+    <div class="smart-meta">
+
+      <div class="smart-meta-item">
+        <div class="smart-meta-heading">Role</div>
+        <div class="smart-meta-value">
+          Project Lead &amp; Mechanical Design
+        </div>
+      </div>
+
+      <div class="smart-meta-item">
+        <div class="smart-meta-heading">Year</div>
+        <div class="smart-meta-value">
+          Spring 2026
+        </div>
+      </div>
+
+      <div class="smart-meta-item">
+        <div class="smart-meta-heading">Team</div>
+        <div class="smart-meta-value">
+          Spotted... then Stopped
+        </div>
+      </div>
+
+      <div class="smart-meta-item">
+        <div class="smart-meta-heading">Documentation</div>
+        <div class="smart-meta-value">
+          <a
+            class="smart-report-link"
+            href="https://docs.google.com/document/d/1K4rZF0i-Lw44lrSVzpyYk6Z6Sbv8mkQhzqhPHqws2ZQ/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Client Report ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Project Overview</h2>
+
+    <div class="smart-text">
+      <p>
+        SmartSweep was developed as part of Cornell's MAE 2250
+        Open Design Project to address spotted lanternfly
+        contamination in vineyards. Our team designed and
+        prototyped a mechanical brush system intended to
+        remove lanternflies from grapevines before harvesting,
+        reducing the risk of insects entering the grape yield.
+      </p>
+
+      <p>
+        As project lead, I helped guide the design process
+        from initial concepts through prototyping and testing.
+        I worked on the mechanical design of the brush
+        assembly, shaft geometry, and motor integration,
+        using Fusion 360 and 3D printing to develop and
+        improve the prototype.
+      </p>
+    </div>
+
+    <figure class="smart-hero">
+      <img
+        src="{{ '/assets/images/smartsweep.png' | relative_url }}"
+        alt="SmartSweep spotted lanternfly removal prototype"
+      >
+      <figcaption>
+        Figure 1. SmartSweep spotted lanternfly removal system.
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <!-- ===== PROBLEM ===== -->
+
+  <section id="problem">
+
+    <h2>Problem &amp; Design Objective</h2>
+
+    <div class="smart-text">
+      <p>
+        Spotted lanternflies can enter mechanical grape
+        harvesters along with harvested fruit, potentially
+        contaminating the yield. Our client-focused design
+        challenge was to develop a mechanism that could
+        remove insects from vines before grape collection
+        without damaging the vines or prematurely
+        dislodging grapes.
+      </p>
+
+      <p>
+        We proposed a front-mounted attachment for
+        existing harvesting equipment, using rotating
+        brushes positioned to sweep insects away from
+        the vines. The design needed to be adjustable,
+        effective at removing insects, and practical
+        to assemble and maintain.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ===== CONCEPT DEVELOPMENT ===== -->
+
+  <section id="concept">
+
+    <h2>Concept Development</h2>
+
+    <div class="smart-text">
+      <p>
+        Our initial concept used two rotating cylindrical
+        brushes mounted to an adjustable frame. Inspired
+        by the motion of car-wash brushes, the system
+        would sweep along the vine area as the harvester
+        moved forward.
+      </p>
+
+      <p>
+        Brush height, bristle length, and spacing were
+        important considerations. The mechanism needed
+        sufficient contact to remove insects while
+        limiting unwanted contact with grapes and vines.
+      </p>
+    </div>
+
+    <div class="smart-gallery">
+
+      <figure>
+        <img
+          src="{{ '/assets/images/mockup.png' | relative_url }}"
+          alt="Front view of the initial spinning brush concept"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 2. Initial brush concept — front view.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/assets/images/mockup_back.png' | relative_url }}"
+          alt="Rear view of the initial spinning brush concept"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 3. Initial brush concept — rear view.
+        </figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- ===== BRUSH TESTING ===== -->
+
+  <section id="brush-testing">
+
+    <h2>Brush Design &amp; Testing</h2>
+
+    <div class="smart-text">
+      <p>
+        We built a functional prototype to evaluate
+        whether rotating strip brushes could effectively
+        remove objects from a cylindrical surface.
+        Testing also helped us compare brush lengths
+        and identify changes needed before the final
+        assembly.
+      </p>
+
+      <p>
+        For the removal test, five sticky-note rings
+        were attached to a rod to represent objects
+        that needed to be dislodged. We operated
+        the brush for approximately ten revolutions
+        and recorded how many rings were removed
+        across three trials.
+      </p>
+    </div>
+
+    <div class="smart-gallery">
+
+      <figure>
+        <img
+          src="{{ '/assets/images/small_brush.png' | relative_url }}"
+          alt="Prototype using shorter brush bristles"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 4. Shorter brush configuration.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/assets/images/large_brush.png' | relative_url }}"
+          alt="Prototype using longer brush bristles"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 5. Longer brush configuration.
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <div class="smart-results">
+      <div class="smart-result-row">
+        <div class="smart-result-label">Trial 1</div>
+        <div class="smart-result-value">3 of 5 rings removed</div>
+      </div>
+      <div class="smart-result-row">
+        <div class="smart-result-label">Trial 2</div>
+        <div class="smart-result-value">5 of 5 rings removed</div>
+      </div>
+      <div class="smart-result-row">
+        <div class="smart-result-label">Trial 3</div>
+        <div class="smart-result-value">5 of 5 rings removed</div>
+      </div>
+    </div>
+
+    <div class="smart-text">
+      <p>
+        The brush passed our functional test criteria,
+        but the shorter bristles did not consistently
+        reach objects farther from the shaft. Based
+        on these observations, we selected longer
+        brushes for the next prototype iteration.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ===== SHAFT DESIGN ===== -->
+
+  <section id="shaft-design">
+
+    <h2>Shaft Design &amp; Assembly Iterations</h2>
+
+    <div class="smart-text">
+      <p>
+        Another challenge was designing the shaft slots
+        to hold the strip brushes securely while allowing
+        them to be inserted and replaced without damaging
+        the printed components.
+      </p>
+
+      <p>
+        Our first printed shaft had slots that were too
+        tight, requiring excessive insertion force and
+        causing damage during assembly. We revised
+        the geometry by increasing the slot length
+        by 1.27 inches and smoothing the edges.
+      </p>
+    </div>
+
+    <div class="smart-gallery">
+
+      <figure>
+        <img
+          src="{{ '/assets/images/broken.png' | relative_url }}"
+          alt="Damaged shaft slots from the first prototype"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 6. First shaft iteration with damaged slots.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/assets/images/large_slot.png' | relative_url }}"
+          alt="Redesigned shaft with larger brush slots"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 7. Revised shaft with improved slot geometry.
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <div class="smart-text">
+      <p>
+        We evaluated the clearance by inserting the
+        brushes and measuring the remaining gap using
+        folded paper strips. The second print allowed
+        smooth insertion with approximately one sheet
+        of paper clearance, providing a better balance
+        between brush retention and ease of assembly.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ===== MOTOR AND TORQUE ===== -->
+
+  <section id="motor">
+
+    <h2>Motor Selection &amp; Torque Testing</h2>
+
+    <div class="smart-text">
+      <p>
+        To estimate the torque required to rotate the
+        brush shaft, we applied increasing weights to
+        a 1.75 cm crank arm attached to the shaft.
+        The mechanism did not rotate with a 50 g load,
+        but rotation was achieved with a 100 g load.
+      </p>
+
+      <p>
+        This gave us an estimated required torque of
+        approximately 0.02 N·m, which helped guide
+        motor selection for the functional prototype.
+      </p>
+    </div>
+
+    <div class="smart-gallery">
+
+      <figure>
+        <img
+          src="{{ '/assets/images/gears.png' | relative_url }}"
+          alt="Earlier gear system prototypes"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 8. Earlier gear system iterations.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="{{ '/assets/images/torque.png' | relative_url }}"
+          alt="Torque testing setup"
+          loading="lazy"
+        >
+        <figcaption>
+          Figure 9. Torque test setup.
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <div class="smart-specs">
+      <div class="smart-spec">
+        <div class="smart-spec-number">1.75 cm</div>
+        <div class="smart-spec-label">Crank arm length</div>
+      </div>
+
+      <div class="smart-spec">
+        <div class="smart-spec-number">100 g</div>
+        <div class="smart-spec-label">Load producing rotation</div>
+      </div>
+
+      <div class="smart-spec">
+        <div class="smart-spec-number">0.02 N·m</div>
+        <div class="smart-spec-label">Estimated torque requirement</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== RESULTS ===== -->
+
+  <section id="results">
+
+    <h2>Final Prototype &amp; Results</h2>
+
+    <div class="smart-text">
+      <p>
+        Through iterative testing, we improved the
+        brush configuration and shaft assembly,
+        addressing issues with bristle reach,
+        insertion force, and component fit.
+        The functional prototype demonstrated
+        the feasibility of using rotating brushes
+        to dislodge objects from a cylindrical
+        surface.
+      </p>
+
+      <p>
+        The project received runner-up recognition
+        for Outstanding Problem/Solution.
+        Further development would be needed to
+        evaluate performance on real grapevines
+        and integrate the system with a harvester.
+      </p>
+    </div>
+
+    <div class="smart-report-card">
+      <h3>Final Client Report</h3>
+
+      <p>
+        The full report documents our design
+        process, prototype development, testing,
+        and recommendations.
+      </p>
+
+      <a
+        href="https://docs.google.com/document/d/1K4rZF0i-Lw44lrSVzpyYk6Z6Sbv8mkQhzqhPHqws2ZQ/edit"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View Full Client Report ↗
+      </a>
+    </div>
+
+  </section>
+
 </div>
-
----
-
-## **Project Navigation**
-
-<li><a href="#client-outline-and-pitch">Client Outline and Pitch</a></li>
-<li><a href="#functional-prototype">Functional Prototype</a></li>
-<li><a href="#client-report">Client Report</a></li>
-
-
----
-
-<a id="client-outline-and-pitch"></a>
-## Client Outline and Pitch
-
-**Team:** Spotted... then Stopped
-
----
-
-#### **Problem Statement:**
-
-Due to limitations in the labour force, New York vineyard operators use mechanical harvesters rather than hand-picking grapes. This allows Spotted Lanternflies (SLF) to frequently enter harvester bins and contaminate the yield. A Cornell–Penn State study found that 60% of lanternflies on vines end up in harvester bins, and current standards require rejection if even 1–2 adult insects are found per 1 kg sample. This leads farmers to invest a season's worth of resources in a crop, only for it to be rejected due to late-stage contamination. Addressing this issue reduces uncertainty in harvest outcomes, allowing farmers to plan and allocate resources with greater confidence. It will also invariably lead to higher profits as fewer crops will be rejected due to contamination.
-
----
-
-#### **Impact:**
-
-Reducing SLF contamination during harvesting helps minimize wasted product, improve crop quality, and maximize vineyard yield.
-
----
-
-#### **Proposed Direction:**
-
-Our proposed solution is a front-mounted attachment for grape harvesters designed to remove SLF from vines immediately before grape collection. This approach aims to reduce contamination while minimizing disruption to the harvesting process.
-
----
-
-#### **Concept A: Spinning Brushes**
-
-<div style="display: flex; justify-content: center; gap: 30px; margin: 15px 0 5px 0;">
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/mockup.png"
-         style="width: 250px; height: 275px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Spinning brush mockup front view</p>
-  </div>
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/mockup_back.png"
-         style="width: 250px; height: 275px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Spinning brush mockup back view</p>
-  </div>
-
-</div>
-
-
-The concept consists of a front-mounted attachment with rotating brushes positioned to target the vine area. Similar to a car wash brush, the rotating rods would sweep SLF off the vines before the grapes are harvested. The brush height and position would be adjusted to minimize contact with the grapes while maximizing insect removal.
-
-   **How it would be used:**
-
-  - Mounted to the front of the harvester
-  - Brush height adjusted to match vine position
-  - Rotating brushes move with the harvester speed
-  - SLF are dislodged before grape collection
-
-   **Why it’s better than the status quo:**
-
-  - Removes insects before contamination occurs
-  - Reduces the need for post-harvest sorting
-  - Designed to integrate with existing harvesting equipment
-
----
-
-#### **End-of-semester proof-of-concept:**
-
-Two rotating cylindrical brushes mounted to an adjustable frame, designed to operate together ahead of the harvester.
-
----
-
-#### **Key Risks / Unknowns:**
-
-**Potential vine damage** — Brushes could scrape or damage vines if excessive force is applied. Further testing is needed to evaluate bristle stiffness and vine contact.
-
-**Premature grape removal** — Incorrect brush height or positioning could knock grapes off before harvesting. Testing is needed to optimize brush placement.
-
-**Incomplete SLF removal** — Gaps between brushes may allow some insects to remain on the vine. Additional testing is needed to evaluate brush coverage and effectiveness.
-
----
-
-#### **Questions for the client:**
-
-**Can we get a blueprint/design for the harvesters used?** — This would help guide mounting design and overall system integration.
-
-**What is the average height/length of the vine?** — This affects brush sizing, spacing, and adjustability requirements.
-
-**What is the durability of the vine?** — Understanding allowable contact forces would help determine appropriate bristle material and stiffness.
-
----
-
-#### **References:**
-
-- [WineAmerica Methodology Report (2025)](https://wineamerica.org/wp-content/uploads/2025/05/2025-WineAmerica-Methodology-4-28-25-Final.pdf)
-- [Penn State Research on Spotted Lanternflies and Grapevines](https://www.psu.edu/news/research/story/grapevines-may-only-need-help-survive-heavy-spotted-lanternfly-infestations)
-
----
-
-<a name="functional-prototype"></a>
-## Functional Prototype
-
----
-
-
-#### **Purpose:**
-
-The purpose of the functional prototype was to evaluate the brush and shaft system before moving into final design decisions. Testing focused on brush effectiveness, ease of assembly, shaft tolerancing, and required motor torque.
-
-The prototype allowed us to determine whether the strip brushes could be securely integrated into the shaft while still being easy to assemble and replace. We also tested whether the rotating brushes could effectively remove SLF while in motion and estimated the torque required to select an appropriate motor for the final design.
-
-
----
-
-#### **Tests and Outcomes:**
-
----
-
-##### **Functional Test — Brushes** | <span style="color:#ff4fa3"><strong>Passed</strong></span>
-
-<div style="display: flex; justify-content: center; gap: 30px; margin: 15px 0 5px 0;">
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/small_brush.png"
-         style="width: 250px; height: 350px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Shorter brushes</p>
-  </div>
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/large_brush.png"
-         style="width: 250px; height: 350px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Larger brushes</p>
-  </div>
-
-</div>
-
-
-
-**What we tested:** Effectiveness of the rotating brush at removing objects from a cylindrical surface.
-
-**Method:** Five sticky-note rings (2 cm wide) were attached to a rod. Removal counts were recorded after approximately 10 revolutions. The test was repeated three times with a passing threshold of at least 4/5 removals.
-
-**Results:**
-- Trial 1: 3/5 removed
-- Trial 2: 5/5 removed
-- Trial 3: 5/5 removed
-
-**Conclusion:** The brush stiffness was effective, but the original bristle length was too short to consistently contact objects farther from the shaft. Longer brushes were selected for the next prototype iteration.
-
----
-
-##### **Assembly Test — Brushes & Shaft Slots** | <span style="color:#ff4fa3"><strong>Passed (v2)</strong></span>
-
-<div style="display: flex; justify-content: center; gap: 30px; margin: 15px 0 5px 0;">
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/broken.png"
-         style="width: 250px; height: 250px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Broken shaft slots</p>
-  </div>
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/large_slot.png"
-         style="width: 250px; height: 250px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Larger shaft slots</p>
-  </div>
-
-</div>
-
-**What we tested:** Fit and tolerance between the brush base and shaft slot, aiming for secure retention without excessive insertion force.
-
-
-**Method:** Brushes were inserted into the shaft slots and the remaining gap was measured using progressively folded paper strips until no additional strips could fit. If the fit was too tight or caused damage, the shaft was redesigned and reprinted for retesting.
-
-
-**Results:**
-- Print 1: **Failed** — excessive insertion force caused slot damage
-- *Changes for print 2: slot length increased by 1.27 in and edges smoothed*
-- Print 2: **Passed** — smooth insertion with approximately one sheet of paper clearance
-
-
-**Conclusion:** The updated shaft design provided the best balance between secure brush retention and ease of assembly. The shaft geometry is ready for integration into the final prototype.
-
----
-
-##### **Torque Test — Motor** | <span style="color:#ff4fa3"><strong>Passed</strong></span>
-
-<div style="display: flex; justify-content: center; gap: 30px; margin: 15px 0 5px 0;">
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/gears.png"
-         style="width: 275px; height: 200px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Failed gear systems</p>
-  </div>
-
-  <div style="text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/torque.png"
-         style="width: 275px; height: 200px; object-fit: cover; display: block; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    <p style="margin-top: 8px; font-size: 14px; color: #666;">Torque test</p>
-  </div>
-
-</div>
-
-**What we tested:** Minimum torque required to initiate shaft rotation at target speed.
-
-**Method:** Increasing weights were applied to a 1.75 cm crank arm attached to the shaft until rotation occurred.
-
-**Results:**
-- 50 g applied → no rotation
-- 100 g applied → successful achieved
-- Estimated required torque: **0.02 N·m**
-
-
-**Conclusion:** The measured torque requirement confirmed that a compact 12V motor would provide sufficient power for the prototype. This test also helped identify friction losses that will be considered in future iterations.
-
----
-
-
-
-<a id="client-report"></a>
-## Client Report
-
-[View Full Client Report (PDF)](https://docs.google.com/document/d/1K4rZF0i-Lw44lrSVzpyYk6Z6Sbv8mkQhzqhPHqws2ZQ/edit)
-
----
