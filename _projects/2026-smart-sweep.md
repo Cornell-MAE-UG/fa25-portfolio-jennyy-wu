@@ -175,15 +175,20 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 /* ===== CONCEPT DEVELOPMENT PHOTOS ===== */
 
 .smart-page .smart-concept-gallery {
-  max-width: 780px;
-  gap: 20px;
-  margin-top: 24px;
-  margin-bottom: 10px;
+  max-width: 740px;
+  gap: 14px;
+  margin: 22px auto 0;
 }
 
 .smart-page .smart-concept-gallery img {
-  height: 320px;
+  width: 100%;
+  height: 350px;
   object-fit: contain;
+}
+
+/* Tighten spacing before Brush Design & Testing */
+.smart-page #concept {
+  margin-bottom: 25px;
 }
 
 /* ===== BRUSH CAD COMPARISON ===== */
@@ -409,7 +414,7 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       <div class="smart-meta-item">
         <div class="smart-meta-heading">Role</div>
         <div class="smart-meta-value">
-          Project Lead &amp; Meche
+          Project Lead &amp; MechE
         </div>
       </div>
 

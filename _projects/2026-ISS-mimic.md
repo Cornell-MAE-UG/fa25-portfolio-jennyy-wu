@@ -382,13 +382,13 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
       <div>
         <div class="iss-meta-heading">Role</div>
         <div class="iss-meta-value">
-          Mechanical Design &amp; Prototyping
+          MechE
         </div>
       </div>
 
       <div>
         <div class="iss-meta-heading">Year</div>
-        <div class="iss-meta-value">2025–2026</div>
+        <div class="iss-meta-value">2026</div>
       </div>
 
       <div>
