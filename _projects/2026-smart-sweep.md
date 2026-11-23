@@ -189,14 +189,21 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 /* ===== BRUSH CAD COMPARISON ===== */
 
 .smart-page .brush-comparison {
-  max-width: 720px;
-  gap: 12px;
-  margin: 22px auto 0;
+  width: 100%;
+  max-width: 850px;
+  gap: 0px;
+  margin: 18px auto 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.smart-page .brush-comparison figure {
+  width: 100%;
+  margin: 0;
 }
 
 .smart-page .brush-comparison img {
   width: 100%;
-  height: 370px;
+  height: 440px;
   object-fit: contain;
   object-position: center;
   background: transparent;
@@ -580,9 +587,9 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
 }
 
 .smart-page .smart-test-overall {
-  margin-top: 14px;
-  padding-top: 17px;
-  border-color: #E5E9E5;
+  margin-top: 18px;
+  padding-top: 0;
+  border-top: none;
 }
 
 .smart-page .smart-test-overall span {
@@ -865,7 +872,9 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
       </p>
     </div>
 
-  </section>
+  </div> <!-- Closes smart-test-dashboard -->
+
+</section>
 
   <!-- ===== SHAFT DESIGN ===== -->
 
