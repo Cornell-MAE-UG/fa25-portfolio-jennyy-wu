@@ -473,21 +473,16 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
         </figcaption>
       </figure>
 
-      <figure>
-        <div class="sub-placeholder">
-          <div class="sub-placeholder-icon">+</div>
-          <div class="sub-placeholder-title">
-            Ballast Prototype
-          </div>
-          <div class="sub-placeholder-note">
-            Photograph of the assembled
-            motor-driven syringe mechanism.
-          </div>
-        </div>
-        <figcaption>
-          Figure 5. Physical prototype of the ballast system.
-        </figcaption>
-      </figure>
+      <figure class="iss-hero">
+      <img
+        src="{{ '/assets/images/sub_ballast.jpeg' | relative_url }}"
+        alt="Photograph of the assembled
+            motor-driven syringe mechanism."
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 5. Physical prototype of the ballast system.
+      </figcaption>
 
     </div>
 
