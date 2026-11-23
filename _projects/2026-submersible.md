@@ -322,7 +322,7 @@ main.page-content > .wrapper {
       <div>
         <div class="sub-meta-heading">Role</div>
         <div class="sub-meta-value">
-          Mechanical Design &amp; Prototyping
+          MechE
         </div>
       </div>
 

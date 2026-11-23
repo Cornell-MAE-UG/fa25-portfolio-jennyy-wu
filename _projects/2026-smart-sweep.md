@@ -175,41 +175,36 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 /* ===== CONCEPT DEVELOPMENT PHOTOS ===== */
 
 .smart-page .smart-concept-gallery {
-  max-width: 860px;
-  gap: 8px;
-  margin: 18px auto 0;
+  max-width: 720px;
+  gap: 12px;
+  margin: 22px auto 0;
 }
 
 .smart-page .smart-concept-gallery img {
   width: 100%;
-  height: 410px;
+  height: 370px;
   object-fit: contain;
 }
 
 /* ===== BRUSH CAD COMPARISON ===== */
 
 .smart-page .brush-comparison {
-  max-width: 860px;
-  gap: 8px;
-  margin: 18px auto 16px;
+  max-width: 720px;
+  gap: 12px;
+  margin: 22px auto 0;
 }
 
 .smart-page .brush-comparison img {
   width: 100%;
-  height: 410px;
-  object-fit: contain !important;
+  height: 370px;
+  object-fit: contain;
   object-position: center;
   background: transparent;
 }
 
-/* ===== SECTION SPACING ===== */
-
+/* Tighten space between sections */
 .smart-page #concept {
-  margin-bottom: 18px;
-}
-
-.smart-page #brush-testing {
-  margin-top: 0;
+  margin-bottom: 25px;
 }
 
 /* ===== METRIC CARDS ===== */
@@ -853,6 +848,8 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
       </span>
     </div>
 
+    </div>
+
     <div class="smart-test-overall">
       <div>
         <span>OVERALL REMOVAL RATE</span>
@@ -861,8 +858,6 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
 
       <p>13 of 15 simulated rings removed across three trials</p>
     </div>
-
-  </div>
 
     <div class="smart-text">
       <p>
