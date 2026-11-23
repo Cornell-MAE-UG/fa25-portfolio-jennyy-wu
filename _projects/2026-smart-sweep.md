@@ -694,22 +694,43 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       </p>
     </div>
 
-    <div class="smart-report-card">
+    <!-- ===== FINAL PROTOTYPE VIDEO ===== -->
+
+    <div class="smartsweep-final-video">
+
+      <video controls playsinline preload="metadata">
+        <source
+          src="{{ '/assets/videos/smartsweep-demo.mp4' | relative_url }}"
+          type="video/mp4"
+        >
+        Your browser does not support video playback.
+      </video>
+
+      <p class="smartsweep-video-caption">
+        Final prototype demonstrating the counter-rotating
+        brush mechanism in action.
+      </p>
+
+    </div>
+
+    <!-- ===== FINAL CLIENT REPORT ===== -->
+
+    <div class="smartsweep-final-report">
+
       <h3>Final Client Report</h3>
 
       <p>
-        The full report documents our design
-        process, prototype development, testing,
-        and recommendations.
+        The full report documents our design process,
+        prototype development, testing, and recommendations.
       </p>
 
-      <a
-        href="https://docs.google.com/document/d/1K4rZF0i-Lw44lrSVzpyYk6Z6Sbv8mkQhzqhPHqws2ZQ/edit"
+      <!-- Keep your existing working report link here -->
+      <a href="YOUR_EXISTING_REPORT_LINK"
         target="_blank"
-        rel="noopener noreferrer"
-      >
+        rel="noopener noreferrer">
         View Full Client Report ↗
       </a>
+
     </div>
 
   </section>
