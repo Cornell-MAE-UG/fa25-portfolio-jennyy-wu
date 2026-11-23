@@ -300,56 +300,68 @@ technologies: [Fusion 360, CAD, 3D Printing, Gear Design, Mechanical Assembly, R
   }
 }
 
-/* ===== VERTICAL SPACING REFINEMENTS ===== */
+/* ===== CONSISTENT VERTICAL SPACING ===== */
 
-/* Space between major sections */
+/* Major section spacing */
 .iss-page section {
-  margin-bottom: 55px !important;
+  margin-bottom: 42px;
 }
 
-/* Space below section headings */
+/* Main headings */
 .iss-page h2 {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
-/* Space above smaller headings */
+/* Subheadings */
 .iss-page h3 {
-  margin-top: 28px;
-  margin-bottom: 16px;
+  margin: 24px 0 14px;
 }
 
-/* Space between paragraphs */
+/* Paragraph spacing */
 .iss-page p {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
-/* Space around full-width images */
-.iss-page .iss-full {
-  margin-top: 25px !important;
-  margin-bottom: 25px !important;
+/* Main images and captions */
+.iss-page .iss-full,
+.iss-page .iss-hero {
+  margin-top: 22px;
+  margin-bottom: 22px;
 }
 
-/* Space around image galleries */
+/* Side-by-side images */
 .iss-page .iss-gallery {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+  gap: 24px;
 }
 
-/* Captions closer to images */
+/* Captions */
 .iss-page figcaption {
   margin-top: 8px;
 }
 
-/* Space around gear calculations */
+/* Gear ratio calculation cards */
 .iss-page .iss-specs {
-  margin-top: 20px;
-  margin-bottom: 25px;
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+/* Keep images aligned within galleries */
+.iss-page .iss-gallery .iss-hero {
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 /* Mobile */
 @media (max-width: 700px) {
   .iss-page section {
-    margin-bottom: 45px !important;
+    margin-bottom: 35px;
+  }
+
+  .iss-page .iss-gallery {
+    gap: 20px;
   }
 }
 
