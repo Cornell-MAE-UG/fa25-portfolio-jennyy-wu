@@ -455,34 +455,29 @@ technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterpro
       </p>
     </div>
 
-    <div class="sub-gallery">
 
-      <figure>
-        <div class="sub-placeholder">
-          <div class="sub-placeholder-icon">+</div>
-          <div class="sub-placeholder-title">
-            Rack-and-Pinion CAD
-          </div>
-          <div class="sub-placeholder-note">
-            Close-up of the motor, pinion,
-            rack, and syringe plunger.
-          </div>
-        </div>
-        <figcaption>
-          Figure 4. CAD model of the syringe actuation mechanism.
-        </figcaption>
-      </figure>
+    <div class="iss-gallery">
 
       <figure class="iss-hero">
       <img
+        src="{{ '/assets/images/motor_mount.jpeg' | relative_url }}"
+        alt="Close-up of the motor, pinion rack, and syringe plunger."
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 4. CAD model of the syringe actuation mechanism.
+      </figcaption>
+    </figure>
+        <figure class="iss-hero">
+      <img
         src="{{ '/assets/images/sub_ballast.jpeg' | relative_url }}"
-        alt="Photograph of the assembled
-            motor-driven syringe mechanism."
+        alt="Assembled motor-driven syringe mechanism"
         loading="lazy"
       >
       <figcaption>
         Figure 5. Physical prototype of the ballast system.
       </figcaption>
+    </figure>
 
     </div>
 
