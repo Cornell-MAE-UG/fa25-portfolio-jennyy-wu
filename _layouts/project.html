@@ -1,63 +1,25 @@
-
 ---
 layout: default
 ---
 
 <style>
-  /* ===== PROJECT FOOTER ===== */
-
+  /* Align bottom section with project content */
   .project-bottom {
     width: 85vw;
     max-width: 900px;
     margin: 0 auto;
-    padding: 10px 0 65px;
-    text-align: center;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+    padding: 0 0 40px;
+    text-align: left;
     box-sizing: border-box;
   }
 
-  .project-technologies {
-    margin: 0 auto 24px;
-    font-size: 14px;
-    line-height: 1.8;
-    color: #777;
-    text-align: center;
-  }
-
-  .project-technologies strong {
-    display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-  }
-
-  .project-back {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    margin: 0 auto;
-    color: #555;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .project-back:hover {
-    color: #111;
-    text-decoration: none;
-  }
-
-  .project-back i {
-    font-size: 17px;
+  .project-bottom .back-arrow {
+    display: inline-block;
   }
 
   @media (max-width: 700px) {
     .project-bottom {
       width: calc(100% - 36px);
-      padding-bottom: 50px;
     }
   }
 </style>
@@ -73,21 +35,16 @@ layout: default
 
 {{ content }}
 
-<!-- ===== CENTERED PROJECT FOOTER ===== -->
-
 <div class="project-bottom">
 
   {% if page.technologies %}
-    <div class="project-technologies">
-      <strong>Technologies Used</strong>
-      <span>{{ page.technologies | join: " · " }}</span>
-    </div>
+    <p>
+      <strong>Technologies Used</strong>:
+      {{ page.technologies | join: ", " }}
+    </p>
   {% endif %}
 
-  <a
-    href="{{ '/projects/' | relative_url }}"
-    class="project-back"
-  >
+  <a href="{{ '/projects/' | relative_url }}" class="back-arrow">
     <i class="bi bi-arrow-left-circle-fill"></i>
     Back to Projects
   </a>
