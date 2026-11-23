@@ -175,27 +175,26 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 /* ===== CONCEPT DEVELOPMENT PHOTOS ===== */
 
 .smart-page .smart-concept-gallery {
-  max-width: 800px;
+  max-width: 720px;
   gap: 12px;
   margin: 22px auto 0;
 }
 
 .smart-page .smart-concept-gallery img {
   width: 100%;
-  height: 380px;
+  height: 370px;
   object-fit: contain;
 }
 
 /* ===== BRUSH CAD COMPARISON ===== */
 
 .smart-page .brush-comparison {
-  max-width: 760px;
+  max-width: 720px;
   gap: 12px;
   margin: 22px auto 20px;
 }
 
 .smart-page .brush-comparison img {
-  display: block;
   width: 100%;
   height: 370px;
   object-fit: contain !important;
@@ -397,6 +396,115 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
     padding: 28px 18px;
   }
 }
+
+/* ===== SMARTSWEEP TEST RESULTS ===== */
+
+.smart-page .smart-test-dashboard {
+  width: 100%;
+  max-width: 720px;
+  margin: 26px auto 32px;
+  text-align: left;
+}
+
+.smart-page .smart-test-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.smart-page .smart-test-card {
+  display: flex;
+  flex-direction: column;
+  padding: 22px 18px;
+  background: #EFF5F0;
+  border: 1px solid #DDE8E0;
+  border-radius: 7px;
+}
+
+.smart-page .smart-test-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: #718578;
+}
+
+.smart-page .smart-test-percent {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  color: #527D69;
+  margin: 14px 0 18px;
+  line-height: 1;
+}
+
+.smart-page .smart-test-bar {
+  width: 100%;
+  height: 5px;
+  background: #DDE8E0;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.smart-page .smart-test-bar > div {
+  height: 100%;
+  background: #527D69;
+  border-radius: 5px;
+}
+
+.smart-page .smart-test-count {
+  font-size: 12px;
+  color: #64766B;
+}
+
+.smart-page .smart-test-overall {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 2px 0;
+  margin-top: 18px;
+  border-top: 1px solid #DDE8E0;
+}
+
+.smart-page .smart-test-overall > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.smart-page .smart-test-overall span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #718578;
+}
+
+.smart-page .smart-test-overall strong {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #527D69;
+}
+
+.smart-page .smart-test-overall p {
+  font-size: 13px;
+  color: #777;
+  margin: 0 0 5px;
+}
+
+@media (max-width: 700px) {
+  .smart-page .smart-test-cards {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .smart-page .smart-test-overall {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 </style>
 
 <div class="smart-page">
@@ -613,33 +721,63 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
       </figure>
 
     </div>
+<!-- ===== BRUSH REMOVAL TEST RESULTS ===== -->
 
-    <!-- ===== BRUSH REMOVAL TEST RESULTS ===== -->
+<div class="smart-test-dashboard">
 
-    <div class="smart-results">
+  <div class="smart-test-cards">
 
-      <div class="smart-result-row">
-        <div class="smart-result-label">Trial 1</div>
-        <div class="smart-result-value">
-          3 of 5 rings removed
-        </div>
+    <div class="smart-test-card">
+      <span class="smart-test-label">TRIAL 01</span>
+      <strong class="smart-test-percent">60%</strong>
+
+      <div class="smart-test-bar">
+        <div style="width: 60%;"></div>
       </div>
 
-      <div class="smart-result-row">
-        <div class="smart-result-label">Trial 2</div>
-        <div class="smart-result-value">
-          5 of 5 rings removed
-        </div>
+      <span class="smart-test-count">
+        3 of 5 rings removed
+      </span>
+    </div>
+
+    <div class="smart-test-card">
+      <span class="smart-test-label">TRIAL 02</span>
+      <strong class="smart-test-percent">100%</strong>
+
+      <div class="smart-test-bar">
+        <div style="width: 100%;"></div>
       </div>
 
-      <div class="smart-result-row">
-        <div class="smart-result-label">Trial 3</div>
-        <div class="smart-result-value">
-          5 of 5 rings removed
-        </div>
+      <span class="smart-test-count">
+        5 of 5 rings removed
+      </span>
+    </div>
+
+    <div class="smart-test-card">
+      <span class="smart-test-label">TRIAL 03</span>
+      <strong class="smart-test-percent">100%</strong>
+
+      <div class="smart-test-bar">
+        <div style="width: 100%;"></div>
       </div>
+
+      <span class="smart-test-count">
+        5 of 5 rings removed
+      </span>
+    </div>
 
     </div>
+
+    <div class="smart-test-overall">
+      <div>
+        <span>OVERALL REMOVAL RATE</span>
+        <strong>86.7%</strong>
+      </div>
+
+      <p>13 of 15 simulated rings removed across three trials</p>
+    </div>
+
+  </div>
 
     <div class="smart-text">
       <p>
