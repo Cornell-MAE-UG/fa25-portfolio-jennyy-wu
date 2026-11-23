@@ -4,179 +4,861 @@ title: Submersible XRP
 permalink: /projects/submersible-xrp/
 description: Cornell Cup Robotics — Underwater Robotics and Mechanical Design
 technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterproofing, Robotics]
-image: /assets/images/submersible.jpeg
 ---
 
 <style>
-.page-content,
-.wrapper,
-.container {
-    max-width: 800px !important;
-    width: 92% !important;
+/* ===== SUBMERSIBLE XRP PROJECT PAGE ===== */
+
+.sub-page {
+  width: 85vw;
+  max-width: 900px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 0 80px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #222;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.sub-page * {
+  box-sizing: border-box;
+}
+
+/* ===== TITLES AND TEXT ===== */
+
+.sub-page .sub-main-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(44px, 5vw, 58px);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1.1;
+  margin: 0 auto 14px;
+}
+
+.sub-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 3vw, 38px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+  color: #171717;
+  margin: 0 0 18px;
+}
+
+.sub-page h3 {
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin: 24px 0 14px;
+}
+
+.sub-page p {
+  font-size: 16px;
+  line-height: 1.85;
+  color: #444;
+  margin: 0 0 14px;
+}
+
+.sub-page section {
+  margin-bottom: 42px;
+}
+
+.sub-text {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== PROJECT METADATA ===== */
+
+.sub-page .sub-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto 20px;
+  padding: 8px 0;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.sub-meta-heading {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.sub-meta-value {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ===== IMAGES AND CAPTIONS ===== */
+
+.sub-page figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.sub-page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.sub-page figcaption {
+  font-size: 12px;
+  line-height: 1.65;
+  color: #888;
+  margin-top: 8px;
+}
+
+.sub-page .sub-hero {
+  width: 70%;
+  max-width: 630px;
+  margin: 22px auto;
+}
+
+.sub-page .sub-full {
+  width: 100%;
+  margin: 22px auto;
+}
+
+.sub-page .sub-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  margin: 22px auto;
+}
+
+.sub-page .sub-gallery figure {
+  width: 100%;
+}
+
+/* ===== PLACEHOLDERS ===== */
+
+.sub-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: #f5f5f3;
+  border: 1px dashed #d5d5d2;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.sub-placeholder.wide {
+  aspect-ratio: 16 / 9;
+}
+
+.sub-placeholder-icon {
+  font-size: 27px;
+  font-weight: 300;
+  color: #aaa;
+  margin-bottom: 13px;
+}
+
+.sub-placeholder-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.sub-placeholder-note {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #aaa;
+  max-width: 330px;
+}
+
+/* ===== ENGINEERING CALLOUTS ===== */
+
+.sub-specs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 18px 0 20px;
+}
+
+.sub-spec {
+  background: #f7f7f6;
+  padding: 25px 15px;
+  border-radius: 4px;
+}
+
+.sub-spec-number {
+  font-size: 31px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin-bottom: 7px;
+}
+
+.sub-spec-name {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #777;
+}
+
+.sub-equation {
+  background: #f7f7f6;
+  padding: 30px 20px;
+  margin: 22px auto;
+  border-radius: 4px;
+}
+
+.sub-equation-main {
+  font-size: clamp(20px, 3vw, 29px);
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.sub-equation-note {
+  font-size: 12px;
+  color: #888;
+  line-height: 1.7;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 700px) {
+  .sub-page {
+    width: calc(100% - 36px);
+    padding: 20px 0 65px;
+  }
+
+  .sub-page section {
+    margin-bottom: 35px;
+  }
+
+  .sub-page .sub-meta {
+    gap: 10px;
+  }
+
+  .sub-meta-value {
+    font-size: 13px;
+  }
+
+  .sub-page .sub-hero {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .sub-page .sub-gallery,
+  .sub-specs {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-page p {
+    font-size: 15px;
+  }
 }
 </style>
 
-<p style="max-width: 850px; margin: 0 auto 30px auto; font-size: 18px;">
-The Submersible XRP is a Cornell Cup Robotics project focused on developing an underwater robot capable of collecting water samples for microplastics research in collaboration with EarthEcho.
-
-I worked on the mechanical design and prototyping of the robot, particularly its waterproof housing and syringe-based ballast system. My work involved designing components in Fusion 360, 3D printing prototypes, assembling mechanical systems, and troubleshooting issues related to waterproofing and buoyancy.
-</p>
-
----
-
-## System Description
-
-The Submersible XRP is designed to travel underwater, control its depth, and collect water samples for microplastics analysis.
-
-The mechanical system includes:
-
-- A waterproof cylindrical housing that protects the electronics
-- Two thrusters for underwater movement
-- Two syringe-based ballast mechanisms for controlling buoyancy
-- A separate syringe for collecting water samples
-- N20 motors and rack-and-pinion mechanisms for moving the syringe plungers
-- Internal mounting trays for the electronics and XRP components
-
-One of the main design challenges was fitting all these components inside a compact, waterproof housing while keeping the robot capable of sinking and rising.
-
----
-
-## Syringe-Based Ballast System
-
-To control the robot's buoyancy, we designed a ballast system using two syringes driven by N20 motors and rack-and-pinion mechanisms.
-
-The motor rotates a pinion gear, which moves a rack connected to the syringe plunger. This converts rotational motion into linear motion.
-
-When the plunger pulls back, the syringe takes in water, increasing the robot's total mass and helping it sink.
-
-When the plunger pushes forward, water is expelled, decreasing the robot's mass and allowing it to rise.
-
-This system allows the robot to adjust its buoyancy without relying entirely on its thrusters.
-
-### Mechanical Design Considerations
-
-Important considerations included:
-
-- Motor torque required to move the syringe plungers
-- Alignment between the rack and pinion
-- Friction within the syringe mechanism
-- Available syringe volume
-- Balanced placement of the two ballast syringes
-- Space constraints inside the housing
-
-We tested the ballast mechanism separately to verify that the motors and syringes could move as intended.
-
----
-
-## Buoyancy and Housing Size
-
-One of the biggest challenges was that our original housing was too buoyant.
-
-Because the housing displaced a relatively large volume of water, the upward buoyant force was greater than the robot's weight, even when the ballast syringes were filled.
-
-According to Archimedes' principle:
-
-F_b = ρ_water × g × V_displaced
-
-Where:
-
-- F_b is the buoyant force
-- ρ_water is the density of water
-- g is gravitational acceleration
-- V_displaced is the volume of water displaced by the robot
-
-A larger housing displaces more water, increasing the buoyant force.
-
-To address this, we began redesigning the housing with a smaller overall volume while still leaving enough room for the electronics, motors, and syringe mechanisms.
-
-This required balancing internal space with the robot's ability to sink.
-
----
-
-## Waterproof Housing Design
-
-Waterproofing was another major engineering challenge because even a small leak could damage the electronics inside the robot.
-
-Our original design used a cylindrical tube with end caps containing openings for external connections.
-
-During manufacturing, we drilled the port holes before fully tightening the end caps.
-
-When the caps were installed in their final positions, the holes no longer lined up correctly.
-
-We attempted to correct the problem by redrilling the holes and applying sealing material, but these repairs did not produce a reliable watertight seal.
-
-### Housing Redesign
-
-Rather than continuing to repair the original end caps, we began redesigning the housing to incorporate the port holes directly into the 3D-printed components.
-
-The redesign focuses on:
-
-- Improving port alignment
-- Reducing potential leak paths
-- Making assembly more consistent
-- Improving sealing around connections
-- Reducing the overall housing volume
-- Maintaining access to internal components
-
-This approach allows us to address the original manufacturing problem through the design itself.
-
----
-
-## CAD and 3D Printing
-
-I used Fusion 360 to design and modify components for the submersible.
-
-3D printing allowed us to prototype different housing and mounting designs and make changes as problems appeared during assembly.
-
-Important design considerations included:
-
-- Fit between the housing and end caps
-- Port placement and alignment
-- Mounting positions for motors and syringes
-- Clearance for moving mechanisms
-- Internal space for electronics and wiring
-- Ease of assembly and maintenance
-
-The project reinforced the importance of designing parts around how they will actually be manufactured and assembled.
-
----
-
-## Testing and Troubleshooting
-
-We tested the propellers and ballast system individually to check whether the mechanisms operated properly.
-
-Both systems were able to move as intended during these initial tests.
-
-However, the housing presented separate challenges related to waterproofing and buoyancy.
-
-### Waterproofing Tests
-
-To identify leaks, we are testing the empty housing by:
-
-1. Assembling the housing without electronics
-2. Submerging it in water
-3. Pumping air into the housing
-4. Watching for bubbles escaping through gaps or connections
-5. Identifying leak locations and adjusting the design
-
-This allows us to locate sealing problems without risking damage to the electronics.
-
-### Buoyancy Testing
-
-We also identified that the original housing displaced too much water for the ballast system to overcome.
-
-Our redesign aims to reduce the housing size so the syringes can provide enough additional water mass to control the robot's depth.
-
-Further testing will be needed to verify the redesigned housing's waterproofing and buoyancy performance.
-
----
-
-## Engineering Lessons
-
-This project taught me how closely connected mechanical design decisions can be.
-
-Changing the housing size affects buoyancy, internal component placement, and assembly. Similarly, a small manufacturing mistake, such as drilling holes before final assembly, can create major waterproofing problems.
-
-I also learned the importance of testing individual mechanisms before combining them into a complete system.
-
-Most importantly, the project gave me experience identifying design failures, understanding their causes, and developing practical improvements through CAD, prototyping, and testing.
+<div class="sub-page">
+
+  <!-- ===== MAIN TITLE ===== -->
+
+  <h1 class="sub-main-title">Submersible XRP</h1>
+
+  <!-- ===== PROJECT OVERVIEW ===== -->
+
+  <section>
+
+    <div class="sub-meta">
+      <div>
+        <div class="sub-meta-heading">Role</div>
+        <div class="sub-meta-value">
+          Mechanical Design &amp; Prototyping
+        </div>
+      </div>
+
+      <div>
+        <div class="sub-meta-heading">Year</div>
+        <div class="sub-meta-value">2026–Present</div>
+      </div>
+
+      <div>
+        <div class="sub-meta-heading">Team</div>
+        <div class="sub-meta-value">
+          Cornell Cup Robotics
+        </div>
+      </div>
+    </div>
+
+    <h2>Project Overview</h2>
+
+    <div class="sub-text">
+      <p>
+        The Submersible XRP is a Cornell Cup Robotics
+        project focused on developing an underwater
+        robot capable of collecting water samples for
+        microplastics research in collaboration with
+        EarthEcho. The robot uses a waterproof housing,
+        motor-driven thrusters, and a syringe-based
+        ballast system to control its movement and depth.
+      </p>
+
+      <p>
+        I worked on the mechanical design and prototyping
+        of the robot, particularly its waterproof housing
+        and syringe-based ballast mechanisms. My work
+        involved designing components in Fusion 360,
+        3D printing prototypes, assembling mechanisms,
+        and troubleshooting issues related to
+        waterproofing and buoyancy.
+      </p>
+    </div>
+
+    <figure class="sub-hero">
+      <img
+        src="{{ '/assets/images/submersible.jpeg' | relative_url }}"
+        alt="Submersible XRP underwater robotics project"
+        loading="lazy"
+      >
+      <figcaption>
+        Figure 1. Submersible XRP robotic system.
+      </figcaption>
+    </figure>
+
+  </section>
+
+  <!-- ===== SYSTEM DESIGN ===== -->
+
+  <section>
+
+    <h2>System Design &amp; CAD Assembly</h2>
+
+    <div class="sub-text">
+      <p>
+        The robot was designed around a cylindrical
+        waterproof enclosure containing the electronics,
+        motors, and syringe mechanisms. Two external
+        thrusters provide underwater movement, while
+        three syringes serve separate functions: two
+        control buoyancy and one collects water samples.
+      </p>
+
+      <p>
+        I used Fusion 360 to design the housing and
+        internal mounting components, considering
+        how the electronics, XRP platform, motors,
+        and moving mechanisms would fit together.
+        A major challenge was keeping the assembly
+        compact without sacrificing access to
+        components or compromising the waterproof seal.
+      </p>
+    </div>
+
+    <div class="sub-specs">
+      <div class="sub-spec">
+        <div class="sub-spec-number">2</div>
+        <div class="sub-spec-name">Propulsion thrusters</div>
+      </div>
+
+      <div class="sub-spec">
+        <div class="sub-spec-number">2</div>
+        <div class="sub-spec-name">Ballast syringes</div>
+      </div>
+
+      <div class="sub-spec">
+        <div class="sub-spec-number">1</div>
+        <div class="sub-spec-name">Water sampling syringe</div>
+      </div>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Full CAD Assembly
+          </div>
+          <div class="sub-placeholder-note">
+            Fusion 360 isometric view of the
+            complete submersible.
+          </div>
+        </div>
+        <figcaption>
+          Figure 2. CAD model of the complete robot.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Internal Component Layout
+          </div>
+          <div class="sub-placeholder-note">
+            CAD view showing the electronics,
+            syringes, motors, and mounting trays.
+          </div>
+        </div>
+        <figcaption>
+          Figure 3. Internal mechanical assembly.
+        </figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- ===== BALLAST SYSTEM ===== -->
+
+  <section>
+
+    <h2>Syringe-Based Ballast System</h2>
+
+    <div class="sub-text">
+      <p>
+        To control the robot's buoyancy, we developed
+        a ballast system using two syringes driven
+        by N20 motors and rack-and-pinion mechanisms.
+        The motor rotates a pinion gear, which drives
+        a linear rack connected to the syringe plunger.
+        This converts the motor's rotational motion
+        into the linear motion needed to draw in
+        or expel water.
+      </p>
+
+      <p>
+        Retracting the plunger draws water into the
+        syringe, increasing the robot's mass and
+        helping it sink. Extending the plunger
+        expels water, decreasing its mass and
+        allowing the robot to rise. This provides
+        a way to adjust buoyancy without relying
+        entirely on the thrusters.
+      </p>
+
+      <p>
+        The design required considering motor torque,
+        rack-and-pinion alignment, syringe friction,
+        available water volume, and the placement
+        of both ballast mechanisms inside the housing.
+        We tested the mechanism separately to verify
+        that the motors could move the plungers.
+      </p>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Rack-and-Pinion CAD
+          </div>
+          <div class="sub-placeholder-note">
+            Close-up of the motor, pinion,
+            rack, and syringe plunger.
+          </div>
+        </div>
+        <figcaption>
+          Figure 4. CAD model of the syringe actuation mechanism.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Ballast Prototype
+          </div>
+          <div class="sub-placeholder-note">
+            Photograph of the assembled
+            motor-driven syringe mechanism.
+          </div>
+        </div>
+        <figcaption>
+          Figure 5. Physical prototype of the ballast system.
+        </figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- ===== BUOYANCY ===== -->
+
+  <section>
+
+    <h2>Buoyancy &amp; Housing Optimization</h2>
+
+    <div class="sub-text">
+      <p>
+        One of the biggest engineering challenges was
+        that our original housing was too buoyant.
+        Because the enclosure displaced a relatively
+        large volume of water, the upward buoyant
+        force exceeded the robot's weight, even
+        when the ballast syringes were filled.
+      </p>
+
+      <p>
+        According to Archimedes' principle, the
+        buoyant force depends on the volume of
+        water displaced by the robot:
+      </p>
+    </div>
+
+    <div class="sub-equation">
+      <div class="sub-equation-main">
+        F<sub>b</sub> = ρ<sub>water</sub> × g × V<sub>displaced</sub>
+      </div>
+      <div class="sub-equation-note">
+        Buoyant force = water density × gravitational acceleration
+        × displaced volume
+      </div>
+    </div>
+
+    <div class="sub-text">
+      <p>
+        A larger housing displaces more water and
+        therefore experiences a greater upward
+        buoyant force. To address this, we began
+        redesigning the enclosure with a smaller
+        overall volume while preserving enough
+        internal space for the electronics, motors,
+        and syringe mechanisms.
+      </p>
+
+      <p>
+        This required balancing the packaging of
+        internal components with the amount of
+        water the ballast system could take in.
+        The goal is to reduce the robot's excess
+        buoyancy so the syringes can effectively
+        control its depth.
+      </p>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Original Housing
+          </div>
+          <div class="sub-placeholder-note">
+            CAD view showing the initial
+            cylindrical enclosure.
+          </div>
+        </div>
+        <figcaption>
+          Figure 6. Original housing geometry.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Reduced-Volume Housing
+          </div>
+          <div class="sub-placeholder-note">
+            Updated CAD design showing the
+            more compact enclosure.
+          </div>
+        </div>
+        <figcaption>
+          Figure 7. Housing redesign to reduce displaced volume.
+        </figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- ===== WATERPROOFING ===== -->
+
+  <section>
+
+    <h2>Waterproof Housing Design</h2>
+
+    <div class="sub-text">
+      <p>
+        Waterproofing was another major challenge
+        because even a small leak could damage
+        the electronics inside the robot. Our
+        original design used a cylindrical tube
+        with end caps containing openings for
+        external connections.
+      </p>
+
+      <p>
+        During manufacturing, we drilled the
+        port holes before fully tightening the
+        end caps. When the caps were installed
+        in their final positions, the holes no
+        longer aligned correctly.
+      </p>
+
+      <p>
+        We attempted to correct the problem
+        by redrilling the openings and applying
+        sealing material, but the repairs did
+        not produce a reliable watertight seal.
+      </p>
+    </div>
+
+    <h3>Housing Redesign</h3>
+
+    <div class="sub-text">
+      <p>
+        Rather than continuing to repair the
+        original end caps, we began redesigning
+        the housing to incorporate the port
+        openings directly into the 3D-printed
+        components. This approach aims to
+        improve alignment, reduce potential
+        leak paths, and make assembly more
+        consistent.
+      </p>
+
+      <p>
+        The redesign also considers sealing
+        around external connections, access
+        to internal components, and reducing
+        the overall housing volume to address
+        the buoyancy problem.
+      </p>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Original End Cap
+          </div>
+          <div class="sub-placeholder-note">
+            Photo or CAD view showing the
+            drilled ports and alignment issue.
+          </div>
+        </div>
+        <figcaption>
+          Figure 8. Original end-cap design.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Redesigned End Cap
+          </div>
+          <div class="sub-placeholder-note">
+            CAD view of the updated port
+            geometry and sealing features.
+          </div>
+        </div>
+        <figcaption>
+          Figure 9. Redesigned end cap with integrated ports.
+        </figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- ===== PROTOTYPING ===== -->
+
+  <section>
+
+    <h2>3D Printing &amp; Prototyping</h2>
+
+    <div class="sub-text">
+      <p>
+        I used Fusion 360 and 3D printing to
+        develop and revise the housing, mounting
+        trays, and mechanical components.
+        Prototyping allowed us to identify
+        problems with fit, port placement,
+        component clearance, and assembly
+        before integrating the full robot.
+      </p>
+
+      <p>
+        Design considerations included the
+        fit between the tube and end caps,
+        motor and syringe mounting positions,
+        clearance for moving racks, and
+        space for electronics and wiring.
+        These iterations helped us improve
+        the mechanical layout as the
+        design evolved.
+      </p>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            3D-Printed Components
+          </div>
+          <div class="sub-placeholder-note">
+            Photograph of printed housing,
+            mounting, or syringe components.
+          </div>
+        </div>
+        <figcaption>
+          Figure 10. Manufactured prototype components.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Internal Assembly
+          </div>
+          <div class="sub-placeholder-note">
+            Photograph showing the mechanical
+            components installed inside the housing.
+          </div>
+        </div>
+        <figcaption>
+          Figure 11. Submersible mechanical assembly.
+        </figcaption>
+      </figure>
+
+    </div>
+
+  </section>
+
+  <!-- ===== TESTING ===== -->
+
+  <section>
+
+    <h2>Testing &amp; Results</h2>
+
+    <div class="sub-text">
+      <p>
+        We tested the thrusters and ballast
+        system individually to verify that
+        the mechanisms operated as intended.
+        Both systems were able to move
+        during initial testing.
+      </p>
+
+      <p>
+        However, the housing introduced
+        separate challenges involving
+        waterproofing and buoyancy.
+        These tests helped us identify
+        the areas requiring redesign
+        before integrating the electronics
+        into a fully operational underwater robot.
+      </p>
+    </div>
+
+    <h3>Waterproofing Tests</h3>
+
+    <div class="sub-text">
+      <p>
+        Our leak-testing approach involves
+        assembling the empty housing without
+        electronics, submerging it in water,
+        and introducing low-pressure air.
+        Escaping bubbles can help identify
+        gaps around ports, end caps, or
+        other sealing surfaces.
+      </p>
+
+      <p>
+        This allows us to investigate
+        potential leak paths without
+        exposing the electronics to water.
+      </p>
+    </div>
+
+    <div class="sub-gallery">
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Waterproofing Test
+          </div>
+          <div class="sub-placeholder-note">
+            Photo of the empty housing
+            during submerged leak testing.
+          </div>
+        </div>
+        <figcaption>
+          Figure 12. Housing leak-testing setup.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <div class="sub-placeholder">
+          <div class="sub-placeholder-icon">+</div>
+          <div class="sub-placeholder-title">
+            Ballast Mechanism Test
+          </div>
+          <div class="sub-placeholder-note">
+            Photo of the syringe and
+            rack-and-pinion test setup.
+          </div>
+        </div>
+        <figcaption>
+          Figure 13. Testing the syringe actuation system.
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <h3>Current Design Status</h3>
+
+    <div class="sub-text">
+      <p>
+        The initial thruster and syringe
+        actuation tests demonstrated that
+        the individual mechanisms could move
+        as intended. The housing redesign
+        is focused on improving waterproofing
+        and reducing displaced volume.
+        Further testing is needed to verify
+        the revised enclosure and demonstrate
+        reliable buoyancy control underwater.
+      </p>
+    </div>
+
+    <figure class="sub-full">
+      <div class="sub-placeholder wide">
+        <div class="sub-placeholder-icon">▶</div>
+        <div class="sub-placeholder-title">
+          Submersible Testing Video
+        </div>
+        <div class="sub-placeholder-note">
+          Add footage of the thrusters,
+          syringe actuation, or underwater testing.
+        </div>
+      </div>
+      <figcaption>
+        Video 1. Submersible XRP mechanical testing.
+      </figcaption>
+    </figure>
+
+  </section>
+
+</div>
