@@ -175,37 +175,37 @@ technologies: [Fusion 360, 3D Printing, Rapid Prototyping, Mechanical Design, DC
 /* ===== CONCEPT DEVELOPMENT PHOTOS ===== */
 
 .smart-page .smart-concept-gallery {
-  max-width: 740px;
-  gap: 14px;
+  max-width: 800px;
+  gap: 12px;
   margin: 22px auto 0;
 }
 
 .smart-page .smart-concept-gallery img {
   width: 100%;
-  height: 350px;
+  height: 380px;
   object-fit: contain;
-}
-
-/* Tighten spacing before Brush Design & Testing */
-.smart-page #concept {
-  margin-bottom: 25px;
 }
 
 /* ===== BRUSH CAD COMPARISON ===== */
 
 .smart-page .brush-comparison {
-  max-width: 700px;
-  gap: 20px;
-  margin-top: 24px;
-  margin-bottom: 20px;
+  max-width: 760px;
+  gap: 12px;
+  margin: 22px auto 20px;
 }
 
 .smart-page .brush-comparison img {
+  display: block;
   width: 100%;
-  height: 300px;
+  height: 370px;
   object-fit: contain !important;
   object-position: center;
   background: transparent;
+}
+
+/* Tighten space between sections */
+.smart-page #concept {
+  margin-bottom: 25px;
 }
 
 /* ===== METRIC CARDS ===== */
