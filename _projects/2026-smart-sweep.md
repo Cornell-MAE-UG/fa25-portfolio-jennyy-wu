@@ -697,28 +697,25 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
 
   <section id="problem">
 
-    <h2>Problem &amp; Design Objective</h2>
+    <h2>Customer Needs &amp; Design Metrics</h2>
 
-    <div class="smart-text">
-      <p>
-        Spotted lanternflies can enter mechanical grape
-        harvesters along with harvested fruit, potentially
-        contaminating the yield. Our client-focused design
-        challenge was to develop a mechanism that could
-        remove insects from vines before grape collection
-        without damaging the vines or prematurely
-        dislodging grapes.
-      </p>
+    <p>
+      The primary customer need for SmartSweep was a safe, 
+      affordable, and effective method of removing spotted 
+      lanternflies from tree trunks without damaging the bark. 
+      The device needed to be lightweight, easy to operate, 
+      and adaptable to different trunk diameters while 
+      maintaining reliable brush contact.
+    </p>
 
-      <p>
-        We proposed a front-mounted attachment for
-        existing harvesting equipment, using rotating
-        brushes positioned to sweep insects away from
-        the vines. The design needed to be adjustable,
-        effective at removing insects, and practical
-        to assemble and maintain.
-      </p>
-    </div>
+    <p>
+      To address these needs, we designed the mechanism to 
+      accommodate trunk diameters of 2–4 inches, with 
+      counter-rotating brushes operating at approximately 
+      60 RPM. Additional design considerations included 
+      sufficient motor torque, interchangeable brush shafts, 
+      ease of assembly, and consistent removal performance.
+    </p>
 
   </section>
 
