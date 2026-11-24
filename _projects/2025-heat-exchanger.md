@@ -411,6 +411,24 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 }
 
 }
+/* Reduce space below Governing Balances */
+
+.heat-page .heat-governing h2 {
+  margin-bottom: 0;
+}
+
+.heat-governing .heat-balances {
+  margin-top: 0;
+}
+
+.heat-governing .heat-balance:first-child {
+  padding-top: 0;
+}
+
+.heat-governing .heat-diagram {
+  margin-top: 0;
+}
+
 </style>
 
 <div class="heat-page">
@@ -792,7 +810,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   
 <!-- ===== GOVERNING BALANCES ===== -->
 
-<section id="governing-balances">
+<section id="governing-balances" class="heat-governing">
 
   <h2>Governing Balances</h2>
 
