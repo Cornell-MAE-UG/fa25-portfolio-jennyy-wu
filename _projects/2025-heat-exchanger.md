@@ -66,7 +66,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
 .heat-meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   padding: 18px 0;
   margin: 24px 0 28px;
@@ -487,6 +487,13 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   }
 }
 
+@media (max-width: 700px) {
+  .heat-meta {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
 </style>
 
 <div class="heat-page">
@@ -497,9 +504,15 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   <h1>Heat Exchanger System Analysis</h1>
 
   <div class="heat-meta">
+
     <div>
       <span class="heat-meta-label">Course</span>
       <span class="heat-meta-value">Thermodynamics</span>
+    </div>
+
+    <div>
+      <span class="heat-meta-label">Year</span>
+      <span class="heat-meta-value">2025</span>
     </div>
 
     <div>
@@ -511,6 +524,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
       <span class="heat-meta-label">System</span>
       <span class="heat-meta-value">Plate Heat Exchanger</span>
     </div>
+
   </div>
 
   <h2>Project Overview</h2>
