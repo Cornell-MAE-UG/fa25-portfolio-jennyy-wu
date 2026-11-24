@@ -142,10 +142,10 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
 .heat-balance {
   display: grid;
-  grid-template-columns: 32% minmax(0, 1fr);
+  grid-template-columns: 38% minmax(0, 1fr);
   align-items: center;
-  gap: 30px;
-  padding: 24px 0;
+  gap: 24px;
+  padding: 22px 0;
   border-bottom: 1px solid #e0e3e5;
 }
 
@@ -155,7 +155,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
 .heat-diagram {
   width: 100%;
-  max-width: 240px;
+  max-width: 260px;
   margin: 0 auto;
 }
 
@@ -172,11 +172,11 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
 .heat-balance-label {
   display: block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 1.2px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .heat-balance-formula {
@@ -235,7 +235,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 .heat-assumption svg {
   display: block;
   width: 100%;
-  max-width: 145px;
+  max-width: 175px;
   height: auto;
   margin: 0 auto 3px;
 }
@@ -288,42 +288,83 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 .heat-comparison {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-  max-width: 800px;
-  margin: 25px auto;
+  gap: 40px;
+  max-width: 720px;
+  margin: 24px auto 18px;
 }
 
 .heat-flow-card {
-  padding: 24px 22px;
-  border: 1px solid #e4e7e5;
-  background: #f7f8f7;
-  border-radius: 7px;
+  padding: 0;
+  border: none;
+  background: transparent;
   text-align: center;
 }
 
+.heat-flow-card svg {
+  display: block;
+  width: 100%;
+  max-width: 290px;
+  height: auto;
+  margin: 0 auto 8px;
+}
+
 .heat-flow-card h3 {
-  margin: 0 0 14px;
-  font-size: 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 8px 0 5px;
 }
 
 .heat-flow-card p {
-  font-size: 14px;
-  line-height: 1.7;
-  margin: 12px auto 0;
+  font-size: 13px;
+  color: #777;
+  margin: 0;
+  line-height: 1.6;
 }
 
-.heat-flow-lines {
-  padding: 12px 0;
-  font-size: 15px;
-  font-weight: 600;
+.heat-flow-legend {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  margin: 20px auto 24px;
+  font-size: 13px;
+  color: #666;
 }
 
-.heat-hot {
-  color: #bd765e;
+.heat-flow-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
 }
 
-.heat-cold {
-  color: #5b849e;
+.heat-flow-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.heat-hot-dot {
+  background: #bd765e;
+}
+
+.heat-cold-dot {
+  background: #5b849e;
+}
+
+@media (max-width: 700px) {
+  .heat-comparison {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .heat-flow-card h3 {
+    font-size: 17px;
+  }
+
+  .heat-flow-card p {
+    font-size: 12px;
+  }
 }
 
 /* ===== MOBILE ===== */
@@ -1031,87 +1072,200 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 </section>
 
 
-  <!-- ===== FLOW CONFIGURATIONS ===== -->
+  <!-- ===== PARALLEL FLOW VS COUNTERFLOW ===== -->
 
-  <section>
-    <h2>Parallel Flow vs. Counterflow</h2>
+<section>
 
-    <p>
-      We examined two flow configurations to
-      understand how the direction of the water
-      streams affects heat transfer.
-    </p>
+  <h2>Parallel Flow vs. Counterflow</h2>
 
-    <div class="heat-comparison">
+  <p>
+    We examined how the direction of the water streams
+    influences heat transfer within the exchanger.
+  </p>
 
-      <div class="heat-flow-card">
-        <h3>Parallel Flow</h3>
+  <div class="heat-comparison">
 
-        <div class="heat-flow-lines">
-          <div class="heat-hot">Hot Water →</div>
-          <div class="heat-cold">Cold Water →</div>
-        </div>
+    <!-- PARALLEL FLOW -->
 
-        <p>
-          Both streams travel in the same direction.
-          The temperature difference is greatest
-          near the inlet and decreases along
-          the exchanger.
-        </p>
-      </div>
+    <div class="heat-flow-card">
 
-      <div class="heat-flow-card">
-        <h3>Counterflow</h3>
+      <svg id="heat-parallel"
+           viewBox="0 0 260 145"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Animated parallel flow diagram">
+      </svg>
 
-        <div class="heat-flow-lines">
-          <div class="heat-hot">Hot Water →</div>
-          <div class="heat-cold">Cold Water ←</div>
-        </div>
+      <h3>Parallel Flow</h3>
 
-        <p>
-          The streams travel in opposite directions,
-          maintaining a more uniform temperature
-          difference and generally allowing
-          greater heat transfer effectiveness.
-        </p>
-      </div>
+      <p>Same flow direction</p>
 
     </div>
 
-    <p>
-      Counterflow operation can allow the cold
-      outlet temperature to approach the hot
-      inlet temperature more closely than
-      parallel-flow operation.
-    </p>
+    <!-- COUNTERFLOW -->
 
-    <p>
-      We also considered how changes in flow rate
-      influence heat transfer. Higher flow rates
-      can increase the heat transfer rate while
-      reducing the temperature change experienced
-      by an individual stream.
-    </p>
-  </section>
+    <div class="heat-flow-card">
 
-  <!-- ===== ENGINEERING RELEVANCE ===== -->
+      <svg id="heat-counter"
+           viewBox="0 0 260 145"
+           xmlns="http://www.w3.org/2000/svg"
+           role="img"
+           aria-label="Animated counterflow diagram">
+      </svg>
 
-  <section>
-    <h2>Engineering Relevance</h2>
+      <h3>Counterflow</h3>
 
-    <p>
-      Heat exchangers are used in HVAC systems,
-      power generation, automotive cooling,
-      and industrial processing.
-    </p>
+      <p>Opposite flow directions</p>
 
-    <p>
-      This project helped connect thermodynamic
-      theory with experimental equipment and
-      showed how flow arrangement and operating
-      conditions influence energy transfer
-      and system efficiency.
-    </p>
-  </section>
+    </div>
 
-</div>
+  </div>
+
+  <!-- LEGEND -->
+
+  <div class="heat-flow-legend">
+
+    <span>
+      <span class="heat-flow-dot heat-hot-dot"></span>
+      Hot Water
+    </span>
+
+    <span>
+      <span class="heat-flow-dot heat-cold-dot"></span>
+      Cold Water
+    </span>
+
+  </div>
+
+  <p>
+    Counterflow maintains a more favorable temperature
+    difference along the exchanger, generally allowing
+    greater heat transfer effectiveness.
+  </p>
+
+  <script>
+    (function () {
+
+      const reducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      ["heat-parallel", "heat-counter"].forEach(function(id) {
+
+        const svg = document.getElementById(id);
+        if (!svg) return;
+
+        let content = `
+          <defs>
+            <clipPath id="clip-${id}">
+              <rect x="18" y="24"
+                    width="224" height="96" rx="2"/>
+            </clipPath>
+          </defs>
+
+          <rect x="18" y="24"
+                width="224" height="96" rx="3"
+                fill="#929da5"
+                fill-opacity="0.04"
+                stroke="#929da5"/>
+        `;
+
+        for (let i = 0; i < 4; i++) {
+
+          const y = 36 + i * 24;
+
+          const color = i % 2 === 0
+            ? "#bd765e"
+            : "#5b849e";
+
+          const reverse =
+            id === "heat-counter" && i % 2 === 1;
+
+          content += `
+            <rect x="18" y="${y - 9}"
+                  width="224" height="18"
+                  fill="${color}"
+                  fill-opacity="0.10"/>
+
+            <path d="M18 ${y + 12} H242"
+                  stroke="#929da5"
+                  stroke-width="0.7"/>
+
+            <path d="M4 ${y} H18 M242 ${y} H256"
+                  stroke="${color}"
+                  stroke-width="5"/>
+
+            <g clip-path="url(#clip-${id})">
+          `;
+
+          if (reducedMotion) {
+
+            content += `
+              <path d="${reverse
+                ? `M215 ${y} H45 l7 -4 m-7 4 l7 4`
+                : `M45 ${y} H215 l-7 -4 m7 4 l-7 4`}"
+                stroke="${color}"
+                stroke-width="2"
+                fill="none"/>
+            `;
+
+          } else {
+
+            for (let j = 0; j < 7; j++) {
+
+              content += `
+                <circle cy="${y}"
+                        cx="${20 + j * 32}"
+                        r="3"
+                        fill="${color}"
+                        opacity="0.85">
+
+                  <animate
+                    attributeName="cx"
+                    from="${reverse ? 260 : 0}"
+                    to="${reverse ? 0 : 260}"
+                    dur="3.8s"
+                    begin="${-j * 3.8 / 7}s"
+                    repeatCount="indefinite"/>
+
+                </circle>
+              `;
+
+            }
+
+          }
+
+          content += `</g>`;
+
+        }
+
+        svg.innerHTML = content;
+
+      });
+
+    })();
+  </script>
+
+</section>
+
+
+<!-- ===== ENGINEERING RELEVANCE ===== -->
+
+<section>
+
+  <h2>Engineering Relevance</h2>
+
+  <p>
+    Heat exchangers play an important role in HVAC systems,
+    power generation, automotive cooling, and industrial
+    processing.
+  </p>
+
+  <p>
+    This project connected thermodynamic theory with
+    experimental testing, demonstrating how flow arrangement
+    and operating conditions influence heat transfer and
+    system efficiency.
+  </p>
+
+</section>
