@@ -433,17 +433,17 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
 .heat-experiment {
   display: grid;
-  grid-template-columns: 1.65fr 1fr;
+  grid-template-columns: 1.3fr 1fr;
   align-items: center;
-  gap: 18px;
-  max-width: 800px;
+  gap: 12px;
+  max-width: 740px;
   margin: 24px auto;
 }
 
 .heat-experiment-photos {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .heat-experiment figure {
