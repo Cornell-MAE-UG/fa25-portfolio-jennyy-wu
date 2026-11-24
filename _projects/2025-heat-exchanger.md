@@ -457,32 +457,295 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   <h2>Thermodynamic Modeling</h2>
 
   <p>
-    We modeled the heat exchanger as a steady-flow
-    control volume and applied conservation of
-    mass and energy to both water streams.
+    The heat exchanger was modeled as a steady-flow
+    control volume under the following assumptions.
   </p>
 
   <div class="heat-assumptions">
-    <div class="heat-assumption">
-      Steady-state operation
-    </div>
+
+    <!-- STEADY STATE -->
 
     <div class="heat-assumption">
-      Incompressible liquid water
+
+      <svg viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M25 30 H165 M25 50 H165
+                 M25 70 H165 M25 90 H165
+                 M45 15 V95 M65 15 V95
+                 M85 15 V95 M105 15 V95
+                 M125 15 V95 M145 15 V95
+                 M165 15 V95"
+              stroke="#64849b"
+              stroke-opacity="0.12"
+              fill="none"/>
+
+        <path d="M25 12 V95 H168"
+              stroke="#81909a" fill="none"/>
+
+        <path d="M28 80 C42 80 42 35 68 35
+                 H163 V95 H28 Z"
+              fill="#64849b" fill-opacity="0.12"/>
+
+        <path d="M28 80 C42 80 42 35 68 35 H163"
+              stroke="#64849b"
+              stroke-width="2.5" fill="none"/>
+
+        <path d="M72 22 V87"
+              stroke="#64849b"
+              stroke-dasharray="3 3"/>
+
+        <text x="118" y="27" text-anchor="middle"
+              font-size="10" fill="#64849b">STEADY</text>
+
+        <text x="12" y="18" font-size="11" fill="#888">X</text>
+        <text x="165" y="108" font-size="11" fill="#888">t</text>
+
+      </svg>
+
+      <span class="heat-assumption-title">
+        Steady State
+      </span>
+
+      <span class="heat-assumption-formula">
+        ∂X/∂t = 0
+      </span>
+
     </div>
 
-    <div class="heat-assumption">
-      Negligible kinetic and potential energy changes
-    </div>
+
+    <!-- INCOMPRESSIBLE FLOW -->
 
     <div class="heat-assumption">
-      No shaft work within the heat exchanger
+
+      <svg viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M10 25 H55 L90 40 H170
+                 V80 H90 L55 95 H10 Z"
+              fill="#729b91" fill-opacity="0.12"
+              stroke="#729b91" stroke-width="1.5"/>
+
+        <g fill="#729b91" fill-opacity="0.8">
+
+          <circle cx="20" cy="41" r="3"/>
+          <circle cx="34" cy="41" r="3"/>
+          <circle cx="48" cy="41" r="3"/>
+
+          <circle cx="20" cy="79" r="3"/>
+          <circle cx="34" cy="79" r="3"/>
+          <circle cx="48" cy="79" r="3"/>
+
+          <circle cx="64" cy="50" r="3"/>
+          <circle cx="82" cy="50" r="3"/>
+          <circle cx="100" cy="50" r="3"/>
+          <circle cx="118" cy="50" r="3"/>
+          <circle cx="136" cy="50" r="3"/>
+          <circle cx="154" cy="50" r="3"/>
+
+          <circle cx="64" cy="70" r="3"/>
+          <circle cx="82" cy="70" r="3"/>
+          <circle cx="100" cy="70" r="3"/>
+          <circle cx="118" cy="70" r="3"/>
+          <circle cx="136" cy="70" r="3"/>
+          <circle cx="154" cy="70" r="3"/>
+
+        </g>
+
+        <path d="M18 60 H153
+                 L145 54 M153 60 L145 66"
+              stroke="#729b91"
+              stroke-width="2" fill="none"/>
+
+        <path d="M10 18 H55 M10 14 V22
+                 M55 14 V22 M92 32 H170"
+              stroke="#729b91"
+              stroke-opacity="0.6"
+              stroke-dasharray="3 2" fill="none"/>
+
+        <text x="90" y="111" text-anchor="middle"
+              font-size="11" fill="#729b91">ρ₁ = ρ₂</text>
+
+      </svg>
+
+      <span class="heat-assumption-title">
+        Incompressible Flow
+      </span>
+
+      <span class="heat-assumption-formula">
+        ρ = constant
+      </span>
+
     </div>
 
+
+    <!-- KINETIC AND POTENTIAL ENERGY -->
+
     <div class="heat-assumption">
-      Negligible heat transfer to the surroundings
+
+      <svg viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+
+        <path d="M15 95 H167"
+              stroke="#999" stroke-dasharray="4 3"/>
+
+        <path d="M30 95 V40 H150 V95"
+              stroke="#b69b6a"
+              stroke-dasharray="3 3" fill="none"/>
+
+        <rect x="20" y="30" width="140" height="20"
+              fill="#b69b6a" fill-opacity="0.12"
+              stroke="#b69b6a"/>
+
+        <path d="M27 40 H65 M58 35 L65 40 L58 45
+                 M111 40 H149 M142 35 L149 40 L142 45"
+              stroke="#b69b6a"
+              stroke-width="2" fill="none"/>
+
+        <path d="M30 55 V91
+                 M25 60 L30 55 L35 60
+                 M25 86 L30 91 L35 86
+                 M150 55 V91
+                 M145 60 L150 55 L155 60
+                 M145 86 L150 91 L155 86"
+              stroke="#b69b6a" fill="none"/>
+
+        <g font-size="11" fill="#b69b6a">
+          <text x="48" y="22">v₁</text>
+          <text x="130" y="22">v₂</text>
+          <text x="38" y="76">z₁</text>
+          <text x="130" y="76">z₂</text>
+        </g>
+
+      </svg>
+
+      <span class="heat-assumption-title">
+        Negligible KE &amp; PE Changes
+      </span>
+
+      <span class="heat-assumption-formula">
+        ΔKE ≈ ΔPE ≈ 0
+      </span>
+
     </div>
+
+
+    <!-- NO SHAFT WORK -->
+
+    <div class="heat-assumption">
+
+      <svg viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+
+        <rect x="12" y="18" width="156" height="85" rx="5"
+              stroke="#8b829e" stroke-dasharray="4 3"
+              fill="#8b829e" fill-opacity="0.05"/>
+
+        <path d="M20 60 H160"
+              stroke="#8b829e"
+              stroke-width="8" stroke-opacity="0.25"/>
+
+        <g transform="translate(90 60)">
+
+          <g fill="#8b829e">
+
+            <rect x="-5" y="-36" width="10" height="13" rx="1"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(30)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(60)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(90)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(120)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(150)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(180)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(210)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(240)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(270)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(300)"/>
+            <rect x="-5" y="-36" width="10" height="13" rx="1" transform="rotate(330)"/>
+
+          </g>
+
+          <circle r="28" fill="#8b829e"
+                  fill-opacity="0.2"
+                  stroke="#8b829e" stroke-width="2"/>
+
+          <circle r="18" fill="none"
+                  stroke="#8b829e" stroke-opacity="0.6"/>
+
+          <circle r="7" fill="#8b829e"
+                  fill-opacity="0.5" stroke="#8b829e"/>
+
+        </g>
+
+        <path d="M45 105 L135 15"
+              stroke="#c47c62" stroke-width="2.5"/>
+
+      </svg>
+
+      <span class="heat-assumption-title">
+        No Shaft Work
+      </span>
+
+      <span class="heat-assumption-formula">
+        Ẇ<sub>s</sub> = 0
+      </span>
+
+    </div>
+
+
+    <!-- NEGLIGIBLE EXTERNAL HEAT LOSS -->
+
+    <div class="heat-assumption">
+
+      <svg viewBox="0 0 180 120" xmlns="http://www.w3.org/2000/svg">
+
+        <rect x="25" y="14" width="130" height="90" rx="5"
+              stroke="#c47c62" stroke-dasharray="4 3"
+              fill="#c47c62" fill-opacity="0.05"/>
+
+        <rect x="35" y="24" width="110" height="70" rx="3"
+              stroke="#c47c62"
+              fill="#c47c62" fill-opacity="0.09"/>
+
+        <g stroke="#c47c62" stroke-opacity="0.65" fill="none">
+
+          <path d="M44 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+          <path d="M56 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+          <path d="M68 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+          <path d="M80 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+          <path d="M92 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+          <path d="M104 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+          <path d="M116 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+          <path d="M128 29 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8"/>
+
+        </g>
+
+        <path d="M10 42 H35 M145 42 H170"
+              stroke="#c47c62" stroke-width="5"/>
+
+        <path d="M10 77 H35 M145 77 H170"
+              stroke="#64849b" stroke-width="5"/>
+
+        <path d="M90 14 V2 M84 7 L90 2 L96 7"
+              stroke="#c47c62" fill="none"/>
+
+        <path d="M82 3 L98 14 M98 3 L82 14"
+              stroke="#c47c62" stroke-width="2"/>
+
+        <text x="90" y="117" font-size="9"
+              text-anchor="middle" fill="#c47c62">
+          ADIABATIC BOUNDARY
+        </text>
+
+      </svg>
+
+      <span class="heat-assumption-title">
+        Negligible External Heat Loss
+      </span>
+
+      <span class="heat-assumption-formula">
+        Q̇<sub>ext</sub> ≈ 0
+      </span>
+
+    </div>
+
   </div>
+
 </section>
 
   
