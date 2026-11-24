@@ -205,16 +205,82 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 /* ===== ASSUMPTIONS ===== */
 
 .heat-assumptions {
-  max-width: 760px;
-  margin: 22px auto;
-  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 20px 18px;
+  max-width: 720px;
+  margin: 24px auto 8px;
+  text-align: center;
 }
 
 .heat-assumption {
-  padding: 13px 0;
-  border-bottom: 1px solid #e8e8e8;
-  font-size: 15px;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 4px 0;
+  border: none;
+  background: transparent;
+}
+
+.heat-assumption:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.heat-assumption:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+.heat-assumption svg {
+  display: block;
+  width: 100%;
+  max-width: 145px;
+  height: auto;
+  margin: 0 auto 3px;
+}
+
+.heat-assumption-title {
+  font-size: 13px;
+  font-weight: 600;
   color: #444;
+  line-height: 1.5;
+}
+
+.heat-assumption-formula {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  color: #555;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .heat-assumptions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+  }
+
+  .heat-assumption,
+  .heat-assumption:nth-child(4),
+  .heat-assumption:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .heat-assumption:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .heat-assumption svg {
+    max-width: 125px;
+  }
+
+  .heat-assumption-title {
+    font-size: 12px;
+  }
+
+  .heat-assumption-formula {
+    font-size: 15px;
+  }
 }
 
 /* ===== FLOW COMPARISON ===== */
@@ -302,6 +368,8 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 .heat-balance-formula {
   font-size: 18px;
 }
+
+}
 </style>
 
 <div class="heat-page">
@@ -385,37 +453,37 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
   <!-- ===== THERMODYNAMIC MODELING ===== -->
 
-  <section>
-    <h2>Thermodynamic Modeling</h2>
+<section>
+  <h2>Thermodynamic Modeling</h2>
 
-    <p>
-      We modeled the heat exchanger as a steady-flow
-      control volume and applied conservation of
-      mass and energy to both water streams.
-    </p>
+  <p>
+    We modeled the heat exchanger as a steady-flow
+    control volume and applied conservation of
+    mass and energy to both water streams.
+  </p>
 
-    <div class="heat-assumptions">
-      <div class="heat-assumption">
-        Steady-state operation
-      </div>
-
-      <div class="heat-assumption">
-        Incompressible liquid water
-      </div>
-
-      <div class="heat-assumption">
-        Negligible kinetic and potential energy changes
-      </div>
-
-      <div class="heat-assumption">
-        No shaft work within the heat exchanger
-      </div>
-
-      <div class="heat-assumption">
-        Negligible heat transfer to the surroundings
-      </div>
+  <div class="heat-assumptions">
+    <div class="heat-assumption">
+      Steady-state operation
     </div>
-  </section>
+
+    <div class="heat-assumption">
+      Incompressible liquid water
+    </div>
+
+    <div class="heat-assumption">
+      Negligible kinetic and potential energy changes
+    </div>
+
+    <div class="heat-assumption">
+      No shaft work within the heat exchanger
+    </div>
+
+    <div class="heat-assumption">
+      Negligible heat transfer to the surroundings
+    </div>
+  </div>
+</section>
 
   
 <!-- ===== GOVERNING BALANCES ===== -->
