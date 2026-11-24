@@ -429,6 +429,64 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   margin-top: 0;
 }
 
+/* ===== EXPERIMENTAL MEDIA ===== */
+
+.heat-experiment {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  align-items: center;
+  gap: 18px;
+  max-width: 800px;
+  margin: 24px auto;
+}
+
+.heat-experiment-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.heat-experiment figure {
+  width: 100%;
+  margin: 0;
+}
+
+.heat-experiment img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.heat-experiment video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.heat-experiment-caption {
+  margin: 10px auto 0;
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .heat-experiment {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .heat-experiment video {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
 </style>
 
 <div class="heat-page">
@@ -458,49 +516,62 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   <h2>Project Overview</h2>
 
   <p>
-    This project investigated how flow configuration and 
-    operating conditions affect heat transfer in a compact 
-    plate heat exchanger. We compared parallel flow and 
-    counterflow to better understand their influence on 
-    thermal performance.
+    This project investigated the effects of flow direction 
+    and operating conditions on the thermal performance of 
+    a compact plate heat exchanger.
   </p>
 
   <p>
-    Using two independent water circulation loops, we 
-    collected inlet and outlet temperature measurements 
-    and applied conservation of mass, energy balances, 
-    and entropy analysis to evaluate the system's behavior.
+    Using independently pumped hot and cold water streams, 
+    we measured inlet and outlet temperatures and applied 
+    thermodynamic principles to analyze energy transfer, 
+    entropy generation, and system effectiveness.
   </p>
 
-  <figure class="heat-hero">
-    <img
-      src="{{ '/assets/images/heat-exchanger.jpg' | relative_url }}"
-      alt="Heat exchanger experimental setup"
-    >
-    <figcaption>
-      Figure 1. Experimental heat exchanger system.
-    </figcaption>
-  </figure>
+  <!-- ===== EXPERIMENTAL SETUP ===== -->
 
-</section>
+<section>
 
-  <!-- ===== VIDEO ===== -->
+  <h2>Experimental Setup</h2>
 
-  <section>
-  <h2>Experimental Demonstration</h2>
+  <div class="heat-experiment">
 
-  <figure class="heat-video">
-    <video controls playsinline preload="metadata">
-      <source
-        src="{{ '/assets/videos/heat_exchanger.mp4' | relative_url }}"
-        type="video/mp4"
-      >
-    </video>
+    <!-- LEFT: TWO PHOTOGRAPHS -->
 
-    <figcaption>
-      Video 1. Heat exchanger in operation.
-    </figcaption>
-  </figure>
+    <div class="heat-experiment-photos">
+
+      <figure>
+        <img src="{{ '/assets/images/heat-exchanger.jpg' | relative_url }}"
+             alt="Experimental heat exchanger apparatus">
+      </figure>
+
+      <figure>
+        <img src="{{ '/assets/images/heat-exchanger-flow.jpeg' | relative_url }}"
+             alt="Heat exchanger with colored water streams">
+      </figure>
+
+    </div>
+
+    <!-- RIGHT: VERTICAL VIDEO -->
+
+    <figure>
+
+      <video controls playsinline preload="metadata">
+
+        <source src="{{ '/assets/videos/heat-exchanger.mp4' | relative_url }}"
+                type="video/mp4">
+
+      </video>
+
+    </figure>
+
+  </div>
+
+  <div class="heat-experiment-caption">
+    Experimental apparatus, visualization of the water
+    streams, and heat exchanger in operation.
+  </div>
+
 </section>
 
   <!-- ===== THERMODYNAMIC MODELING ===== -->
@@ -1265,17 +1336,17 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   <h2>Engineering Takeaways</h2>
 
   <p>
-    This project strengthened my understanding of thermal 
-    system modeling, experimental testing, and energy 
-    conservation. It also demonstrated how design decisions, 
-    such as flow arrangement and flow rate, can influence 
-    thermal performance.
+    Beyond the theoretical energy balances, this project 
+    highlighted the importance of flow configuration, flow 
+    rate, and thermal losses when evaluating heat exchanger 
+    performance.
   </p>
 
   <p>
-    These principles are directly applicable to HVAC systems, 
-    automotive cooling, power generation, and industrial 
-    thermal management.
+    Working with a physical system also helped me recognize 
+    the limitations of idealized models, particularly when 
+    accounting for heat loss, measurement uncertainty, 
+    and changing operating conditions.
   </p>
 
 </section>
