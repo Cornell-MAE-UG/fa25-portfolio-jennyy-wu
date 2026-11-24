@@ -608,6 +608,95 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
   color: #888;
 }
 
+/* ===== TESTING RESULTS ===== */
+
+.sweep-results {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 800px;
+  margin: 24px auto;
+}
+
+.sweep-result-card {
+  padding: 20px 18px;
+  border: 1px solid #dcdfe0;
+  border-radius: 8px;
+  background: transparent;
+  text-align: left;
+  --result-color: #71988b;
+}
+
+.sweep-result-card.partial {
+  --result-color: #b59a67;
+}
+
+.sweep-trial-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.sweep-percentage {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--result-color);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.sweep-progress {
+  height: 3px;
+  background: #e2e5e6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.sweep-progress-fill {
+  height: 100%;
+  background: var(--result-color);
+  border-radius: 4px;
+}
+
+.sweep-result-detail {
+  font-size: 13px;
+  color: #666;
+}
+
+.sweep-overall {
+  text-align: center;
+  margin: 28px auto 22px;
+}
+
+.sweep-overall-number {
+  font-size: 36px;
+  font-weight: 600;
+  color: #222;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.sweep-overall-label {
+  font-size: 15px;
+  color: #555;
+}
+
+.sweep-overall-detail {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+@media (max-width: 600px) {
+  .sweep-results {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
 </style>
 
 <div class="smart-page">
@@ -807,69 +896,75 @@ existing testing HTML. Just add this CSS at the very bottom of your <style> sect
       </figure>
 
     </div>
-<!-- ===== BRUSH REMOVAL TEST RESULTS ===== -->
+<div class="sweep-results">
 
-<div class="smart-test-dashboard">
+  <!-- TRIAL 1 -->
+  <div class="sweep-result-card partial">
+    <div class="sweep-trial-label">TRIAL 01</div>
+    <div class="sweep-percentage">60%</div>
 
-  <div class="smart-test-cards">
-
-    <div class="smart-test-card">
-      <span class="smart-test-label">TRIAL 01</span>
-      <strong class="smart-test-percent">60%</strong>
-
-      <div class="smart-test-bar">
-        <div style="width: 60%;"></div>
-      </div>
-
-      <span class="smart-test-count">
-        3 of 5 rings removed
-      </span>
+    <div class="sweep-progress">
+      <div class="sweep-progress-fill"
+           style="width: 60%;"></div>
     </div>
 
-    <div class="smart-test-card">
-      <span class="smart-test-label">TRIAL 02</span>
-      <strong class="smart-test-percent">100%</strong>
+    <div class="sweep-result-detail">
+      3 of 5 rings removed
+    </div>
+  </div>
 
-      <div class="smart-test-bar">
-        <div style="width: 100%;"></div>
-      </div>
+  <!-- TRIAL 2 -->
+  <div class="sweep-result-card">
+    <div class="sweep-trial-label">TRIAL 02</div>
+    <div class="sweep-percentage">100%</div>
 
-      <span class="smart-test-count">
-        5 of 5 rings removed
-      </span>
+    <div class="sweep-progress">
+      <div class="sweep-progress-fill"
+           style="width: 100%;"></div>
     </div>
 
-    <div class="smart-test-card">
-      <span class="smart-test-label">TRIAL 03</span>
-      <strong class="smart-test-percent">100%</strong>
+    <div class="sweep-result-detail">
+      5 of 5 rings removed
+    </div>
+  </div>
 
-      <div class="smart-test-bar">
-        <div style="width: 100%;"></div>
-      </div>
+  <!-- TRIAL 3 -->
+  <div class="sweep-result-card">
+    <div class="sweep-trial-label">TRIAL 03</div>
+    <div class="sweep-percentage">100%</div>
 
-      <span class="smart-test-count">
-        5 of 5 rings removed
-      </span>
+    <div class="sweep-progress">
+      <div class="sweep-progress-fill"
+           style="width: 100%;"></div>
     </div>
 
+    <div class="sweep-result-detail">
+      5 of 5 rings removed
     </div>
+  </div>
 
-    <div class="smart-test-overall">
-      <div>
-        <span>OVERALL REMOVAL RATE</span>
-        <strong>86.7%</strong>
-      </div>
+</div>
 
-      <p>13 of 15 simulated rings removed across three trials</p>
-    </div>
+<!-- OVERALL RESULT -->
 
-    <div class="smart-text">
-      <p>
-        Testing showed that longer bristles provided better reach, so we selected them for the next prototype.
-      </p>
-    </div>
+<div class="sweep-overall">
 
-  </div> <!-- Closes smart-test-dashboard -->
+  <div class="sweep-overall-number">86.7%</div>
+
+  <div class="sweep-overall-label">
+    Overall simulated removal rate
+  </div>
+
+  <div class="sweep-overall-detail">
+    13 of 15 rings removed across three trials
+  </div>
+
+</div>
+
+<p style="text-align: center;">
+  Testing showed that longer bristles provided better
+  reach, so we selected them for the next prototype.
+</p>
 
 </section>
 
