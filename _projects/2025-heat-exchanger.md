@@ -245,101 +245,82 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
 <div class="heat-page">
 
-  <!-- ===== INTRODUCTION ===== -->
+  <!-- ===== PROJECT OVERVIEW ===== -->
 
-  <section>
-    <h1>Heat Exchanger System Analysis</h1>
+<section>
+  <h1>Heat Exchanger System Analysis</h1>
 
-    <div class="heat-meta">
-      <div>
-        <span class="heat-meta-label">Course</span>
-        <span class="heat-meta-value">Thermodynamics</span>
-      </div>
-
-      <div>
-        <span class="heat-meta-label">Focus</span>
-        <span class="heat-meta-value">Heat Transfer</span>
-      </div>
-
-      <div>
-        <span class="heat-meta-label">System</span>
-        <span class="heat-meta-value">Plate Heat Exchanger</span>
-      </div>
+  <div class="heat-meta">
+    <div>
+      <span class="heat-meta-label">Course</span>
+      <span class="heat-meta-value">Thermodynamics</span>
     </div>
 
-    <p>
-      This project investigated how thermal energy
-      is transferred between two water streams
-      in a compact plate heat exchanger.
-      We studied how flow configuration and
-      operating conditions affect thermal performance.
-    </p>
+    <div>
+      <span class="heat-meta-label">Focus</span>
+      <span class="heat-meta-value">Heat Transfer</span>
+    </div>
 
-    <p>
-      The experiment connected steady-flow energy
-      balances and entropy generation to the behavior
-      of a real engineering system.
-    </p>
+    <div>
+      <span class="heat-meta-label">System</span>
+      <span class="heat-meta-value">Plate Heat Exchanger</span>
+    </div>
+  </div>
 
-    <figure class="heat-hero">
-      <img
-        src="{{ '/assets/images/heat-exchanger.jpg' | relative_url }}"
-        alt="Heat exchanger experimental setup"
-      >
-      <figcaption>
-        Figure 1. Experimental heat exchanger system.
-      </figcaption>
-    </figure>
-  </section>
+  <h2>Project Overview</h2>
 
-  <!-- ===== SYSTEM DESCRIPTION ===== -->
+  <p>
+    This project investigated heat transfer between two water
+    streams in a compact plate heat exchanger, examining how
+    flow configuration and operating conditions affect
+    thermal performance.
+  </p>
 
-  <section>
-    <h2>System Description</h2>
+  <p>
+    The experimental setup consisted of two independent
+    circulation loops supplying hot and cold water.
+    Pumps circulated water through the exchanger, while
+    thermometers and a thermocouple measured inlet and
+    outlet temperatures.
+  </p>
 
-    <p>
-      The setup consisted of a plate heat exchanger
-      connected to two independent water circulation
-      loops. One supplied hot water from a heated
-      reservoir, while the other supplied cold water
-      from an insulated reservoir.
-    </p>
+  <p>
+    Heat was transferred through the exchanger walls without
+    mixing the fluids, allowing us to apply steady-flow
+    energy balances and analyze entropy generation
+    in a real engineering system.
+  </p>
 
-    <p>
-      Each loop used a pump to circulate water.
-      Temperatures were measured at the inlet and
-      outlet using thermometers and a thermocouple.
-      Heat passed through the exchanger walls
-      without the two streams mixing.
-    </p>
-  </section>
+  <figure class="heat-hero">
+    <img
+      src="{{ '/assets/images/heat-exchanger.jpg' | relative_url }}"
+      alt="Heat exchanger experimental setup"
+    >
+    <figcaption>
+      Figure 1. Experimental heat exchanger system.
+    </figcaption>
+  </figure>
+
+</section>
 
   <!-- ===== VIDEO ===== -->
 
   <section>
-    <h2>Experimental Setup in Operation</h2>
+  <h2>Experimental Demonstration</h2>
 
-    <p>
-      The video shows the physical heat exchanger
-      setup used to investigate heat transfer
-      between the hot and cold water loops.
-    </p>
+  <figure class="heat-video">
+    <video controls playsinline preload="metadata">
+      <source
+        src="{{ '/assets/videos/heat_exchanger.mp4' | relative_url }}"
+        type="video/mp4"
+      >
+    </video>
 
-    <figure class="heat-video">
-      <video controls playsinline preload="metadata">
-        <source
-          src="{{ '/assets/videos/heat-exchanger.mp4' | relative_url }}"
-          type="video/mp4"
-        >
-        Your browser does not support video playback.
-      </video>
-
-      <figcaption>
-        Video 1. Heat exchanger experimental setup
-        during operation.
-      </figcaption>
-    </figure>
-  </section>
+    <figcaption>
+      Video 1. Heat exchanger in operation.
+    </figcaption>
+  </figure>
+</section>
 
   <!-- ===== THERMODYNAMIC MODELING ===== -->
 
