@@ -3,32 +3,53 @@ layout: project
 title: Cargo Transport System
 permalink: /projects/cargo-transport/
 description: Sikorsky STEM Challenge | High School
-image: /assets/images/cargo_transport.jpg
 ---
 
 <style>
 .cargo-page {
   width: 85vw;
   max-width: 900px;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
   padding: 20px 0 65px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 .cargo-page img {
-  max-width: 100%;
+  display: block;
+  width: 80%;
+  max-width: 650px;
   height: auto;
+  margin: 24px auto;
+  border-radius: 5px;
+}
+
+.cargo-page p {
+  max-width: 800px;
+  margin: 0 auto 18px;
+  font-size: 16px;
+  line-height: 1.85;
+  color: #444;
 }
 
 @media (max-width: 700px) {
   .cargo-page {
     width: calc(100% - 36px);
   }
+
+  .cargo-page img {
+    width: 100%;
+  }
 }
 </style>
 
-<div class="cargo-page" markdown="1">
+<div class="salem-page" markdown="1">
+
+# Cargo Transport System
+
+<img src="{{ '/assets/images/cargo_transport.jpg' | relative_url }}" alt="Cargo Transport System">
+
+## Project Overview
 
 Our team built a semi-autonomous cargo transport system that could pick up a payload, move along a test frame, identify a destination by its roof color, and lower the payload there.
 
