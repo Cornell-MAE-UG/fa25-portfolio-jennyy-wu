@@ -1149,9 +1149,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   </div>
 
   <p>
-    Counterflow maintains a more favorable temperature
-    difference along the exchanger, generally allowing
-    greater heat transfer effectiveness.
+    Counterflow maintains a more consistent temperature difference between the hot and cold streams, resulting in greater heat transfer effectiveness compared to parallel flow under comparable operating conditions.
   </p>
 
   <script>
@@ -1260,23 +1258,24 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 </section>
 
 
-<!-- ===== ENGINEERING RELEVANCE ===== -->
+<!-- ===== ENGINEERING TAKEAWAYS ===== -->
 
 <section>
 
-  <h2>Engineering Relevance</h2>
+  <h2>Engineering Takeaways</h2>
 
   <p>
-    Heat exchangers play an important role in HVAC systems,
-    power generation, automotive cooling, and industrial
-    processing.
+    This project strengthened my understanding of thermal 
+    system modeling, experimental testing, and energy 
+    conservation. It also demonstrated how design decisions, 
+    such as flow arrangement and flow rate, can influence 
+    thermal performance.
   </p>
 
   <p>
-    This project connected thermodynamic theory with
-    experimental testing, demonstrating how flow arrangement
-    and operating conditions influence heat transfer and
-    system efficiency.
+    These principles are directly applicable to HVAC systems, 
+    automotive cooling, power generation, and industrial 
+    thermal management.
   </p>
 
 </section>
