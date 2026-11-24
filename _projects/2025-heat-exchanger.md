@@ -132,27 +132,74 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   background: #111;
 }
 
-/* ===== EQUATIONS ===== */
+/* ===== GOVERNING BALANCES ===== */
 
-.heat-equation {
+.heat-balances {
+  width: 100%;
   max-width: 800px;
-  margin: 20px auto;
-  padding: 22px 18px;
-  background: #f6f6f5;
-  border-radius: 5px;
-  font-size: 18px;
-  line-height: 1.8;
-  overflow-x: auto;
+  margin: 24px auto;
 }
 
-.heat-equation-label {
+.heat-balance {
+  display: grid;
+  grid-template-columns: 32% minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+  padding: 24px 0;
+  border-bottom: 1px solid #e0e3e5;
+}
+
+.heat-balance:last-child {
+  border-bottom: none;
+}
+
+.heat-diagram {
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+.heat-diagram svg {
   display: block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.3px;
+  width: 100%;
+  height: auto;
+}
+
+.heat-balance-content {
+  text-align: center;
+  min-width: 0;
+}
+
+.heat-balance-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #888;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+.heat-balance-formula {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 23px;
+  line-height: 1.8;
+  color: #333;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.heat-mass-label {
+  color: #64849b;
+}
+
+.heat-energy-label {
+  color: #c47c62;
+}
+
+.heat-entropy-label {
+  color: #b69b6a;
 }
 
 /* ===== ASSUMPTIONS ===== */
@@ -237,9 +284,23 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
     grid-template-columns: 1fr;
   }
 
-  .heat-equation {
-    font-size: 15px;
-  }
+  .heat-balance {
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 22px 0;
+}
+
+.heat-diagram {
+  max-width: 190px;
+}
+
+.heat-balance-label {
+  font-size: 11px;
+  margin-bottom: 12px;
+}
+
+.heat-balance-formula {
+  font-size: 18px;
 }
 </style>
 
@@ -356,62 +417,288 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
     </div>
   </section>
 
-  <!-- ===== GOVERNING BALANCES ===== -->
+  
+<!-- ===== GOVERNING BALANCES ===== -->
 
-  <section>
-    <h2>Governing Balances</h2>
+<section id="governing-balances">
 
-    <p>
-      Conservation of mass requires the mass
-      flow rate entering each stream to equal
-      the mass flow rate leaving it.
-    </p>
+  <h2>Governing Balances</h2>
 
-    <div class="heat-equation">
-      <span class="heat-equation-label">
-        Conservation of Mass
-      </span>
+  <div class="heat-balances">
 
-      ṁ<sub>in</sub> = ṁ<sub>out</sub>
+    <!-- ===== 01. CONSERVATION OF MASS ===== -->
+
+    <div class="heat-balance">
+
+      <div class="heat-diagram">
+
+        <svg viewBox="0 0 160 110"
+             xmlns="http://www.w3.org/2000/svg"
+             role="img"
+             aria-label="Mass flow through a control volume">
+
+          <!-- Control volume -->
+
+          <rect x="48" y="18"
+                width="64" height="70"
+                rx="3"
+                fill="#64849b"
+                fill-opacity="0.08"
+                stroke="#64849b"
+                stroke-dasharray="4 3"/>
+
+          <!-- Flow arrows -->
+
+          <path d="M5 53 H62
+                   M98 53 H155
+                   M53 47 L62 53 L53 59
+                   M146 47 L155 53 L146 59"
+                stroke="#64849b"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"/>
+
+          <!-- Labels -->
+
+          <text x="24" y="40"
+                font-size="11"
+                fill="#555"
+                text-anchor="middle">
+            ṁ in
+          </text>
+
+          <text x="136" y="40"
+                font-size="11"
+                fill="#555"
+                text-anchor="middle">
+            ṁ out
+          </text>
+
+          <text x="80" y="103"
+                font-size="10"
+                fill="#888"
+                text-anchor="middle">
+            Control volume
+          </text>
+
+        </svg>
+
+      </div>
+
+      <div class="heat-balance-content">
+
+        <span class="heat-balance-label heat-mass-label">
+          01 — Conservation of Mass
+        </span>
+
+        <div class="heat-balance-formula">
+          ṁ<sub>in</sub> = ṁ<sub>out</sub>
+        </div>
+
+      </div>
+
     </div>
 
-    <p>
-      Assuming negligible heat loss to the surroundings,
-      the energy lost by the hot water equals the
-      energy gained by the cold water.
-    </p>
+    <!-- ===== 02. CONSERVATION OF ENERGY ===== -->
 
-    <div class="heat-equation">
-      <span class="heat-equation-label">
-        Steady-Flow Energy Balance
-      </span>
+    <div class="heat-balance">
 
-      ṁ<sub>h</sub>c<sub>p</sub>
-      (T<sub>h,out</sub> − T<sub>h,in</sub>)
-      +
-      ṁ<sub>c</sub>c<sub>p</sub>
-      (T<sub>c,out</sub> − T<sub>c,in</sub>)
-      = 0
+      <div class="heat-diagram">
+
+        <svg viewBox="0 0 160 110"
+             xmlns="http://www.w3.org/2000/svg"
+             role="img"
+             aria-label="Heat transfer between hot and cold streams">
+
+          <!-- Hot stream -->
+
+          <rect x="12" y="17"
+                width="136" height="28"
+                rx="4"
+                fill="#c47c62"
+                fill-opacity="0.14"/>
+
+          <!-- Cold stream -->
+
+          <rect x="12" y="65"
+                width="136" height="28"
+                rx="4"
+                fill="#64849b"
+                fill-opacity="0.15"/>
+
+          <!-- Hot flow arrow -->
+
+          <path d="M23 31 H135
+                   L127 25
+                   M135 31 L127 37"
+                stroke="#c47c62"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"/>
+
+          <!-- Cold flow arrow -->
+
+          <path d="M135 79 H23
+                   L31 73
+                   M23 79 L31 85"
+                stroke="#64849b"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"/>
+
+          <!-- Heat transfer arrows -->
+
+          <path d="M45 43 V63
+                   L41 58
+                   M45 63 L49 58
+
+                   M80 43 V63
+                   L76 58
+                   M80 63 L84 58
+
+                   M115 43 V63
+                   L111 58
+                   M115 63 L119 58"
+                stroke="#b69b6a"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"/>
+
+          <!-- Labels -->
+
+          <text x="80" y="11"
+                font-size="10"
+                fill="#c47c62"
+                text-anchor="middle">
+            HOT STREAM
+          </text>
+
+          <text x="80" y="105"
+                font-size="10"
+                fill="#64849b"
+                text-anchor="middle">
+            COLD STREAM
+          </text>
+
+        </svg>
+
+      </div>
+
+      <div class="heat-balance-content">
+
+        <span class="heat-balance-label heat-energy-label">
+          02 — Conservation of Energy
+        </span>
+
+        <div class="heat-balance-formula">
+          ṁ<sub>h</sub>c<sub>p</sub>ΔT<sub>h</sub>
+          +
+          ṁ<sub>c</sub>c<sub>p</sub>ΔT<sub>c</sub>
+          = 0
+        </div>
+
+      </div>
+
     </div>
 
-    <p>
-      We also considered entropy generation
-      associated with irreversible heat transfer
-      across a finite temperature difference.
-    </p>
+    <!-- ===== 03. ENTROPY GENERATION ===== -->
 
-    <div class="heat-equation">
-      <span class="heat-equation-label">
-        Entropy Generation
-      </span>
+    <div class="heat-balance">
 
-      Ṡ<sub>gen</sub> =
-      ṁ<sub>h</sub>(s<sub>h,out</sub> − s<sub>h,in</sub>)
-      +
-      ṁ<sub>c</sub>(s<sub>c,out</sub> − s<sub>c,in</sub>)
-      ≥ 0
+      <div class="heat-diagram">
+
+        <svg viewBox="0 0 160 110"
+             xmlns="http://www.w3.org/2000/svg"
+             role="img"
+             aria-label="Illustrative temperature profiles and finite temperature difference">
+
+          <!-- Graph axes -->
+
+          <path d="M22 10 V91 H150"
+                stroke="#aaa"
+                stroke-width="1.2"
+                fill="none"/>
+
+          <!-- Hot temperature curve -->
+
+          <path d="M28 23
+                   C65 30 100 41 143 49"
+                stroke="#c47c62"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                fill="none"/>
+
+          <!-- Cold temperature curve -->
+
+          <path d="M28 62
+                   C65 69 100 80 143 88"
+                stroke="#64849b"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                fill="none"/>
+
+          <!-- Temperature difference -->
+
+          <path d="M85 37 V75
+                   M81 42 L85 37 L89 42
+                   M81 70 L85 75 L89 70"
+                stroke="#b69b6a"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                fill="none"/>
+
+          <!-- Labels -->
+
+          <text x="94" y="59"
+                font-size="12"
+                fill="#b69b6a">
+            ΔT
+          </text>
+
+          <text x="12" y="14"
+                font-size="10"
+                fill="#777">
+            T
+          </text>
+
+          <text x="148" y="103"
+                font-size="10"
+                fill="#777">
+            x
+          </text>
+
+        </svg>
+
+      </div>
+
+      <div class="heat-balance-content">
+
+        <span class="heat-balance-label heat-entropy-label">
+          03 — Entropy Generation
+        </span>
+
+        <div class="heat-balance-formula">
+          Ṡ<sub>gen</sub>
+          =
+          ṁ<sub>h</sub>Δs<sub>h</sub>
+          +
+          ṁ<sub>c</sub>Δs<sub>c</sub>
+          ≥ 0
+        </div>
+
+      </div>
+
     </div>
-  </section>
+
+  </div>
+
+</section>
+
 
   <!-- ===== FLOW CONFIGURATIONS ===== -->
 
