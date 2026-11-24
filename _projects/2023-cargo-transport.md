@@ -41,13 +41,31 @@ description: Sikorsky STEM Challenge | High School
     width: 100%;
   }
 }
+
+.cargo-page img{
+  display: block;
+  width: 80%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto 28px;
+  border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+  .cargo-page img,
+  .salem-page img {
+    width: 100%;
+  }
+}
+
 </style>
 
-<div class="salem-page" markdown="1">
+<div class="cargo-page" markdown="1">
+
+<img src="{{ '/assets/images/cargo_transport.jpg' | relative_url }}" alt="Cargo Transport System">
 
 # Cargo Transport System
 
-<img src="{{ '/assets/images/cargo_transport.jpg' | relative_url }}" alt="Cargo Transport System">
 
 ## Project Overview
 

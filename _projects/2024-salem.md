@@ -60,13 +60,28 @@ description: Sikorsky STEM Challenge | High School
     width: 100%;
   }
 }
+
+.salem-page img {
+  display: block;
+  width: 80%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto 28px;
+  border-radius: 6px;
+}
+
+@media (max-width: 700px) {
+  .cargo-page img,
+  .salem-page img {
+    width: 100%;
+  }
+}
+
 </style>
 
 <div class="salem-page" markdown="1">
 
-# SALEM
-
-<img src="{{ '/assets/images/salem.png' | relative_url }}" alt="SALEM prototype">
+<img src="{{ '/assets/images/salem.png' | relative_url }}" alt="SALEM Prototype">
 
 ## Project Overview
 
