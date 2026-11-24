@@ -433,43 +433,51 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
 .heat-experiment {
   display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.855fr);
+  align-items: stretch;
   gap: 12px;
   max-width: 740px;
-  margin: 24px auto;
+  margin: 24px auto 12px;
 }
 
 .heat-experiment-photos {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
   gap: 12px;
 }
 
 .heat-experiment figure {
   width: 100%;
+  min-width: 0;
   margin: 0;
 }
 
 .heat-experiment img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 6px;
+}
+
+.heat-experiment > figure {
+  position: relative;
 }
 
 .heat-experiment video {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: none;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 6px;
-  background: transparent;
 }
 
 .heat-experiment-caption {
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   font-size: 12px;
   color: #888;
   text-align: center;
@@ -478,19 +486,15 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 @media (max-width: 700px) {
   .heat-experiment {
     grid-template-columns: 1fr;
-    gap: 18px;
   }
 
   .heat-experiment video {
+    position: static;
+    width: 100%;
+    height: auto;
     max-width: 280px;
     margin: 0 auto;
-  }
-}
-
-@media (max-width: 700px) {
-  .heat-meta {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
+    object-fit: contain;
   }
 }
 
