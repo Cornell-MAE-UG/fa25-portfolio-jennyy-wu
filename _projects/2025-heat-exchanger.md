@@ -458,25 +458,18 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
   <h2>Project Overview</h2>
 
   <p>
-    This project investigated heat transfer between two water
-    streams in a compact plate heat exchanger, examining how
-    flow configuration and operating conditions affect
+    This project investigated how flow configuration and 
+    operating conditions affect heat transfer in a compact 
+    plate heat exchanger. We compared parallel flow and 
+    counterflow to better understand their influence on 
     thermal performance.
   </p>
 
   <p>
-    The experimental setup consisted of two independent
-    circulation loops supplying hot and cold water.
-    Pumps circulated water through the exchanger, while
-    thermometers and a thermocouple measured inlet and
-    outlet temperatures.
-  </p>
-
-  <p>
-    Heat was transferred through the exchanger walls without
-    mixing the fluids, allowing us to apply steady-flow
-    energy balances and analyze entropy generation
-    in a real engineering system.
+    Using two independent water circulation loops, we 
+    collected inlet and outlet temperature measurements 
+    and applied conservation of mass, energy balances, 
+    and entropy analysis to evaluate the system's behavior.
   </p>
 
   <figure class="heat-hero">
