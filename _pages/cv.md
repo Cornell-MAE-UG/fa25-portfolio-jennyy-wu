@@ -3,6 +3,26 @@ layout: default
 title: Jenny Wu - CV
 permalink: /cv/
 ---
+
+<style>
+.cv-page {
+  width: 85vw;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0 65px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .cv-page {
+    width: calc(100% - 36px);
+  }
+}
+</style>
+
+<div class="cv-page" markdown="1">
+
 ## Curriculum Vitae
 
 [Download my CV]({{ "/assets/CV.pdf" | relative_url }}) in PDF format.
@@ -102,3 +122,5 @@ Expected Graduation: May 2028
 - Captain of Varsity Golf  
 
 ---
+
+</div>
