@@ -1,6 +1,6 @@
 ---
 layout: project
-title: AR Kart XRP
+title: AR Kart
 permalink: /projects/ar-kart/
 description: Cornell Cup Robotics — Mechanical Design, Steering, and Prototyping
 technologies: [Fusion 360, CAD, 3D Printing, Ackermann Steering, Drivetrain, Robotics]
@@ -361,7 +361,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Ackermann Steering, Drivetrain, Rob
 
   <!-- ===== TITLE ===== -->
 
-  <h1 class="kart-title">AR Kart XRP</h1>
+  <h1 class="kart-title">AR Kart</h1>
 
   <!-- ===== PROJECT OVERVIEW ===== -->
 
@@ -392,7 +392,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Ackermann Steering, Drivetrain, Rob
 
     <div class="kart-text">
       <p>
-        The AR Kart XRP is a small robotic vehicle developed
+        The AR Kart is a small robotic vehicle developed
         through Cornell Cup Robotics, combining a steering
         system, motor-driven drivetrain, and onboard camera
         for augmented reality applications.
@@ -411,10 +411,10 @@ technologies: [Fusion 360, CAD, 3D Printing, Ackermann Steering, Drivetrain, Rob
     <figure class="kart-hero">
       <img
         src="{{ '/assets/images/ar-kart.png' | relative_url }}"
-        alt="AR Kart XRP robotic vehicle"
+        alt="AR Kart robotic vehicle"
       >
       <figcaption>
-        Figure 1. AR Kart XRP robotic vehicle.
+        Figure 1. AR Kart robotic vehicle.
       </figcaption>
     </figure>
 
@@ -863,7 +863,7 @@ technologies: [Fusion 360, CAD, 3D Printing, Ackermann Steering, Drivetrain, Rob
     </video>
 
     <figcaption>
-        Figure 14. AR Kart XRP prototype demonstrating
+        Figure 14. AR Kart prototype demonstrating
         steering and drivetrain operation.
     </figcaption>
 </figure>

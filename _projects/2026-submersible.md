@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Submersible XRP
+title: Submersible
 permalink: /projects/submersible-xrp/
 description: Cornell Cup Robotics — Underwater Robotics and Mechanical Design
 technologies: [Fusion 360, CAD, 3D Printing, Rack-and-Pinion, Buoyancy, Waterproofing, Robotics, MATLAB, System Dynamics, Feedback Control]
@@ -311,7 +311,7 @@ main.page-content > .wrapper {
 
   <!-- ===== TITLE ===== -->
 
-  <h1 class="sub-main-title">Submersible XRP</h1>
+  <h1 class="sub-main-title">Submersible</h1>
 
   <!-- ===== PROJECT OVERVIEW ===== -->
 
@@ -346,7 +346,7 @@ main.page-content > .wrapper {
 
     <div class="sub-text">
       <p>
-        The Submersible XRP is a Cornell Cup Robotics
+        The Submersible is a Cornell Cup Robotics
         project focused on developing an underwater
         robot capable of collecting water samples for
         microplastics research in collaboration with
@@ -369,10 +369,10 @@ main.page-content > .wrapper {
     <figure class="sub-hero">
       <img
         src="{{ '/assets/images/submersible.jpeg' | relative_url }}"
-        alt="Submersible XRP underwater robotics project"
+        alt="Submersible underwater robotics project"
       >
       <figcaption>
-        Figure 1. Submersible XRP robotic system.
+        Figure 1. Submersible robotic system.
       </figcaption>
     </figure>
 
@@ -796,7 +796,7 @@ main.page-content > .wrapper {
     <div class="sub-text">
       <p>
         Alongside the mechanical development of
-        the Submersible XRP, I began studying
+        the Submersible, I began studying
         the robot's motion as part of MAE 3260:
         System Dynamics. Our project, "Super Sub Bros.,"
         investigates how two side-by-side thrusters
@@ -1036,7 +1036,7 @@ main.page-content > .wrapper {
         </div>
       </div>
       <figcaption>
-        Video 1. Submersible XRP mechanical testing.
+        Video 1. Submersible mechanical testing.
       </figcaption>
     </figure>
 
