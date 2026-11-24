@@ -572,7 +572,7 @@ technologies: [Thermodynamics, Energy Balance, Heat Transfer, Entropy Analysis, 
 
       <video controls playsinline preload="metadata">
 
-        <source src="{{ '/assets/videos/heat-exchanger.mp4' | relative_url }}"
+        <source src="{{ '/assets/videos/heat_exchanger.mp4' | relative_url }}"
                 type="video/mp4">
 
       </video>
